@@ -1,0 +1,141 @@
+{
+  "JP": {
+    "iso": "JP",
+    "name_zh": "日本",
+    "name_en": "Japan",
+    "flag": "🇯🇵",
+    "factbox": [
+      { "label": "首都", "value": "東京" },
+      { "label": "人口", "value": "約 1.24 億" },
+      { "label": "面積", "value": "37.8 萬 km²" },
+      { "label": "政體", "value": "君主立憲制、議會內閣制" },
+      { "label": "元首", "value": "德仁天皇" },
+      { "label": "貨幣", "value": "日圓 (JPY)" }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          { "date": "2024-01", "title": "能登半島地震", "desc": "石川縣發生規模 7.6 強震，造成重大傷亡與基礎設施損毀。" },
+          { "date": "2023-05", "title": "G7 廣島峰會", "desc": "日本主辦七大工業國集團峰會，聚焦烏克蘭情勢與核裁軍。" },
+          { "date": "2022-07", "title": "前首相安倍晉三遇刺", "desc": "於奈良街頭演說時中彈身亡，震驚國際。" }
+        ]
+      },
+      {
+        "type": "article",
+        "title": "概況",
+        "body": "日本為東亞島國，由本州、北海道、九州、四國等島嶼組成。經濟以製造業與服務業為主，是全球第四大經濟體。面臨少子化與高齡化的長期結構挑戰。"
+      }
+    ]
+  },
+  "US": {
+    "iso": "US",
+    "name_zh": "美國",
+    "name_en": "United States",
+    "flag": "🇺🇸",
+    "factbox": [
+      { "label": "首都", "value": "華盛頓特區" },
+      { "label": "人口", "value": "約 3.35 億" },
+      { "label": "面積", "value": "983 萬 km²" },
+      { "label": "政體", "value": "聯邦制、總統制共和國" },
+      { "label": "貨幣", "value": "美元 (USD)" }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          { "date": "2024-11", "title": "總統大選", "desc": "第 60 屆美國總統選舉舉行。" },
+          { "date": "2021-01", "title": "國會山莊事件", "desc": "群眾闖入國會大廈，中斷選舉人票認證程序。" }
+        ]
+      },
+      {
+        "type": "article",
+        "title": "概況",
+        "body": "美國為北美洲聯邦共和國，由 50 州組成，是全球最大經濟體與主要軍事強權。"
+      }
+    ]
+  },
+  "DE": {
+    "iso": "DE",
+    "name_zh": "德國",
+    "name_en": "Germany",
+    "flag": "🇩🇪",
+    "factbox": [
+      { "label": "首都", "value": "柏林" },
+      { "label": "人口", "value": "約 8,400 萬" },
+      { "label": "面積", "value": "35.7 萬 km²" },
+      { "label": "政體", "value": "聯邦制、議會共和國" },
+      { "label": "貨幣", "value": "歐元 (EUR)" }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          { "date": "2021-12", "title": "蕭茲就任總理", "desc": "結束梅克爾長達 16 年執政，社民黨籌組聯合政府。" }
+        ]
+      },
+      {
+        "type": "article",
+        "title": "概況",
+        "body": "德國為中歐聯邦共和國，歐盟人口最多的成員國，工業與出口導向經濟為其核心。"
+      }
+    ]
+  },
+  "FR": {
+    "iso": "FR",
+    "name_zh": "法國",
+    "name_en": "France",
+    "flag": "🇫🇷",
+    "factbox": [
+      { "label": "首都", "value": "巴黎" },
+      { "label": "人口", "value": "約 6,800 萬" },
+      { "label": "面積", "value": "55.1 萬 km²" },
+      { "label": "政體", "value": "半總統制共和國" },
+      { "label": "貨幣", "value": "歐元 (EUR)" }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          { "date": "2024-07", "title": "巴黎奧運", "desc": "睽違百年再度主辦夏季奧林匹克運動會。" }
+        ]
+      },
+      {
+        "type": "article",
+        "title": "概況",
+        "body": "法國為西歐共和國，聯合國安理會常任理事國，文化、外交與農業影響力顯著。"
+      }
+    ]
+  },
+  "GB": {
+    "iso": "GB",
+    "name_zh": "英國",
+    "name_en": "United Kingdom",
+    "flag": "🇬🇧",
+    "factbox": [
+      { "label": "首都", "value": "倫敦" },
+      { "label": "人口", "value": "約 6,700 萬" },
+      { "label": "面積", "value": "24.3 萬 km²" },
+      { "label": "政體", "value": "君主立憲制、議會內閣制" },
+      { "label": "貨幣", "value": "英鎊 (GBP)" }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          { "date": "2022-09", "title": "伊莉莎白二世逝世", "desc": "在位 70 年的女王辭世，查爾斯三世繼位。" }
+        ]
+      },
+      {
+        "type": "article",
+        "title": "概況",
+        "body": "英國為西歐島國，由英格蘭、蘇格蘭、威爾斯與北愛爾蘭組成，2020 年正式脫離歐盟。"
+      }
+    ]
+  }
+}

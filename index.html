@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>世界年鑑 · 國家速覽</title>
+
+  <!-- Map engines (both loaded so the toggle can switch at runtime) -->
+  <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.js"></script>
+
+  <!-- Optional: provide a Mapbox token to enable the Mapbox engine.
+       config.local.js is gitignored — create it locally and set
+       window.WORLD_ALMANAC_MAPBOX_TOKEN = 'pk....'; there.
+       (or append ?mbtoken=pk... to the URL instead) -->
+  <script src="config.local.js" onerror="console.info('[world-almanic] config.local.js not found — Mapbox token unset, MapLibre still works')"></script>
+
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="panel">
+      <header class="header">
+        <div class="title">世界年鑑 · 國家速覽</div>
+        <div id="engine-toggle" class="toggle" role="group" aria-label="底圖引擎">
+          <span class="toggle-label">底圖</span>
+          <button type="button" data-engine="maplibre">MapLibre</button>
+          <button type="button" data-engine="mapbox">Mapbox</button>
+        </div>
+      </header>
+
+      <div class="searchbar">
+        <input id="search" type="text" autocomplete="off" placeholder="🔍 搜尋國家（中／英）…"
+               aria-label="搜尋國家" role="combobox" aria-expanded="false" aria-controls="suggest" />
+        <ul id="suggest" class="suggest" role="listbox" hidden></ul>
+      </div>
+
+      <p id="notice" class="notice" hidden></p>
+
+      <div id="layout" class="layout">
+        <div id="map" class="map" aria-label="世界地圖"></div>
+        <div id="panel" class="entry" aria-live="polite"></div>
+      </div>
+
+      <div class="footer">資料來源：中央社世界年鑑（示意 mock 資料）· 製圖 CNA</div>
+    </div>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
