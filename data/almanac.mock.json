@@ -5813,5 +5813,34 @@
       }
     ],
     "sections": []
+  },
+  "CI": {
+    "iso": "CI",
+    "name_zh": "象牙海岸",
+    "name_en": "Côte d'Ivoire",
+    "flag": "🇨🇮",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "亞穆蘇克羅"
+      },
+      {
+        "label": "語言",
+        "value": "法語"
+      },
+      {
+        "label": "人口",
+        "value": "2,750萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "322,463平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "西非"
+      }
+    ],
+    "sections": []
   }
 }

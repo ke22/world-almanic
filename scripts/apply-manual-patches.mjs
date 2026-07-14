@@ -181,6 +181,9 @@ function main() {
     'DO': { iso: 'DO', name_zh: '多明尼加', name_en: 'Dominican Republic', flag: '🇩🇴', factbox: fb('聖多明哥', '西班牙語', '1,100萬人（2024）', '48,670平方公里', '加勒比海'), sections: [] },
     'TT': { iso: 'TT', name_zh: '千里達及托巴哥', name_en: 'Trinidad and Tobago', flag: '🇹🇹', factbox: fb('西班牙港', '英語', '141萬人（2024）', '5,128平方公里', '加勒比海'), sections: [] },
     'US': { iso: 'US', name_zh: '美國', name_en: 'United States', flag: '🇺🇸', factbox: fb('華盛頓', '英語', '3億4,000萬人（2024）', '9,833,517平方公里', '北美洲'), sections: [] },
+    'CF': { iso: 'CF', name_zh: '中非共和國', name_en: 'Central African Republic', flag: '🇨🇫', factbox: fb('班基', '桑戈語、法語', '480萬人（2024）', '622,984平方公里', '中非'), sections: [] },
+    'CI': { iso: 'CI', name_zh: '象牙海岸', name_en: "Côte d'Ivoire", flag: '🇨🇮', factbox: fb('亞穆蘇克羅', '法語', '2,750萬人（2024）', '322,463平方公里', '西非'), sections: [] },
+    'SZ': { iso: 'SZ', name_zh: '史瓦帝尼', name_en: 'Eswatini', flag: '🇸🇿', factbox: fb('姆巴巴內', '英語、西瓦替語', '116萬人（2024）', '17,364平方公里', '南非'), sections: [] },
   };
 
   for (const [iso, entry] of Object.entries(missing)) {
