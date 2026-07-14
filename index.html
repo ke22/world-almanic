@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>世界年鑑 · 國家速覽</title>
 
-  <!-- Map engines (both loaded so the toggle can switch at runtime) -->
-  <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
-  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <!-- Mapbox GL JS -->
   <link href="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css" rel="stylesheet" />
   <script src="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.js"></script>
+
+  <!-- Mapbox GL Language plugin for Traditional Chinese labels -->
+  <script src="https://unpkg.com/@mapbox/mapbox-gl-language@1.0.1/dist/index.js"></script>
 
   <!-- Optional: provide a Mapbox token to enable the Mapbox engine.
        config.local.js is gitignored — create it locally and set
@@ -24,11 +25,6 @@
     <div class="panel">
       <header class="header">
         <div class="title">世界年鑑 · 國家速覽</div>
-        <div id="engine-toggle" class="toggle" role="group" aria-label="底圖引擎">
-          <span class="toggle-label">底圖</span>
-          <button type="button" data-engine="maplibre">MapLibre</button>
-          <button type="button" data-engine="mapbox">Mapbox</button>
-        </div>
       </header>
 
       <div class="searchbar">

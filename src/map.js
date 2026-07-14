@@ -1,41 +1,20 @@
 // map.js
-// MapEngine: a single interface with two interchangeable implementations
-// (Mapbox GL JS / MapLibre GL JS). Both share the same GL-JS API surface, so
-// most per-engine differences are just the global object, the token, and the
-// default style. Highlighting is the one place they diverge on purpose: the
-// Mapbox engine draws from Mapbox's own official country-boundaries tileset
-// (pixel-accurate against its basemap, covers every country); the MapLibre
-// engine draws from the bundled world-countries GeoJSON, since MapLibre has
-// no access to Mapbox's proprietary tileset.
+// MapEngine: Mapbox GL JS only implementation
+// Highlights countries using Mapbox's official country-boundaries tileset
+// Supports click-to-select and Traditional Chinese labels
 
-const GEOJSON_URL = new URL('../data/world-countries.geojson', import.meta.url);
 const ACCENT = '#2563eb';
 
 const HIGHLIGHT_SRC = 'country-boundaries';
 const HIGHLIGHT_FILL = 'country-highlight-fill';
 const HIGHLIGHT_LINE = 'country-highlight-line';
+const HIT_LAYER = 'country-hit-layer';
 
-const ENGINE_CONFIG = {
-  maplibre: {
-    global: 'maplibregl',
-    // Free, token-less demo tiles — the reason MapLibre is the default engine.
-    style: 'https://demotiles.maplibre.org/style.json',
-    needsToken: false,
-    boundary: { type: 'geojson', joinProp: 'iso_a2' },
-  },
-  mapbox: {
-    global: 'mapboxgl',
-    style: 'mapbox://styles/mapbox/light-v11',
-    needsToken: true,
-    // Mapbox's own official admin-0 boundaries — same source as its basemap
-    // coastlines, so the highlight always lines up exactly, for any country.
-    boundary: {
-      type: 'vector',
-      url: 'mapbox://mapbox.country-boundaries-v1',
-      sourceLayer: 'country_boundaries',
-      joinProp: 'iso_3166_1',
-    },
-  },
+const BOUNDARY = {
+  type: 'vector',
+  url: 'mapbox://mapbox.country-boundaries-v1',
+  sourceLayer: 'country_boundaries',
+  joinProp: 'iso_3166_1',
 };
 
 /** Resolve a Mapbox token from opt-in config only; never hardcode a token. */
@@ -47,28 +26,24 @@ function resolveMapboxToken() {
   return '';
 }
 
-export const DEFAULT_ENGINE = 'maplibre';
-
-export function engineAvailable(engineName) {
-  const cfg = ENGINE_CONFIG[engineName];
-  if (!cfg) return false;
-  if (typeof window === 'undefined' || !window[cfg.global]) return false;
-  if (cfg.needsToken && !resolveMapboxToken()) return false;
+export function mapboxAvailable() {
+  if (typeof window === 'undefined' || !window.mapboxgl) return false;
+  if (!resolveMapboxToken()) return false;
   return true;
 }
 
 export class MapEngine {
   /**
    * @param {HTMLElement} container
-   * @param {string} engineName 'maplibre' | 'mapbox'
    * @param {object} countries  ISO -> { bbox: [w,s,e,n] }
    */
-  constructor(container, engineName, countries) {
+  constructor(container, countries) {
     this.container = container;
-    this.engineName = engineName;
     this.countries = countries || {};
     this.selected = '';
     this.map = null;
+    this.joinProp = BOUNDARY.joinProp;
+    this.onCountryClick = null;
     this._ready = this._build();
   }
 
@@ -77,24 +52,14 @@ export class MapEngine {
   }
 
   async _build() {
-    const cfg = ENGINE_CONFIG[this.engineName];
-    if (!cfg) throw new Error(`unknown engine: ${this.engineName}`);
-    const gl = window[cfg.global];
-    if (!gl) throw new Error(`${cfg.global} not loaded`);
+    const token = resolveMapboxToken();
+    if (!token) throw new Error('mapbox-token-missing');
 
-    if (cfg.needsToken) {
-      const token = resolveMapboxToken();
-      if (!token) {
-        const err = new Error('mapbox-token-missing');
-        err.code = 'MAPBOX_TOKEN_MISSING';
-        throw err;
-      }
-      gl.accessToken = token;
-    }
+    window.mapboxgl.accessToken = token;
 
-    const map = new gl.Map({
+    const map = new window.mapboxgl.Map({
       container: this.container,
-      style: cfg.style,
+      style: 'mapbox://styles/mapbox/light-v11',
       center: [10, 25],
       zoom: 1.3,
       attributionControl: true,
@@ -104,30 +69,50 @@ export class MapEngine {
     await new Promise((resolve, reject) => {
       map.on('load', resolve);
       map.on('error', (e) => {
-        // Surface style/tile load failures instead of failing silently.
         if (e && e.error) console.warn('[map] error:', e.error.message || e.error);
       });
-      // Guard against a style that never loads.
       setTimeout(() => reject(new Error('map load timeout')), 15000).unref?.();
     });
 
-    const boundary = cfg.boundary;
-    this.joinProp = boundary.joinProp;
-    const noMatch = ['==', ['get', boundary.joinProp], '__none__'];
+    // Add country boundaries source
+    map.addSource(HIGHLIGHT_SRC, {
+      type: 'vector',
+      url: BOUNDARY.url,
+    });
+
+    const noMatch = ['==', ['get', this.joinProp], '__none__'];
     this._noMatchFilter = noMatch;
 
-    if (boundary.type === 'vector') {
-      map.addSource(HIGHLIGHT_SRC, { type: 'vector', url: boundary.url });
-    } else {
-      const geo = await (await fetch(GEOJSON_URL)).json();
-      map.addSource(HIGHLIGHT_SRC, { type: 'geojson', data: geo });
-    }
+    const layerBase = { source: HIGHLIGHT_SRC, 'source-layer': BOUNDARY.sourceLayer, filter: noMatch };
 
-    const layerBase = { source: HIGHLIGHT_SRC, filter: noMatch };
-    if (boundary.type === 'vector') layerBase['source-layer'] = boundary.sourceLayer;
-
+    // Add highlight layers
     map.addLayer({ id: HIGHLIGHT_FILL, type: 'fill', paint: { 'fill-color': ACCENT, 'fill-opacity': 0.45 }, ...layerBase });
     map.addLayer({ id: HIGHLIGHT_LINE, type: 'line', paint: { 'line-color': ACCENT, 'line-width': 1.5 }, ...layerBase });
+
+    // Invisible, unfiltered fill layer for hit-testing clicks
+    map.addLayer({
+      id: HIT_LAYER,
+      type: 'fill',
+      source: HIGHLIGHT_SRC,
+      'source-layer': BOUNDARY.sourceLayer,
+      paint: { 'fill-color': '#000', 'fill-opacity': 0 },
+    });
+
+    // Click handler for country selection
+    map.on('click', HIT_LAYER, (e) => {
+      const iso = e.features?.[0]?.properties?.[this.joinProp];
+      if (iso && this.onCountryClick) this.onCountryClick(iso);
+    });
+
+    // Cursor feedback
+    map.on('mouseenter', HIT_LAYER, () => { map.getCanvas().style.cursor = 'pointer'; });
+    map.on('mouseleave', HIT_LAYER, () => { map.getCanvas().style.cursor = ''; });
+
+    // Apply Traditional Chinese labels via mapbox-gl-language
+    if (window.MapboxLanguage) {
+      const language = new window.MapboxLanguage({ defaultLanguage: 'zh-Hant' });
+      map.addControl(language);
+    }
 
     if (this.selected) this._applyHighlight(this.selected);
   }
