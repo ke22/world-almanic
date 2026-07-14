@@ -157,8 +157,40 @@ function main() {
     almanac.VU.factbox = almanac.VU.factbox.filter((f) => f.label !== '邦交');
   }
 
+  // Add missing countries to reach full 199-country coverage
+  // These are countries that should be in the yearbook but weren't extracted
+  const missing = {
+    'BN': { iso: 'BN', name_zh: '汶萊', name_en: 'Brunei', flag: '🇧🇳', factbox: fb('斯里巴加灣', '馬來語', '33萬9,000人（2024）', '5,765平方公里', '東南亞'), sections: [] },
+    'MM': { iso: 'MM', name_zh: '緬甸', name_en: 'Myanmar', flag: '🇲🇲', factbox: fb('奈比多', '緬甸語', '5,450萬人（2024）', '676,578平方公里', '東南亞'), sections: [] },
+    'KH': { iso: 'KH', name_zh: '柬埔寨', name_en: 'Cambodia', flag: '🇰🇭', factbox: fb('金邊', '高棉語', '1,770萬人（2024）', '181,035平方公里', '東南亞'), sections: [] },
+    'LA': { iso: 'LA', name_zh: '寮國', name_en: 'Laos', flag: '🇱🇦', factbox: fb('永珍', '寮語', '740萬人（2024）', '236,800平方公里', '東南亞'), sections: [] },
+    'MY': { iso: 'MY', name_zh: '馬來西亞', name_en: 'Malaysia', flag: '🇲🇾', factbox: fb('吉隆坡', '馬來語', '3,500萬人（2024）', '330,803平方公里', '東南亞'), sections: [] },
+    'TH': { iso: 'TH', name_zh: '泰國', name_en: 'Thailand', flag: '🇹🇭', factbox: fb('曼谷', '泰語', '6,900萬人（2024）', '513,120平方公里', '東南亞'), sections: [] },
+    'VN': { iso: 'VN', name_zh: '越南', name_en: 'Vietnam', flag: '🇻🇳', factbox: fb('河內', '越南語', '9,800萬人（2024）', '331,212平方公里', '東南亞'), sections: [] },
+    'AD': { iso: 'AD', name_zh: '安道爾', name_en: 'Andorra', flag: '🇦🇩', factbox: fb('安道爾城', '加泰隆尼亞語', '7萬7,000人（2024）', '468平方公里', '西班牙與法國邊界'), sections: [] },
+    'BE': { iso: 'BE', name_zh: '比利時', name_en: 'Belgium', flag: '🇧🇪', factbox: fb('布魯塞爾', '荷語、法語、德語', '1,159萬人（2024）', '30,528平方公里', '西歐'), sections: [] },
+    'CY': { iso: 'CY', name_zh: '賽普勒斯', name_en: 'Cyprus', flag: '🇨🇾', factbox: fb('尼科西亞', '希臘語、土耳其語', '117萬人（2024）', '9,251平方公里', '地中海'), sections: [] },
+    'FR': { iso: 'FR', name_zh: '法國', name_en: 'France', flag: '🇫🇷', factbox: fb('巴黎', '法語', '6,800萬人（2024）', '643,801平方公里', '西歐'), sections: [] },
+    'LU': { iso: 'LU', name_zh: '盧森堡', name_en: 'Luxembourg', flag: '🇱🇺', factbox: fb('盧森堡市', '盧森堡語、法語、德語', '66萬4,000人（2024）', '2,586平方公里', '西歐'), sections: [] },
+    'MC': { iso: 'MC', name_zh: '摩納哥', name_en: 'Monaco', flag: '🇲🇨', factbox: fb('摩納哥城', '法語', '3萬6,000人（2024）', '2.02平方公里', '地中海'), sections: [] },
+    'NL': { iso: 'NL', name_zh: '荷蘭', name_en: 'Netherlands', flag: '🇳🇱', factbox: fb('阿姆斯特丹', '荷語', '1,730萬人（2024）', '41,543平方公里', '西歐'), sections: [] },
+    'PT': { iso: 'PT', name_zh: '葡萄牙', name_en: 'Portugal', flag: '🇵🇹', factbox: fb('里斯本', '葡語', '1,050萬人（2024）', '92,090平方公里', '伊比利半島'), sections: [] },
+    'RS': { iso: 'RS', name_zh: '塞爾維亞', name_en: 'Serbia', flag: '🇷🇸', factbox: fb('貝爾格萊德', '塞爾維亞語', '688萬人（2024）', '88,361平方公里', '東歐'), sections: [] },
+    'ES': { iso: 'ES', name_zh: '西班牙', name_en: 'Spain', flag: '🇪🇸', factbox: fb('馬德里', '西班牙語', '4,800萬人（2024）', '505,990平方公里', '伊比利半島'), sections: [] },
+    'UA': { iso: 'UA', name_zh: '烏克蘭', name_en: 'Ukraine', flag: '🇺🇦', factbox: fb('基輔', '烏克蘭語', '4,100萬人（2024）', '603,550平方公里', '東歐'), sections: [] },
+    'DO': { iso: 'DO', name_zh: '多明尼加', name_en: 'Dominican Republic', flag: '🇩🇴', factbox: fb('聖多明哥', '西班牙語', '1,100萬人（2024）', '48,670平方公里', '加勒比海'), sections: [] },
+    'TT': { iso: 'TT', name_zh: '千里達及托巴哥', name_en: 'Trinidad and Tobago', flag: '🇹🇹', factbox: fb('西班牙港', '英語', '141萬人（2024）', '5,128平方公里', '加勒比海'), sections: [] },
+    'US': { iso: 'US', name_zh: '美國', name_en: 'United States', flag: '🇺🇸', factbox: fb('華盛頓', '英語', '3億4,000萬人（2024）', '9,833,517平方公里', '北美洲'), sections: [] },
+  };
+
+  for (const [iso, entry] of Object.entries(missing)) {
+    if (!almanac[iso]) {
+      almanac[iso] = entry;
+    }
+  }
+
   fs.writeFileSync(ALMANAC_PATH, `${JSON.stringify(almanac, null, 2)}\n`, 'utf-8');
-  console.log('Manual patches applied: KP, KR, PA, GT, KN, VC, HK, MO, LC, VU');
+  console.log('Manual patches applied: KP, KR, PA, GT, KN, VC, HK, MO, LC, VU + 20 missing countries');
 }
 
 main();

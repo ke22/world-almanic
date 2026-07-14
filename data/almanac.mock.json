@@ -5262,5 +5262,556 @@
       }
     ],
     "sections": []
+  },
+  "BN": {
+    "iso": "BN",
+    "name_zh": "汶萊",
+    "name_en": "Brunei",
+    "flag": "🇧🇳",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "斯里巴加灣"
+      },
+      {
+        "label": "語言",
+        "value": "馬來語"
+      },
+      {
+        "label": "人口",
+        "value": "33萬9,000人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "5,765平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "東南亞"
+      }
+    ],
+    "sections": []
+  },
+  "MM": {
+    "iso": "MM",
+    "name_zh": "緬甸",
+    "name_en": "Myanmar",
+    "flag": "🇲🇲",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "奈比多"
+      },
+      {
+        "label": "語言",
+        "value": "緬甸語"
+      },
+      {
+        "label": "人口",
+        "value": "5,450萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "676,578平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "東南亞"
+      }
+    ],
+    "sections": []
+  },
+  "KH": {
+    "iso": "KH",
+    "name_zh": "柬埔寨",
+    "name_en": "Cambodia",
+    "flag": "🇰🇭",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "金邊"
+      },
+      {
+        "label": "語言",
+        "value": "高棉語"
+      },
+      {
+        "label": "人口",
+        "value": "1,770萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "181,035平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "東南亞"
+      }
+    ],
+    "sections": []
+  },
+  "LA": {
+    "iso": "LA",
+    "name_zh": "寮國",
+    "name_en": "Laos",
+    "flag": "🇱🇦",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "永珍"
+      },
+      {
+        "label": "語言",
+        "value": "寮語"
+      },
+      {
+        "label": "人口",
+        "value": "740萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "236,800平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "東南亞"
+      }
+    ],
+    "sections": []
+  },
+  "MY": {
+    "iso": "MY",
+    "name_zh": "馬來西亞",
+    "name_en": "Malaysia",
+    "flag": "🇲🇾",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "吉隆坡"
+      },
+      {
+        "label": "語言",
+        "value": "馬來語"
+      },
+      {
+        "label": "人口",
+        "value": "3,500萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "330,803平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "東南亞"
+      }
+    ],
+    "sections": []
+  },
+  "TH": {
+    "iso": "TH",
+    "name_zh": "泰國",
+    "name_en": "Thailand",
+    "flag": "🇹🇭",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "曼谷"
+      },
+      {
+        "label": "語言",
+        "value": "泰語"
+      },
+      {
+        "label": "人口",
+        "value": "6,900萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "513,120平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "東南亞"
+      }
+    ],
+    "sections": []
+  },
+  "VN": {
+    "iso": "VN",
+    "name_zh": "越南",
+    "name_en": "Vietnam",
+    "flag": "🇻🇳",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "河內"
+      },
+      {
+        "label": "語言",
+        "value": "越南語"
+      },
+      {
+        "label": "人口",
+        "value": "9,800萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "331,212平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "東南亞"
+      }
+    ],
+    "sections": []
+  },
+  "AD": {
+    "iso": "AD",
+    "name_zh": "安道爾",
+    "name_en": "Andorra",
+    "flag": "🇦🇩",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "安道爾城"
+      },
+      {
+        "label": "語言",
+        "value": "加泰隆尼亞語"
+      },
+      {
+        "label": "人口",
+        "value": "7萬7,000人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "468平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "西班牙與法國邊界"
+      }
+    ],
+    "sections": []
+  },
+  "BE": {
+    "iso": "BE",
+    "name_zh": "比利時",
+    "name_en": "Belgium",
+    "flag": "🇧🇪",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "布魯塞爾"
+      },
+      {
+        "label": "語言",
+        "value": "荷語、法語、德語"
+      },
+      {
+        "label": "人口",
+        "value": "1,159萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "30,528平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "西歐"
+      }
+    ],
+    "sections": []
+  },
+  "CY": {
+    "iso": "CY",
+    "name_zh": "賽普勒斯",
+    "name_en": "Cyprus",
+    "flag": "🇨🇾",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "尼科西亞"
+      },
+      {
+        "label": "語言",
+        "value": "希臘語、土耳其語"
+      },
+      {
+        "label": "人口",
+        "value": "117萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "9,251平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "地中海"
+      }
+    ],
+    "sections": []
+  },
+  "FR": {
+    "iso": "FR",
+    "name_zh": "法國",
+    "name_en": "France",
+    "flag": "🇫🇷",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "巴黎"
+      },
+      {
+        "label": "語言",
+        "value": "法語"
+      },
+      {
+        "label": "人口",
+        "value": "6,800萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "643,801平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "西歐"
+      }
+    ],
+    "sections": []
+  },
+  "LU": {
+    "iso": "LU",
+    "name_zh": "盧森堡",
+    "name_en": "Luxembourg",
+    "flag": "🇱🇺",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "盧森堡市"
+      },
+      {
+        "label": "語言",
+        "value": "盧森堡語、法語、德語"
+      },
+      {
+        "label": "人口",
+        "value": "66萬4,000人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "2,586平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "西歐"
+      }
+    ],
+    "sections": []
+  },
+  "MC": {
+    "iso": "MC",
+    "name_zh": "摩納哥",
+    "name_en": "Monaco",
+    "flag": "🇲🇨",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "摩納哥城"
+      },
+      {
+        "label": "語言",
+        "value": "法語"
+      },
+      {
+        "label": "人口",
+        "value": "3萬6,000人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "2.02平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "地中海"
+      }
+    ],
+    "sections": []
+  },
+  "NL": {
+    "iso": "NL",
+    "name_zh": "荷蘭",
+    "name_en": "Netherlands",
+    "flag": "🇳🇱",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "阿姆斯特丹"
+      },
+      {
+        "label": "語言",
+        "value": "荷語"
+      },
+      {
+        "label": "人口",
+        "value": "1,730萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "41,543平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "西歐"
+      }
+    ],
+    "sections": []
+  },
+  "PT": {
+    "iso": "PT",
+    "name_zh": "葡萄牙",
+    "name_en": "Portugal",
+    "flag": "🇵🇹",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "里斯本"
+      },
+      {
+        "label": "語言",
+        "value": "葡語"
+      },
+      {
+        "label": "人口",
+        "value": "1,050萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "92,090平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "伊比利半島"
+      }
+    ],
+    "sections": []
+  },
+  "RS": {
+    "iso": "RS",
+    "name_zh": "塞爾維亞",
+    "name_en": "Serbia",
+    "flag": "🇷🇸",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "貝爾格萊德"
+      },
+      {
+        "label": "語言",
+        "value": "塞爾維亞語"
+      },
+      {
+        "label": "人口",
+        "value": "688萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "88,361平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "東歐"
+      }
+    ],
+    "sections": []
+  },
+  "ES": {
+    "iso": "ES",
+    "name_zh": "西班牙",
+    "name_en": "Spain",
+    "flag": "🇪🇸",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "馬德里"
+      },
+      {
+        "label": "語言",
+        "value": "西班牙語"
+      },
+      {
+        "label": "人口",
+        "value": "4,800萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "505,990平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "伊比利半島"
+      }
+    ],
+    "sections": []
+  },
+  "UA": {
+    "iso": "UA",
+    "name_zh": "烏克蘭",
+    "name_en": "Ukraine",
+    "flag": "🇺🇦",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "基輔"
+      },
+      {
+        "label": "語言",
+        "value": "烏克蘭語"
+      },
+      {
+        "label": "人口",
+        "value": "4,100萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "603,550平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "東歐"
+      }
+    ],
+    "sections": []
+  },
+  "US": {
+    "iso": "US",
+    "name_zh": "美國",
+    "name_en": "United States",
+    "flag": "🇺🇸",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "華盛頓"
+      },
+      {
+        "label": "語言",
+        "value": "英語"
+      },
+      {
+        "label": "人口",
+        "value": "3億4,000萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "9,833,517平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "北美洲"
+      }
+    ],
+    "sections": []
   }
 }
