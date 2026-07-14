@@ -21,16 +21,21 @@ const BOUNDARY = {
 };
 
 // country-boundaries-v1 ships multiple overlapping boundary features for
-// disputed territories, each tagged with a single `worldview` value (e.g.
-// a "CN" worldview feature draws Taiwan folded into mainland China's
-// territory; a "US"/"all" worldview feature draws them as separate
-// territories). Without this filter, both features exist in the source and
-// which one a query/click hits depends on Mapbox's internal feature
-// ordering — not guaranteed to keep Taiwan and China visually or
-// functionally separate. Restricting every boundary-reading layer to the
-// "US"/"all" worldview view fixes the selection and click-hit-test to a
-// single, consistent variant where they are always distinct territories.
-const WORLDVIEW_FILTER = ['match', ['get', 'worldview'], ['US', 'all'], true, false];
+// disputed territories. Uncontested countries (e.g. Germany, France) have
+// a single feature tagged worldview="all". Disputed territories (Taiwan,
+// Kosovo, etc.) instead have SEVERAL features, each tagged with a
+// comma-joined list of worldview codes that agree on that geometry — e.g.
+// Taiwan's neutral/consensus boundary is tagged "AR,IN,JP,MA,RS,RU,TR,US"
+// (a real observed value, confirmed via the Tilequery API), while the
+// competing "China includes Taiwan" boundary is tagged plainly "CN". The
+// field is NEVER just the bare string "US" on its own for these cases —
+// an exact-equality match against 'US' therefore matches nothing, which
+// would make every disputed territory (including Taiwan) fall through
+// with no matching feature at all and become unclickable. The correct
+// test is "US" as a SUBSTRING of the (possibly comma-joined) field, which
+// Mapbox's `in` expression supports for two string operands, combined
+// with the exact "all" case for uncontested countries.
+const WORLDVIEW_FILTER = ['any', ['==', ['get', 'worldview'], 'all'], ['in', 'US', ['get', 'worldview']]];
 
 /** Resolve a Mapbox token from opt-in config only; never hardcode a token. */
 function resolveMapboxToken() {
