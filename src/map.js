@@ -86,6 +86,18 @@ export class MapEngine {
     });
     this.map = map;
 
+    // Apply Traditional Chinese labels via mapbox-gl-language. This MUST be
+    // added before awaiting 'load' below: the plugin's addControl hooks the
+    // map's 'style.load' event to trigger its language swap, but that event
+    // fires once during the initial style load and never again — if the
+    // control is added after 'load' has already resolved (meaning
+    // 'style.load' already fired earlier), the listener registers too late
+    // and the language switch silently never applies.
+    if (window.MapboxLanguage) {
+      const language = new window.MapboxLanguage({ defaultLanguage: 'zh-Hant' });
+      map.addControl(language);
+    }
+
     await new Promise((resolve, reject) => {
       map.on('load', resolve);
       map.on('error', (e) => {
@@ -131,12 +143,6 @@ export class MapEngine {
     // Cursor feedback
     map.on('mouseenter', HIT_LAYER, () => { map.getCanvas().style.cursor = 'pointer'; });
     map.on('mouseleave', HIT_LAYER, () => { map.getCanvas().style.cursor = ''; });
-
-    // Apply Traditional Chinese labels via mapbox-gl-language
-    if (window.MapboxLanguage) {
-      const language = new window.MapboxLanguage({ defaultLanguage: 'zh-Hant' });
-      map.addControl(language);
-    }
 
     // Capital-city markers: a small circle per country with a capital
     // field in countries.json, visually distinct (red) from the blue
