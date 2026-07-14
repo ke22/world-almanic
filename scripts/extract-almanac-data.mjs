@@ -29,22 +29,29 @@ const TIMELINE_MAX_YEAR = 2024;
 const TIMELINE_MIN_YEAR = TIMELINE_MAX_YEAR - 4; // 2020
 const TIMELINE_CAP = 5;
 
-// Keyword-weighted event scoring. Recency is the base score (more recent =
-// higher); each keyword category adds a flat bonus if any of its keywords
-// appear in the event's sentence (checked once per category, not stacked
-// per keyword match). Taiwan-relevance is a BONUS ONLY, never a filter —
-// this matters most for 建國簡史 fallback events (see buildTimelineEvents),
-// which are not inherently about Taiwan the way 與我關係 bullets are.
+// Lexicographic event ranking: year always wins first (recency is the
+// top-level priority, never outranked by keyword weight), then keyword
+// categories break ties within the same year, in this priority order:
+// milestone > key-event > Taiwan-relevance. Taiwan-relevance is a BONUS
+// ONLY, never a filter — this matters most for 建國簡史 fallback events
+// (see buildTimelineEvents), which are not inherently about Taiwan the way
+// 與我關係 bullets are.
 const KEY_EVENT_KEYWORDS = ['建交', '斷交', '復交', '互訪', '訪台', '訪問', '來訪', '接見', '簽署', '簽訂', '協定', '備忘錄'];
 const MILESTONE_KEYWORDS = ['首次', '首度', '首位', '歷史性', '首開', '創下'];
 const TAIWAN_KEYWORDS = ['台灣', '臺灣', '中華民國', '我國', '我方', '台北', '中華'];
 
-function scoreEventText(sentence, year) {
-  let score = year - TIMELINE_MIN_YEAR + 1; // recency: TIMELINE_MIN_YEAR -> 1 ... TIMELINE_MAX_YEAR -> 5
-  if (KEY_EVENT_KEYWORDS.some((k) => sentence.includes(k))) score += 3;
-  if (MILESTONE_KEYWORDS.some((k) => sentence.includes(k))) score += 2;
-  if (TAIWAN_KEYWORDS.some((k) => sentence.includes(k))) score += 1; // bonus, not required
-  return score;
+function scoreEventTuple(sentence, year) {
+  const hasMilestone = MILESTONE_KEYWORDS.some((k) => sentence.includes(k)) ? 1 : 0;
+  const hasKeyEvent = KEY_EVENT_KEYWORDS.some((k) => sentence.includes(k)) ? 1 : 0;
+  const hasTaiwan = TAIWAN_KEYWORDS.some((k) => sentence.includes(k)) ? 1 : 0; // bonus, not required
+  return [year, hasMilestone, hasKeyEvent, hasTaiwan];
+}
+
+function compareScoreTuplesDesc(a, b) {
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) return b[i] - a[i];
+  }
+  return 0;
 }
 
 // filename key (as it appears in "image/M_<key>.jpg") -> [iso, name_zh, name_en, flag]
@@ -445,8 +452,8 @@ function buildTimelineEvents(relationsText, foundingHistoryText) {
   if (candidates.length === 0) candidates = parseDatedSentences(foundingHistoryText);
   if (candidates.length === 0) return [];
 
-  const scored = candidates.map((c) => ({ ...c, score: scoreEventText(c.sentence, c.year) }));
-  scored.sort((a, b) => b.score - a.score || b.sortKey.localeCompare(a.sortKey));
+  const scored = candidates.map((c) => ({ ...c, scoreTuple: scoreEventTuple(c.sentence, c.year) }));
+  scored.sort((a, b) => compareScoreTuplesDesc(a.scoreTuple, b.scoreTuple) || b.sortKey.localeCompare(a.sortKey));
   const top = scored.slice(0, TIMELINE_CAP);
   top.sort((a, b) => b.sortKey.localeCompare(a.sortKey));
 
