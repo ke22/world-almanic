@@ -6,7 +6,7 @@ import { MapEngine, DEFAULT_ENGINE, engineAvailable } from './map.js';
 import { initSearch } from './search.js';
 import { renderPanel, renderPrompt } from './panel.js';
 
-const COUNTRIES_URL = new URL('../data/countries.json', import.meta.url);
+const COUNTRIES_URL = new URL('../data/countries.json?v=199', import.meta.url);
 
 const els = {
   map: document.getElementById('map'),

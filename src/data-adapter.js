@@ -12,7 +12,7 @@
 //   sections: [ TimelineSection | ArticleSection ]
 // }
 
-const ALMANAC_URL = new URL('../data/almanac.mock.json', import.meta.url);
+const ALMANAC_URL = new URL('../data/almanac.mock.json?v=199', import.meta.url);
 
 let _cache = null;
 
