@@ -36,10 +36,19 @@ html, body {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 12px 14px;
-  border-bottom: 1px solid var(--border);
+  padding: 16px 18px;
+  background: linear-gradient(135deg, #1a4d7a 0%, #2d5a8c 100%);
+  color: white;
+  border-bottom: 3px solid #0f3050;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.title { font-size: 16px; font-weight: 700; letter-spacing: 0.2px; }
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  font-family: 'Noto Sans CJK TC', 'Microsoft JhengHei', 'Segoe UI', sans-serif;
+  color: white;
+}
 
 /* Engine toggle */
 .toggle { display: inline-flex; align-items: center; gap: 4px; }
