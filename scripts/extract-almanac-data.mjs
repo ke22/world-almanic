@@ -549,7 +549,17 @@ function buildTimelineEvents(relationsText, foundingHistoryText) {
     // separate follow-up sentence within the same event's desc (e.g. a
     // continuation sentence with no date of its own, glued onto the
     // previous event by the sub-event splitter above).
-    const title = sentence.split(/[，,。]/)[0];
+    //
+    // Strip parenthetical asides (foreign-name romanizations, e.g.
+    // "穆雅辛（H.E Yasin Hagi Mohamoud）" -> "穆雅辛") from the TITLE only —
+    // the CJK name/term already carries the meaning, and the romanization
+    // is purely decorative padding. desc keeps the full text with parens
+    // intact. Cutting at enumeration commas (、) or other mid-clause
+    // delimiters was tried and rejected: it routinely severed the subject
+    // from its own verb (e.g. "阿聯親王、阿聯酋航空董事會主席...搭乘...來訪"
+    // collapsed to just "阿聯親王", losing the entire action).
+    const firstClause = sentence.split(/[，,。]/)[0];
+    const title = firstClause.replace(/[（(][^）)]*[）)]/g, '');
     return { date, title, desc: sentence };
   });
 }
