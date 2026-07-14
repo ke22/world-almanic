@@ -540,8 +540,16 @@ function buildTimelineEvents(relationsText, foundingHistoryText) {
   top.sort((a, b) => b.sortKey.localeCompare(a.sortKey));
 
   return top.map(({ date, sentence }) => {
-    const firstClause = sentence.split(/[，,]/)[0];
-    const title = firstClause.length <= 20 ? firstClause.replace(/。$/, '') : `${firstClause.slice(0, 18)}…`;
+    // The title is the complete first clause — up to the first comma OR
+    // period, whichever comes first — never character-count-truncated
+    // with an ellipsis. A fixed-length cutoff regularly severed the
+    // clause mid-word (e.g. "由眾議員石破茂、前外務大臣前原誠司率…" lost
+    // its own verb, "率團訪台"). Splitting on period too (not just comma)
+    // additionally prevents the title from running on across a genuinely
+    // separate follow-up sentence within the same event's desc (e.g. a
+    // continuation sentence with no date of its own, glued onto the
+    // previous event by the sub-event splitter above).
+    const title = sentence.split(/[，,。]/)[0];
     return { date, title, desc: sentence };
   });
 }
