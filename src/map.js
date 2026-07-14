@@ -4,11 +4,14 @@
 // Supports click-to-select and Traditional Chinese labels
 
 const ACCENT = '#2563eb';
+const CAPITAL_ACCENT = '#dc2626';
 
 const HIGHLIGHT_SRC = 'country-boundaries';
 const HIGHLIGHT_FILL = 'country-highlight-fill';
 const HIGHLIGHT_LINE = 'country-highlight-line';
 const HIT_LAYER = 'country-hit-layer';
+const CAPITAL_SRC = 'capital-markers';
+const CAPITAL_LAYER = 'capital-markers-layer';
 
 const BOUNDARY = {
   type: 'vector',
@@ -35,7 +38,7 @@ export function mapboxAvailable() {
 export class MapEngine {
   /**
    * @param {HTMLElement} container
-   * @param {object} countries  ISO -> { bbox: [w,s,e,n] }
+   * @param {object} countries  ISO -> { bbox: [w,s,e,n], capital?: { name, lat, lng } }
    */
   constructor(container, countries) {
     this.container = container;
@@ -114,6 +117,45 @@ export class MapEngine {
       map.addControl(language);
     }
 
+    // Capital-city markers: a small circle per country with a capital
+    // field in countries.json, visually distinct (red) from the blue
+    // highlight/hit layers. Countries with no capital field (HK/MO, or
+    // any capital the geocoding pass could not resolve) simply have no
+    // point in this GeoJSON and render no marker.
+    // Use the countries.json key as the iso, not rec.iso — some entries
+    // (e.g. US, FR, ES) omit the internal `iso` field even though the key
+    // itself is the correct code, which would otherwise leave their
+    // capital marker unmatchable by the per-selection filter below.
+    const capitalFeatures = Object.entries(this.countries)
+      .filter(([, rec]) => rec && rec.capital && typeof rec.capital.lat === 'number' && typeof rec.capital.lng === 'number')
+      .map(([iso, rec]) => ({
+        type: 'Feature',
+        properties: { iso, name: rec.capital.name },
+        geometry: { type: 'Point', coordinates: [rec.capital.lng, rec.capital.lat] },
+      }));
+
+    map.addSource(CAPITAL_SRC, {
+      type: 'geojson',
+      data: { type: 'FeatureCollection', features: capitalFeatures },
+    });
+
+    // Hidden until a country is selected — only the selected country's
+    // capital marker should ever be visible, not all 194 at once.
+    this._capitalNoMatchFilter = ['==', ['get', 'iso'], '__none__'];
+
+    map.addLayer({
+      id: CAPITAL_LAYER,
+      type: 'circle',
+      source: CAPITAL_SRC,
+      filter: this._capitalNoMatchFilter,
+      paint: {
+        'circle-radius': 4,
+        'circle-color': CAPITAL_ACCENT,
+        'circle-stroke-width': 1,
+        'circle-stroke-color': '#ffffff',
+      },
+    });
+
     if (this.selected) this._applyHighlight(this.selected);
   }
 
@@ -122,6 +164,9 @@ export class MapEngine {
     const filter = iso ? ['==', ['get', this.joinProp], iso] : this._noMatchFilter;
     this.map.setFilter(HIGHLIGHT_FILL, filter);
     this.map.setFilter(HIGHLIGHT_LINE, filter);
+
+    const capitalFilter = iso ? ['==', ['get', 'iso'], iso] : this._capitalNoMatchFilter;
+    this.map.setFilter(CAPITAL_LAYER, capitalFilter);
   }
 
   /** Highlight a country's polygon; empty string clears the highlight. */
