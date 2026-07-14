@@ -296,58 +296,84 @@ function extractFoundingHistoryText(proseHtml) {
   return decodeEntities(stripTags(headingRemoved)).trim();
 }
 
-function segmentBlocks(html, fileName) {
+function segmentBlocks(html) {
   const blocks = [];
-  const isSelfEntryFile = fileName.includes('亞洲') && fileName.includes('1126');
 
-  // Split by country image tags: <img src="...image/M_<key>.jpg"
-  const imagePattern = /<img[^>]*src="[^"]*image\/M_(\w+)\.jpg"[^>]*\/>/g;
-  let match;
-  let lastIndex = 0;
-  let selfIndex = 0;
-  const matches = [];
-
-  while ((match = imagePattern.exec(html))) {
-    matches.push({ key: match[1], index: match.index });
+  // Each country's content is laid out as:
+  //   [relations header] [relations text] [table] <img M_<key>.jpg /> [founding history]
+  // The image tag — which carries the country's identifying key — sits in the
+  // MIDDLE of a country's own content (after its table, before its founding
+  // history), not at a clean boundary between countries. Segmenting by image
+  // position (as this function previously did) therefore bundles one
+  // country's founding history with the FOLLOWING country's relations text
+  // and table, silently shifting every factbox/relations/timeline field by
+  // one country across the whole dataset. The correct boundary is the
+  // relations header itself.
+  const headerPattern = /class="D2各國簡介_(?:與我關係|國際關係)[^"]*"/gi;
+  const headerPositions = [];
+  let headerMatchIter;
+  while ((headerMatchIter = headerPattern.exec(html))) {
+    headerPositions.push(headerMatchIter.index);
   }
 
-  for (let i = 0; i < matches.length; i++) {
-    const current = matches[i];
-    const next = matches[i + 1];
-    const blockStart = current.index;
-    const blockEnd = next ? next.index : html.length;
-    const block = html.slice(blockStart, blockEnd);
+  const imagePatternGlobal = /<img[^>]*src="[^"]*image\/M_(\w+)\.jpg"[^>]*\/>/g;
+  const allImages = [];
+  let imgMatchIter;
+  while ((imgMatchIter = imagePatternGlobal.exec(html))) {
+    allImages.push({ pos: imgMatchIter.index, key: imgMatchIter[1] });
+  }
 
-    // Find "與我關係" or "國際關係" header, then grab the following "D2各國簡介_本文" paragraph
-    const headerMatch = /class="D2各國簡介_(?:與我關係|國際關係)[^"]*"/i.exec(block);
+  const spans = headerPositions.map((start, i) => {
+    const end = i + 1 < headerPositions.length ? headerPositions[i + 1] : html.length;
+    return { start, end, text: html.slice(start, end) };
+  });
+
+  // Bucket each image strictly by which header-to-header span it physically
+  // falls in. Occasionally two country photos are laid out adjacent to each
+  // other in print, both landing inside the SECOND country's span while the
+  // FIRST country's span gets none — a print-layout quirk, not a data error.
+  // When a span holds 2+ images, the last one (closest to that span's own
+  // founding-history text) is its own; earlier ones are surplus, donated to
+  // the immediately preceding image-less span below.
+  const imagesPerSpan = spans.map((s) => allImages.filter((img) => img.pos >= s.start && img.pos < s.end));
+  const assignedKey = new Array(spans.length).fill(null);
+  const donatable = new Array(spans.length).fill(null);
+
+  for (let i = 0; i < imagesPerSpan.length; i++) {
+    const imgs = imagesPerSpan[i];
+    if (imgs.length === 1) {
+      assignedKey[i] = imgs[0].key;
+    } else if (imgs.length > 1) {
+      assignedKey[i] = imgs[imgs.length - 1].key;
+      donatable[i] = imgs.slice(0, imgs.length - 1);
+    }
+  }
+  for (let i = 0; i < assignedKey.length; i++) {
+    if (assignedKey[i] === null && donatable[i + 1] && donatable[i + 1].length > 0) {
+      assignedKey[i] = donatable[i + 1].shift().key;
+    }
+  }
+
+  for (let i = 0; i < spans.length; i++) {
+    const span = spans[i].text;
+    const key = assignedKey[i];
+    if (!key || !(key in COUNTRY_META)) continue;
+
+    const headerMatch = /class="D2各國簡介_(?:與我關係|國際關係)[^"]*"/i.exec(span);
     let relationsText = null;
     if (headerMatch) {
-      const afterHeader = block.slice(headerMatch.index + headerMatch[0].length);
+      const afterHeader = span.slice(headerMatch.index + headerMatch[0].length);
       const contentMatch = /<p[^>]*class="D2各國簡介_本文[^"]*"[^>]*>([\s\S]*?)<\/p>/i.exec(afterHeader);
       relationsText = contentMatch ? decodeEntities(stripTags(contentMatch[1])).trim() : null;
     }
 
-    const foundingMatch = /class="D2各國簡介_建國簡史[^"]*"[^>]*>([\s\S]*?)(?=<p class="D2各國簡介_[^"]*"|<table|$)/i.exec(block);
+    const foundingMatch = /class="D2各國簡介_建國簡史[^"]*"[^>]*>([\s\S]*?)(?=<p class="D2各國簡介_[^"]*"|<table|$)/i.exec(span);
     const foundingHistoryText = foundingMatch ? decodeEntities(stripTags(foundingMatch[1])).trim() : '';
 
-    const tableMatch = /<table[^>]*>[\s\S]*?<\/table>/i.exec(block);
+    const tableMatch = /<table[^>]*>[\s\S]*?<\/table>/i.exec(span);
     const tableHtml = tableMatch ? tableMatch[0] : '';
 
-    let key;
-    if (isSelfEntryFile && selfIndex === 0) {
-      key = 'Taiwan';
-      selfIndex++;
-    } else if (isSelfEntryFile && selfIndex === 1) {
-      key = 'China';
-      selfIndex++;
-    } else {
-      // Direct match in COUNTRY_META
-      key = (current.key in COUNTRY_META) ? current.key : null;
-    }
-
-    if (key && COUNTRY_META[key]) {
-      blocks.push({ key, relationsText, foundingHistoryText, tableHtml });
-    }
+    blocks.push({ key, relationsText, foundingHistoryText, tableHtml });
   }
 
   return blocks;
@@ -477,7 +503,7 @@ function main() {
     if (!fs.existsSync(filePath)) continue;
     const html = fs.readFileSync(filePath, 'utf-8');
 
-    const blocks = segmentBlocks(html, file);
+    const blocks = segmentBlocks(html);
     blocksScanned += blocks.length;
 
     for (const { key, relationsText, foundingHistoryText, tableHtml } of blocks) {

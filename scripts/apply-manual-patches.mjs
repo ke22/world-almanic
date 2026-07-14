@@ -134,9 +134,24 @@ function main() {
     }],
   };
 
-  // Hong Kong/Macau: special administrative regions, no sovereign capital.
+  // Hong Kong: special administrative region, no sovereign capital. Its other
+  // fields (population, area, language) are correctly extracted on their own.
   if (almanac.HK) almanac.HK.factbox[0].value = '香港（特別行政區無另設首都，全境由香港政府直轄）';
-  if (almanac.MO) almanac.MO.factbox[0].value = '澳門（特別行政區無另設首都，全境由澳門政府直轄）';
+
+  // Macau: the source HTML's image filename for Malaysia's entry is
+  // mislabeled "M_Macau.jpg" (a source data error, not a segmentation bug),
+  // so extract-almanac-data.mjs's image-based key resolution attaches
+  // Malaysia's own table/relations content to the MO entry, and Macau's own
+  // content (which has no image at all in the source) is dropped entirely.
+  // Malaysia is separately covered by the manual "missing countries" entry
+  // below, so this fully replaces MO's factbox with its own correct data
+  // rather than patching a single field.
+  if (almanac.MO) {
+    almanac.MO.factbox = fb(
+      '澳門（特別行政區無另設首都，全境由澳門政府直轄）', '粵語、葡萄牙語、普通話',
+      '68萬3,000人（2024）', '32.9平方公里', '中國南部，珠江口西岸'
+    );
+  }
 
   // St Lucia: correctly extracted 5-field data, but detectRelations() misses
   // its establishment sentence ("外長黃志芳與露國外長布斯吉...簽署建交公報")

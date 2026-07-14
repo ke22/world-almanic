@@ -7,6 +7,67 @@
     "factbox": [
       {
         "label": "首都",
+        "value": "台北（Taipei）"
+      },
+      {
+        "label": "語言",
+        "value": "北京語、閩南語、客家語、原住民語。"
+      },
+      {
+        "label": "人口",
+        "value": "2,359.5萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "35,980平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "亞洲東部"
+      }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "2024-01-15",
+            "title": "諾魯以聯合國2758號決議及一中原則…",
+            "desc": "諾魯以聯合國2758號決議及一中原則等理由，我國與諾魯斷交。"
+          },
+          {
+            "date": "2023-03-25",
+            "title": "捷克眾議院議長艾達莫娃率團訪台。3月…",
+            "desc": "捷克眾議院議長艾達莫娃率團訪台。3月26日我國宣布與宏都拉斯終止外交關係。3月29日蔡英文總統訪問瓜地馬拉、貝里斯。"
+          },
+          {
+            "date": "2022-08-02",
+            "title": "至3日美國眾議院議長裴洛西（Nanc…",
+            "desc": "至3日美國眾議院議長裴洛西（Nancy Pelosi）訪台，是25年來訪台層級最高的美國政要。9月12日「立陶宛貿易代表處」在台北開設。"
+          },
+          {
+            "date": "2021-11-18",
+            "title": "「駐立陶宛台灣代表處」正式掛牌",
+            "desc": "「駐立陶宛台灣代表處」正式掛牌，歐洲國家第一個以台灣為名的代表處。2021年12月尼加拉瓜宣布與台灣斷交。"
+          },
+          {
+            "date": "2021-09-22",
+            "title": "台灣申請加入跨太平洋夥伴全面進步協定…",
+            "desc": "台灣申請加入跨太平洋夥伴全面進步協定（CPTPP）；11月蔡總統邀張忠謀擔任第29屆APEC經濟領袖代表。"
+          }
+        ]
+      }
+    ]
+  },
+  "CN": {
+    "iso": "CN",
+    "name_zh": "中國大陸",
+    "name_en": "China",
+    "flag": "🇨🇳",
+    "factbox": [
+      {
+        "label": "首都",
         "value": "北京"
       },
       {
@@ -40,11 +101,11 @@
       }
     ]
   },
-  "CN": {
-    "iso": "CN",
-    "name_zh": "中國大陸",
-    "name_en": "China",
-    "flag": "🇨🇳",
+  "AF": {
+    "iso": "AF",
+    "name_zh": "阿富汗",
+    "name_en": "Afghanistan",
+    "flag": "🇦🇫",
     "factbox": [
       {
         "label": "首都",
@@ -69,11 +130,11 @@
     ],
     "sections": []
   },
-  "AF": {
-    "iso": "AF",
-    "name_zh": "阿富汗",
-    "name_en": "Afghanistan",
-    "flag": "🇦🇫",
+  "AM": {
+    "iso": "AM",
+    "name_zh": "亞美尼亞",
+    "name_en": "Armenia",
+    "flag": "🇦🇲",
     "factbox": [
       {
         "label": "首都",
@@ -110,11 +171,11 @@
       }
     ]
   },
-  "AM": {
-    "iso": "AM",
-    "name_zh": "亞美尼亞",
-    "name_en": "Armenia",
-    "flag": "🇦🇲",
+  "AZ": {
+    "iso": "AZ",
+    "name_zh": "亞塞拜然",
+    "name_en": "Azerbaijan",
+    "flag": "🇦🇿",
     "factbox": [
       {
         "label": "首都",
@@ -139,11 +200,11 @@
     ],
     "sections": []
   },
-  "AZ": {
-    "iso": "AZ",
-    "name_zh": "亞塞拜然",
-    "name_en": "Azerbaijan",
-    "flag": "🇦🇿",
+  "BH": {
+    "iso": "BH",
+    "name_zh": "巴林",
+    "name_en": "Bahrain",
+    "flag": "🇧🇭",
     "factbox": [
       {
         "label": "首都",
@@ -195,11 +256,11 @@
       }
     ]
   },
-  "BH": {
-    "iso": "BH",
-    "name_zh": "巴林",
-    "name_en": "Bahrain",
-    "flag": "🇧🇭",
+  "BD": {
+    "iso": "BD",
+    "name_zh": "孟加拉",
+    "name_en": "Bangladesh",
+    "flag": "🇧🇩",
     "factbox": [
       {
         "label": "首都",
@@ -236,11 +297,11 @@
       }
     ]
   },
-  "BD": {
-    "iso": "BD",
-    "name_zh": "孟加拉",
-    "name_en": "Bangladesh",
-    "flag": "🇧🇩",
+  "BT": {
+    "iso": "BT",
+    "name_zh": "不丹",
+    "name_en": "Bhutan",
+    "flag": "🇧🇹",
     "factbox": [
       {
         "label": "首都",
@@ -265,67 +326,6 @@
     ],
     "sections": []
   },
-  "BT": {
-    "iso": "BT",
-    "name_zh": "不丹",
-    "name_en": "Bhutan",
-    "flag": "🇧🇹",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": "斯里巴加旺（Bandar Seri Begawan）"
-      },
-      {
-        "label": "語言",
-        "value": "馬來語、英語。"
-      },
-      {
-        "label": "人口",
-        "value": "49.2萬人（2024）"
-      },
-      {
-        "label": "面積",
-        "value": "5,765 平方公里"
-      },
-      {
-        "label": "地理位置",
-        "value": "北婆羅洲西北岸，介於馬來西亞沙巴、砂勞越兩州之間。"
-      }
-    ],
-    "sections": [
-      {
-        "type": "timeline",
-        "title": "近年大事記",
-        "events": [
-          {
-            "date": "2018-12-03",
-            "title": "汶萊航空復飛台灣",
-            "desc": "汶萊航空復飛台灣。"
-          },
-          {
-            "date": "2016-01",
-            "title": "開放汶萊等27國旅客申請電子簽證。8…",
-            "desc": "開放汶萊等27國旅客申請電子簽證。8月1日予汶萊國民來台30天內免簽證一年，2017年延一年，2018年8月起改為14天內免簽證，延至2019年7月底。2019年、2020年7月23日均再延一年。"
-          },
-          {
-            "date": "2011-06",
-            "title": "汶萊同意中華民國護照持有人申請落地簽",
-            "desc": "汶萊同意中華民國護照持有人申請落地簽。"
-          },
-          {
-            "date": "2006-03",
-            "title": "至2007年2月底",
-            "desc": "至2007年2月底，駐處暫停簽證業務。"
-          },
-          {
-            "date": "2001-03-07",
-            "title": "我與汶萊簽署MOU",
-            "desc": "我與汶萊簽署MOU，有助兩國旅客往來便利。"
-          }
-        ]
-      }
-    ]
-  },
   "GE": {
     "iso": "GE",
     "name_zh": "喬治亞",
@@ -334,7 +334,36 @@
     "factbox": [
       {
         "label": "首都",
-        "value": ""
+        "value": "特比利西（Tbilisi）"
+      },
+      {
+        "label": "語言",
+        "value": "喬治亞語、俄語。"
+      },
+      {
+        "label": "人口",
+        "value": "490萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "69,700 平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "中亞高加索KAVKAZ地方之中西部"
+      }
+    ],
+    "sections": []
+  },
+  "HK": {
+    "iso": "HK",
+    "name_zh": "香港",
+    "name_en": "Hong Kong",
+    "flag": "🇭🇰",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "香港（特別行政區無另設首都，全境由香港政府直轄）"
       },
       {
         "label": "語言",
@@ -367,15 +396,15 @@
       }
     ]
   },
-  "HK": {
-    "iso": "HK",
-    "name_zh": "香港",
-    "name_en": "Hong Kong",
-    "flag": "🇭🇰",
+  "IN": {
+    "iso": "IN",
+    "name_zh": "印度",
+    "name_en": "India",
+    "flag": "🇮🇳",
     "factbox": [
       {
         "label": "首都",
-        "value": "香港（特別行政區無另設首都，全境由香港政府直轄）"
+        "value": "新德里（New Delhi）"
       },
       {
         "label": "語言",
@@ -408,40 +437,52 @@
       }
     ]
   },
-  "IN": {
-    "iso": "IN",
-    "name_zh": "印度",
-    "name_en": "India",
-    "flag": "🇮🇳",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": ""
-      },
-      {
-        "label": "語言",
-        "value": ""
-      },
-      {
-        "label": "人口",
-        "value": ""
-      },
-      {
-        "label": "面積",
-        "value": ""
-      },
-      {
-        "label": "地理位置",
-        "value": ""
-      }
-    ],
-    "sections": []
-  },
   "ID": {
     "iso": "ID",
     "name_zh": "印尼",
     "name_en": "Indonesia",
     "flag": "🇮🇩",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "努山塔拉（Nusantara）2024年8月17日遷都"
+      },
+      {
+        "label": "語言",
+        "value": "印尼語、英語。"
+      },
+      {
+        "label": "人口",
+        "value": "2億8,157萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "1,904,569平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "東南亞，太平洋與印度洋間之群島，共有17,508個島嶼。"
+      }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "2020-05-14",
+            "title": "駐印尼代表處援贈30萬片口罩給印尼政府",
+            "desc": "駐印尼代表處援贈30萬片口罩給印尼政府，協助對抗2019冠狀病毒疾病疫情。"
+          }
+        ]
+      }
+    ]
+  },
+  "IR": {
+    "iso": "IR",
+    "name_zh": "伊朗",
+    "name_en": "Iran",
+    "flag": "🇮🇷",
     "factbox": [
       {
         "label": "首都",
@@ -493,11 +534,11 @@
       }
     ]
   },
-  "IR": {
-    "iso": "IR",
-    "name_zh": "伊朗",
-    "name_en": "Iran",
-    "flag": "🇮🇷",
+  "IQ": {
+    "iso": "IQ",
+    "name_zh": "伊拉克",
+    "name_en": "Iraq",
+    "flag": "🇮🇶",
     "factbox": [
       {
         "label": "首都",
@@ -522,11 +563,11 @@
     ],
     "sections": []
   },
-  "IQ": {
-    "iso": "IQ",
-    "name_zh": "伊拉克",
-    "name_en": "Iraq",
-    "flag": "🇮🇶",
+  "IL": {
+    "iso": "IL",
+    "name_zh": "以色列",
+    "name_en": "Israel",
+    "flag": "🇮🇱",
     "factbox": [
       {
         "label": "首都",
@@ -568,11 +609,11 @@
       }
     ]
   },
-  "IL": {
-    "iso": "IL",
-    "name_zh": "以色列",
-    "name_en": "Israel",
-    "flag": "🇮🇱",
+  "JP": {
+    "iso": "JP",
+    "name_zh": "日本",
+    "name_en": "Japan",
+    "flag": "🇯🇵",
     "factbox": [
       {
         "label": "首都",
@@ -629,11 +670,11 @@
       }
     ]
   },
-  "JP": {
-    "iso": "JP",
-    "name_zh": "日本",
-    "name_en": "Japan",
-    "flag": "🇯🇵",
+  "JO": {
+    "iso": "JO",
+    "name_zh": "約旦",
+    "name_en": "Jordan",
+    "flag": "🇯🇴",
     "factbox": [
       {
         "label": "首都",
@@ -670,11 +711,11 @@
       }
     ]
   },
-  "JO": {
-    "iso": "JO",
-    "name_zh": "約旦",
-    "name_en": "Jordan",
-    "flag": "🇯🇴",
+  "KZ": {
+    "iso": "KZ",
+    "name_zh": "哈薩克",
+    "name_en": "Kazakhstan",
+    "flag": "🇰🇿",
     "factbox": [
       {
         "label": "首都",
@@ -726,47 +767,6 @@
             "date": "1995-07",
             "title": "經濟部副部長阿比塔耶夫及總統與內閣部…",
             "desc": "經濟部副部長阿比塔耶夫及總統與內閣部長會議對外關係室主任克里莫夫訪台。"
-          }
-        ]
-      }
-    ]
-  },
-  "KZ": {
-    "iso": "KZ",
-    "name_zh": "哈薩克",
-    "name_en": "Kazakhstan",
-    "flag": "🇰🇿",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": "首爾（Seoul）"
-      },
-      {
-        "label": "語言",
-        "value": "韓語"
-      },
-      {
-        "label": "人口",
-        "value": "5,209萬人（2024）"
-      },
-      {
-        "label": "面積",
-        "value": "99,720 平方公里"
-      },
-      {
-        "label": "地理位置",
-        "value": "東北亞，朝鮮半島。"
-      }
-    ],
-    "sections": [
-      {
-        "type": "timeline",
-        "title": "近年大事記",
-        "events": [
-          {
-            "date": "2023-04-19",
-            "title": "南韓總統尹錫悅接受外媒訪問時指出",
-            "desc": "南韓總統尹錫悅接受外媒訪問時指出，台海問題為全球性議題，反對武力改變現狀。"
           }
         ]
       }
@@ -850,6 +850,47 @@
     "factbox": [
       {
         "label": "首都",
+        "value": "科威特市（Kuwait City）"
+      },
+      {
+        "label": "語言",
+        "value": "阿拉伯語、英語。"
+      },
+      {
+        "label": "人口",
+        "value": "314萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "17,818 平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "亞西、阿拉伯半島東北部。"
+      }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "2020-05-25",
+            "title": "臺北醫學大學附設醫院與科威特一家醫院…",
+            "desc": "臺北醫學大學附設醫院與科威特一家醫院舉行視訊會議，交流如何對抗2019冠狀病毒疾病疫情。"
+          }
+        ]
+      }
+    ]
+  },
+  "KG": {
+    "iso": "KG",
+    "name_zh": "吉爾吉斯",
+    "name_en": "Kyrgyzstan",
+    "flag": "🇰🇬",
+    "factbox": [
+      {
+        "label": "首都",
         "value": "比許凱克（Bishkek）"
       },
       {
@@ -903,62 +944,6 @@
       }
     ]
   },
-  "KG": {
-    "iso": "KG",
-    "name_zh": "吉爾吉斯",
-    "name_en": "Kyrgyzstan",
-    "flag": "🇰🇬",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": "永珍（Vientiane）"
-      },
-      {
-        "label": "語言",
-        "value": "寮語、法語。"
-      },
-      {
-        "label": "人口",
-        "value": "796萬人（2024）"
-      },
-      {
-        "label": "面積",
-        "value": "236,800 平方公里"
-      },
-      {
-        "label": "地理位置",
-        "value": "東南亞、中南半島。"
-      }
-    ],
-    "sections": [
-      {
-        "type": "timeline",
-        "title": "近年大事記",
-        "events": [
-          {
-            "date": "2014",
-            "title": "第一銀行及國泰世華銀行分別獲准於永珍…",
-            "desc": "第一銀行及國泰世華銀行分別獲准於永珍開設分行。"
-          },
-          {
-            "date": "2011-12-14",
-            "title": "經濟部國際貿易局長卓士昭與寮國工商部…",
-            "desc": "經濟部國際貿易局長卓士昭與寮國工商部次長Khemmani Pholsena於布魯塞爾簽署加入世界貿易組織雙邊協議。寮國於1997年向WTO申請入會。"
-          },
-          {
-            "date": "1996-06",
-            "title": "下旬",
-            "desc": "下旬，中華民國全國工業總會首度組團訪問寮國、柬埔寨、緬甸等中南半島新興市場，在寮國拜會寮國外商投資管理委員會主任、工業部長、交通部長，寮國最大私人銀行永珍商業銀行負責人，並獲寮國副總理Tan Muongchanh接見。"
-          },
-          {
-            "date": "1989",
-            "title": "我國開放對寮國直接貿易",
-            "desc": "我國開放對寮國直接貿易。"
-          }
-        ]
-      }
-    ]
-  },
   "LB": {
     "iso": "LB",
     "name_zh": "黎巴嫩",
@@ -967,23 +952,23 @@
     "factbox": [
       {
         "label": "首都",
-        "value": ""
+        "value": "貝魯特（Beirut）"
       },
       {
         "label": "語言",
-        "value": "粵語、葡萄牙語、普通話、其他方言。"
+        "value": "阿拉伯語、法語。"
       },
       {
         "label": "人口",
-        "value": "64.4萬人（2024）"
+        "value": "536.4萬人（2024）"
       },
       {
         "label": "面積",
-        "value": "28平方公里"
+        "value": "10,400 平方公里"
       },
       {
         "label": "地理位置",
-        "value": "中國南部，珠江口外，面臨南海。"
+        "value": "亞西、西臨地中海。"
       }
     ],
     "sections": [
@@ -992,9 +977,9 @@
         "title": "近年大事記",
         "events": [
           {
-            "date": "2021-06-16",
-            "title": "澳門政府宣布19日起",
-            "desc": "澳門政府宣布19日起，在台灣澳門辦事處暫停運作。"
+            "date": "2020-08-04",
+            "title": "貝魯特港區化學品大爆炸",
+            "desc": "貝魯特港區化學品大爆炸，造成200多人喪生，我外交部28日捐款15萬美元表達慰問。"
           }
         ]
       }
@@ -1009,6 +994,47 @@
       {
         "label": "首都",
         "value": "澳門（特別行政區無另設首都，全境由澳門政府直轄）"
+      },
+      {
+        "label": "語言",
+        "value": "粵語、葡萄牙語、普通話"
+      },
+      {
+        "label": "人口",
+        "value": "68萬3,000人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "32.9平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "中國南部，珠江口西岸"
+      }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "2023-04-07",
+            "title": "馬來西亞台灣高等教育展有78所台灣大…",
+            "desc": "馬來西亞台灣高等教育展有78所台灣大專院校參展，並赴5座城市招生。"
+          }
+        ]
+      }
+    ]
+  },
+  "MV": {
+    "iso": "MV",
+    "name_zh": "馬爾地夫",
+    "name_en": "Maldives",
+    "flag": "🇲🇻",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "瑪萊（Male）"
       },
       {
         "label": "語言",
@@ -1041,11 +1067,11 @@
       }
     ]
   },
-  "MV": {
-    "iso": "MV",
-    "name_zh": "馬爾地夫",
-    "name_en": "Maldives",
-    "flag": "🇲🇻",
+  "MN": {
+    "iso": "MN",
+    "name_zh": "蒙古",
+    "name_en": "Mongolia",
+    "flag": "🇲🇳",
     "factbox": [
       {
         "label": "首都",
@@ -1102,11 +1128,11 @@
       }
     ]
   },
-  "MN": {
-    "iso": "MN",
-    "name_zh": "蒙古",
-    "name_en": "Mongolia",
-    "flag": "🇲🇳",
+  "NP": {
+    "iso": "NP",
+    "name_zh": "尼泊爾",
+    "name_en": "Nepal",
+    "flag": "🇳🇵",
     "factbox": [
       {
         "label": "首都",
@@ -1131,11 +1157,11 @@
     ],
     "sections": []
   },
-  "NP": {
-    "iso": "NP",
-    "name_zh": "尼泊爾",
-    "name_en": "Nepal",
-    "flag": "🇳🇵",
+  "OM": {
+    "iso": "OM",
+    "name_zh": "阿曼",
+    "name_en": "Oman",
+    "flag": "🇴🇲",
     "factbox": [
       {
         "label": "首都",
@@ -1187,11 +1213,11 @@
       }
     ]
   },
-  "OM": {
-    "iso": "OM",
-    "name_zh": "阿曼",
-    "name_en": "Oman",
-    "flag": "🇴🇲",
+  "PK": {
+    "iso": "PK",
+    "name_zh": "巴基斯坦",
+    "name_en": "Pakistan",
+    "flag": "🇵🇰",
     "factbox": [
       {
         "label": "首都",
@@ -1228,11 +1254,11 @@
       }
     ]
   },
-  "PK": {
-    "iso": "PK",
-    "name_zh": "巴基斯坦",
-    "name_en": "Pakistan",
-    "flag": "🇵🇰",
+  "PS": {
+    "iso": "PS",
+    "name_zh": "巴勒斯坦",
+    "name_en": "Palestine",
+    "flag": "🇵🇸",
     "factbox": [
       {
         "label": "首都",
@@ -1257,11 +1283,11 @@
     ],
     "sections": []
   },
-  "PS": {
-    "iso": "PS",
-    "name_zh": "巴勒斯坦",
-    "name_en": "Palestine",
-    "flag": "🇵🇸",
+  "PH": {
+    "iso": "PH",
+    "name_zh": "菲律賓",
+    "name_en": "Philippines",
+    "flag": "🇵🇭",
     "factbox": [
       {
         "label": "首都",
@@ -1303,11 +1329,11 @@
       }
     ]
   },
-  "PH": {
-    "iso": "PH",
-    "name_zh": "菲律賓",
-    "name_en": "Philippines",
-    "flag": "🇵🇭",
+  "QA": {
+    "iso": "QA",
+    "name_zh": "卡達",
+    "name_en": "Qatar",
+    "flag": "🇶🇦",
     "factbox": [
       {
         "label": "首都",
@@ -1344,11 +1370,11 @@
       }
     ]
   },
-  "QA": {
-    "iso": "QA",
-    "name_zh": "卡達",
-    "name_en": "Qatar",
-    "flag": "🇶🇦",
+  "SA": {
+    "iso": "SA",
+    "name_zh": "沙烏地阿拉伯",
+    "name_en": "Saudi Arabia",
+    "flag": "🇸🇦",
     "factbox": [
       {
         "label": "首都",
@@ -1385,11 +1411,11 @@
       }
     ]
   },
-  "SA": {
-    "iso": "SA",
-    "name_zh": "沙烏地阿拉伯",
-    "name_en": "Saudi Arabia",
-    "flag": "🇸🇦",
+  "SG": {
+    "iso": "SG",
+    "name_zh": "新加坡",
+    "name_en": "Singapore",
+    "flag": "🇸🇬",
     "factbox": [
       {
         "label": "首都",
@@ -1431,11 +1457,11 @@
       }
     ]
   },
-  "SG": {
-    "iso": "SG",
-    "name_zh": "新加坡",
-    "name_en": "Singapore",
-    "flag": "🇸🇬",
+  "LK": {
+    "iso": "LK",
+    "name_zh": "斯里蘭卡",
+    "name_en": "Sri Lanka",
+    "flag": "🇱🇰",
     "factbox": [
       {
         "label": "首都",
@@ -1477,11 +1503,11 @@
       }
     ]
   },
-  "LK": {
-    "iso": "LK",
-    "name_zh": "斯里蘭卡",
-    "name_en": "Sri Lanka",
-    "flag": "🇱🇰",
+  "SY": {
+    "iso": "SY",
+    "name_zh": "敘利亞",
+    "name_en": "Syria",
+    "flag": "🇸🇾",
     "factbox": [
       {
         "label": "首都",
@@ -1518,11 +1544,11 @@
       }
     ]
   },
-  "SY": {
-    "iso": "SY",
-    "name_zh": "敘利亞",
-    "name_en": "Syria",
-    "flag": "🇸🇾",
+  "TJ": {
+    "iso": "TJ",
+    "name_zh": "塔吉克",
+    "name_en": "Tajikistan",
+    "flag": "🇹🇯",
     "factbox": [
       {
         "label": "首都",
@@ -1564,31 +1590,31 @@
       }
     ]
   },
-  "TJ": {
-    "iso": "TJ",
-    "name_zh": "塔吉克",
-    "name_en": "Tajikistan",
-    "flag": "🇹🇯",
+  "TL": {
+    "iso": "TL",
+    "name_zh": "東帝汶",
+    "name_en": "Timor-Leste",
+    "flag": "🇹🇱",
     "factbox": [
       {
         "label": "首都",
-        "value": "曼谷（Bangkok）"
+        "value": "狄力（Dili）"
       },
       {
         "label": "語言",
-        "value": "泰語"
+        "value": "德頓語、葡萄牙語。"
       },
       {
         "label": "人口",
-        "value": "6,992萬人（2024）"
+        "value": "151萬人（2024）"
       },
       {
         "label": "面積",
-        "value": "513,120 平方公里"
+        "value": ""
       },
       {
         "label": "地理位置",
-        "value": "東南亞"
+        "value": "位於印尼群島東部、距澳洲西北角400公里。東帝汶包括帝汶島東部和西部北海岸的歐庫西地區及附近的阿陶羅島等，西部與印尼西帝汶相接，東南隔阿帝汶海與澳大利亞相望。 面積：14,874平方公里"
       }
     ],
     "sections": [
@@ -1597,19 +1623,19 @@
         "title": "近年大事記",
         "events": [
           {
-            "date": "2024-03-27",
-            "title": "泰王次子瓦差勒宋訪台",
-            "desc": "泰王次子瓦差勒宋訪台，了解台泰產業合作現況，盼促進投資機會。7月15日，台灣旅客免簽人境泰國延長至60天。"
+            "date": "1998-11-26",
+            "title": "諾貝爾和平獎得主霍塔訪台",
+            "desc": "諾貝爾和平獎得主霍塔訪台，在桃園機場被拒絕入境。"
           }
         ]
       }
     ]
   },
-  "TL": {
-    "iso": "TL",
-    "name_zh": "東帝汶",
-    "name_en": "Timor-Leste",
-    "flag": "🇹🇱",
+  "TR": {
+    "iso": "TR",
+    "name_zh": "土耳其",
+    "name_en": "Turkey",
+    "flag": "🇹🇷",
     "factbox": [
       {
         "label": "首都",
@@ -1651,11 +1677,11 @@
       }
     ]
   },
-  "TR": {
-    "iso": "TR",
-    "name_zh": "土耳其",
-    "name_en": "Turkey",
-    "flag": "🇹🇷",
+  "TM": {
+    "iso": "TM",
+    "name_zh": "土庫曼",
+    "name_en": "Turkmenistan",
+    "flag": "🇹🇲",
     "factbox": [
       {
         "label": "首都",
@@ -1697,11 +1723,11 @@
       }
     ]
   },
-  "TM": {
-    "iso": "TM",
-    "name_zh": "土庫曼",
-    "name_en": "Turkmenistan",
-    "flag": "🇹🇲",
+  "AE": {
+    "iso": "AE",
+    "name_zh": "阿拉伯聯合大公國",
+    "name_en": "United Arab Emirates",
+    "flag": "🇦🇪",
     "factbox": [
       {
         "label": "首都",
@@ -1758,11 +1784,11 @@
       }
     ]
   },
-  "AE": {
-    "iso": "AE",
-    "name_zh": "阿拉伯聯合大公國",
-    "name_en": "United Arab Emirates",
-    "flag": "🇦🇪",
+  "UZ": {
+    "iso": "UZ",
+    "name_zh": "烏茲別克",
+    "name_en": "Uzbekistan",
+    "flag": "🇺🇿",
     "factbox": [
       {
         "label": "首都",
@@ -1814,57 +1840,6 @@
       }
     ]
   },
-  "UZ": {
-    "iso": "UZ",
-    "name_zh": "烏茲別克",
-    "name_en": "Uzbekistan",
-    "flag": "🇺🇿",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": "河內（Hanoi）"
-      },
-      {
-        "label": "語言",
-        "value": "越語、英語、法語。"
-      },
-      {
-        "label": "人口",
-        "value": "1億576萬人（2024）"
-      },
-      {
-        "label": "面積",
-        "value": "331,210 平方公里"
-      },
-      {
-        "label": "地理位置",
-        "value": "東南亞，中南半島東南部。"
-      }
-    ],
-    "sections": [
-      {
-        "type": "timeline",
-        "title": "近年大事記",
-        "events": [
-          {
-            "date": "2023-08-15",
-            "title": "越南將台灣列入電子簽證適用名單",
-            "desc": "越南將台灣列入電子簽證適用名單。"
-          },
-          {
-            "date": "2021-11",
-            "title": "政府和民間基金會捐贈1.5萬個立體醫…",
-            "desc": "政府和民間基金會捐贈1.5萬個立體醫療口罩、1,000件個人防護用具、40副耳溫槍、兩台空氣消毒機給越南。"
-          },
-          {
-            "date": "2020-04",
-            "title": "駐越南代表處贈越南30萬片醫療口罩；…",
-            "desc": "駐越南代表處贈越南30萬片醫療口罩；10月政府捐贈越南40萬美元賑濟中部9月底以來的水患風災。"
-          }
-        ]
-      }
-    ]
-  },
   "YE": {
     "iso": "YE",
     "name_zh": "葉門",
@@ -1873,23 +1848,23 @@
     "factbox": [
       {
         "label": "首都",
-        "value": ""
+        "value": "沙那（Sanaa）"
       },
       {
         "label": "語言",
-        "value": ""
+        "value": "阿拉伯語"
       },
       {
         "label": "人口",
-        "value": ""
+        "value": "3,214萬人（2024）"
       },
       {
         "label": "面積",
-        "value": ""
+        "value": "527,968 平方公里"
       },
       {
         "label": "地理位置",
-        "value": ""
+        "value": "阿拉伯半島西南端"
       }
     ],
     "sections": []
@@ -1899,6 +1874,57 @@
     "name_zh": "澳大利亞",
     "name_en": "Australia",
     "flag": "🇦🇺",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "坎培拉（Canberra）"
+      },
+      {
+        "label": "語言",
+        "value": "英語"
+      },
+      {
+        "label": "人口",
+        "value": "2,677萬人（2024.7）"
+      },
+      {
+        "label": "面積",
+        "value": "7,741,220 平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "南大洋洲"
+      }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "2024-04-02",
+            "title": "台澳簽署「運輸安全合作與資交流瞭解備…",
+            "desc": "台澳簽署「運輸安全合作與資交流瞭解備忘錄」。"
+          },
+          {
+            "date": "2023-09",
+            "title": "立法院長游錫堃接見澳洲參眾議員團盼支…",
+            "desc": "立法院長游錫堃接見澳洲參眾議員團盼支持台灣加入跨太平洋夥伴全面進步協定（CPTPP）。9月25日6位澳洲跨黨派參眾議員訪台，討論叵太地緣政治與台澳關係等。11月27日新任澳洲駐台代表馮國斌上任。"
+          },
+          {
+            "date": "2020-04",
+            "title": "澳洲與臺灣達成協議",
+            "desc": "澳洲與臺灣達成協議，以100萬公升酒精為乾洗手原料，交換3公噸生產口罩的材料。8月27日，總統蔡英文在智庫澳洲戰略研究所的印太領袖對話中發表視訊演說。"
+          }
+        ]
+      }
+    ]
+  },
+  "FJ": {
+    "iso": "FJ",
+    "name_zh": "斐濟",
+    "name_en": "Fiji",
+    "flag": "🇫🇯",
     "factbox": [
       {
         "label": "首都",
@@ -1935,11 +1961,11 @@
       }
     ]
   },
-  "FJ": {
-    "iso": "FJ",
-    "name_zh": "斐濟",
-    "name_en": "Fiji",
-    "flag": "🇫🇯",
+  "KI": {
+    "iso": "KI",
+    "name_zh": "吉里巴斯",
+    "name_en": "Kiribati",
+    "flag": "🇰🇮",
     "factbox": [
       {
         "label": "首都",
@@ -1996,11 +2022,11 @@
       }
     ]
   },
-  "KI": {
-    "iso": "KI",
-    "name_zh": "吉里巴斯",
-    "name_en": "Kiribati",
-    "flag": "🇰🇮",
+  "MH": {
+    "iso": "MH",
+    "name_zh": "馬紹爾群島",
+    "name_en": "Marshall Islands",
+    "flag": "🇲🇭",
     "factbox": [
       {
         "label": "首都",
@@ -2041,11 +2067,11 @@
       }
     ]
   },
-  "MH": {
-    "iso": "MH",
-    "name_zh": "馬紹爾群島",
-    "name_en": "Marshall Islands",
-    "flag": "🇲🇭",
+  "FM": {
+    "iso": "FM",
+    "name_zh": "密克羅尼西亞聯邦",
+    "name_en": "Micronesia",
+    "flag": "🇫🇲",
     "factbox": [
       {
         "label": "首都",
@@ -2082,11 +2108,11 @@
       }
     ]
   },
-  "FM": {
-    "iso": "FM",
-    "name_zh": "密克羅尼西亞聯邦",
-    "name_en": "Micronesia",
-    "flag": "🇫🇲",
+  "NR": {
+    "iso": "NR",
+    "name_zh": "諾魯",
+    "name_en": "Nauru",
+    "flag": "🇳🇷",
     "factbox": [
       {
         "label": "首都",
@@ -2133,11 +2159,11 @@
       }
     ]
   },
-  "NR": {
-    "iso": "NR",
-    "name_zh": "諾魯",
-    "name_en": "Nauru",
-    "flag": "🇳🇷",
+  "NZ": {
+    "iso": "NZ",
+    "name_zh": "紐西蘭",
+    "name_en": "New Zealand",
+    "flag": "🇳🇿",
     "factbox": [
       {
         "label": "首都",
@@ -2184,11 +2210,11 @@
       }
     ]
   },
-  "NZ": {
-    "iso": "NZ",
-    "name_zh": "紐西蘭",
-    "name_en": "New Zealand",
-    "flag": "🇳🇿",
+  "PW": {
+    "iso": "PW",
+    "name_zh": "帛琉",
+    "name_en": "Palau",
+    "flag": "🇵🇼",
     "factbox": [
       {
         "label": "首都",
@@ -2249,11 +2275,11 @@
       }
     ]
   },
-  "PW": {
-    "iso": "PW",
-    "name_zh": "帛琉",
-    "name_en": "Palau",
-    "flag": "🇵🇼",
+  "PG": {
+    "iso": "PG",
+    "name_zh": "巴布亞紐幾內亞",
+    "name_en": "Papua New Guinea",
+    "flag": "🇵🇬",
     "factbox": [
       {
         "label": "首都",
@@ -2290,11 +2316,11 @@
       }
     ]
   },
-  "PG": {
-    "iso": "PG",
-    "name_zh": "巴布亞紐幾內亞",
-    "name_en": "Papua New Guinea",
-    "flag": "🇵🇬",
+  "WS": {
+    "iso": "WS",
+    "name_zh": "薩摩亞",
+    "name_en": "Samoa",
+    "flag": "🇼🇸",
     "factbox": [
       {
         "label": "首都",
@@ -2336,40 +2362,52 @@
       }
     ]
   },
-  "WS": {
-    "iso": "WS",
-    "name_zh": "薩摩亞",
-    "name_en": "Samoa",
-    "flag": "🇼🇸",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": ""
-      },
-      {
-        "label": "語言",
-        "value": ""
-      },
-      {
-        "label": "人口",
-        "value": ""
-      },
-      {
-        "label": "面積",
-        "value": ""
-      },
-      {
-        "label": "地理位置",
-        "value": ""
-      }
-    ],
-    "sections": []
-  },
   "SB": {
     "iso": "SB",
     "name_zh": "索羅門群島",
     "name_en": "Solomon Islands",
     "flag": "🇸🇧",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "荷尼阿拉（Honiara）"
+      },
+      {
+        "label": "語言",
+        "value": "英語、美拉尼西亞語混雜。"
+      },
+      {
+        "label": "人口",
+        "value": "72.7萬人（2024.7）"
+      },
+      {
+        "label": "面積",
+        "value": "28,896 平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "南太平洋"
+      }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "2020-06-08",
+            "title": "索國馬萊塔省長蘇達尼感謝台灣捐贈防疫…",
+            "desc": "索國馬萊塔省長蘇達尼感謝台灣捐贈防疫物資。"
+          }
+        ]
+      }
+    ]
+  },
+  "TO": {
+    "iso": "TO",
+    "name_zh": "東加",
+    "name_en": "Tonga",
+    "flag": "🇹🇴",
     "factbox": [
       {
         "label": "首都",
@@ -2421,11 +2459,11 @@
       }
     ]
   },
-  "TO": {
-    "iso": "TO",
-    "name_zh": "東加",
-    "name_en": "Tonga",
-    "flag": "🇹🇴",
+  "TV": {
+    "iso": "TV",
+    "name_zh": "吐瓦魯",
+    "name_en": "Tuvalu",
+    "flag": "🇹🇻",
     "factbox": [
       {
         "label": "首都",
@@ -2481,11 +2519,11 @@
       }
     ]
   },
-  "TV": {
-    "iso": "TV",
-    "name_zh": "吐瓦魯",
-    "name_en": "Tuvalu",
-    "flag": "🇹🇻",
+  "VU": {
+    "iso": "VU",
+    "name_zh": "萬那杜",
+    "name_en": "Vanuatu",
+    "flag": "🇻🇺",
     "factbox": [
       {
         "label": "首都",
@@ -2506,10 +2544,6 @@
       {
         "label": "地理位置",
         "value": "南太平洋，介於澳洲與斐濟之間。"
-      },
-      {
-        "label": "邦交",
-        "value": "12月10日，萬那杜國會以渥荷未經國會同意逕與我建交為由，對渥荷提出不信任案，國會表決通過，渥荷下台，內閣解散。"
       }
     ],
     "sections": [
@@ -2531,35 +2565,6 @@
       }
     ]
   },
-  "VU": {
-    "iso": "VU",
-    "name_zh": "萬那杜",
-    "name_en": "Vanuatu",
-    "flag": "🇻🇺",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": ""
-      },
-      {
-        "label": "語言",
-        "value": ""
-      },
-      {
-        "label": "人口",
-        "value": ""
-      },
-      {
-        "label": "面積",
-        "value": ""
-      },
-      {
-        "label": "地理位置",
-        "value": ""
-      }
-    ],
-    "sections": []
-  },
   "AL": {
     "iso": "AL",
     "name_zh": "阿爾巴尼亞",
@@ -2568,23 +2573,23 @@
     "factbox": [
       {
         "label": "首都",
-        "value": "老安道爾（Andorra la Vella）"
+        "value": "地拉那（Tirana）"
       },
       {
         "label": "語言",
-        "value": "加泰隆尼亞語、法語、卡斯提爾語、葡萄牙語。"
+        "value": "阿爾巴尼亞語"
       },
       {
         "label": "人口",
-        "value": "8萬5,370人（2024）"
+        "value": "310萬人（2024）"
       },
       {
         "label": "面積",
-        "value": "468平方公里"
+        "value": "28,748平方公里"
       },
       {
         "label": "地理位置",
-        "value": "西南歐、介於法國與西班牙之間"
+        "value": "東南歐"
       }
     ],
     "sections": [
@@ -2593,9 +2598,19 @@
         "title": "近年大事記",
         "events": [
           {
-            "date": "2018-07",
-            "title": "民進黨與國際自由聯盟於台北共同發表「…",
-            "desc": "民進黨與國際自由聯盟於台北共同發表「2017安道爾自由宣言」中文版。"
+            "date": "2015-10",
+            "title": "阿爾巴尼亞友台協會於地拉那成立",
+            "desc": "阿爾巴尼亞友台協會於地拉那成立。"
+          },
+          {
+            "date": "2011-06",
+            "title": "阿國給予持中華民國護照者免簽入境90…",
+            "desc": "阿國給予持中華民國護照者免簽入境90天待遇。"
+          },
+          {
+            "date": "1990-03",
+            "title": "我始將阿國列為直接貿易國家",
+            "desc": "我始將阿國列為直接貿易國家。"
           }
         ]
       }
@@ -2606,6 +2621,52 @@
     "name_zh": "奧地利",
     "name_en": "Austria",
     "flag": "🇦🇹",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "維也納（Vienna）"
+      },
+      {
+        "label": "語言",
+        "value": "德語"
+      },
+      {
+        "label": "人口",
+        "value": "896萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "83,871平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "中歐"
+      }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "2023-03",
+            "title": "台奧經貿對話會議簽署MOU",
+            "desc": "台奧經貿對話會議簽署MOU。"
+          },
+          {
+            "date": "2020-04",
+            "title": "台灣援贈奧地利30萬片醫用口罩",
+            "desc": "台灣援贈奧地利30萬片醫用口罩。"
+          }
+        ]
+      }
+    ]
+  },
+  "BY": {
+    "iso": "BY",
+    "name_zh": "白俄羅斯",
+    "name_en": "Belarus",
+    "flag": "🇧🇾",
     "factbox": [
       {
         "label": "首都",
@@ -2642,31 +2703,31 @@
       }
     ]
   },
-  "BY": {
-    "iso": "BY",
-    "name_zh": "白俄羅斯",
-    "name_en": "Belarus",
-    "flag": "🇧🇾",
+  "BA": {
+    "iso": "BA",
+    "name_zh": "波士尼亞與赫塞哥維納",
+    "name_en": "Bosnia and Herzegovina",
+    "flag": "🇧🇦",
     "factbox": [
       {
         "label": "首都",
-        "value": "布魯塞爾（Brussels）"
+        "value": "塞拉耶佛（Sarajevo）"
       },
       {
         "label": "語言",
-        "value": "荷語、法語、德語。"
+        "value": "波士尼亞語、克羅埃西亞語、塞爾維亞語。"
       },
       {
         "label": "人口",
-        "value": "1,197萬人（2024）"
+        "value": "379萬人（2024）"
       },
       {
         "label": "面積",
-        "value": "30,528平方公里"
+        "value": "51,197 平方公里"
       },
       {
         "label": "地理位置",
-        "value": "西歐，西臨北海"
+        "value": "東南歐"
       }
     ],
     "sections": [
@@ -2675,34 +2736,19 @@
         "title": "近年大事記",
         "events": [
           {
-            "date": "2024-08-06",
-            "title": "駐處與比利時台灣商會舉辦台商經貿座談",
-            "desc": "駐處與比利時台灣商會舉辦台商經貿座談。"
-          },
-          {
-            "date": "2023-05",
-            "title": "中旬",
-            "desc": "中旬，比利時議員訪台拜會政治和經濟相關首長。"
-          },
-          {
-            "date": "2021-10-24",
-            "title": "外交部長吳釗燮出訪歐洲",
-            "desc": "外交部長吳釗燮出訪歐洲，29日在布魯塞爾與歐洲議會議員交流。"
-          },
-          {
-            "date": "2020-04",
-            "title": "我國捐贈比利時50萬片口罩",
-            "desc": "我國捐贈比利時50萬片口罩，提供COVID-19疫情所需。"
+            "date": "2012-07",
+            "title": "波士尼亞與赫塞哥維納給予持中華民國護…",
+            "desc": "波士尼亞與赫塞哥維納給予持中華民國護照之國民免簽證入境待遇。"
           }
         ]
       }
     ]
   },
-  "BA": {
-    "iso": "BA",
-    "name_zh": "波士尼亞與赫塞哥維納",
-    "name_en": "Bosnia and Herzegovina",
-    "flag": "🇧🇦",
+  "BG": {
+    "iso": "BG",
+    "name_zh": "保加利亞",
+    "name_en": "Bulgaria",
+    "flag": "🇧🇬",
     "factbox": [
       {
         "label": "首都",
@@ -2739,11 +2785,11 @@
       }
     ]
   },
-  "BG": {
-    "iso": "BG",
-    "name_zh": "保加利亞",
-    "name_en": "Bulgaria",
-    "flag": "🇧🇬",
+  "HR": {
+    "iso": "HR",
+    "name_zh": "克羅埃西亞",
+    "name_en": "Croatia",
+    "flag": "🇭🇷",
     "factbox": [
       {
         "label": "首都",
@@ -2785,31 +2831,31 @@
       }
     ]
   },
-  "HR": {
-    "iso": "HR",
-    "name_zh": "克羅埃西亞",
-    "name_en": "Croatia",
-    "flag": "🇭🇷",
+  "CZ": {
+    "iso": "CZ",
+    "name_zh": "捷克",
+    "name_en": "Czechia",
+    "flag": "🇨🇿",
     "factbox": [
       {
         "label": "首都",
-        "value": "尼柯希亞（Nicosia）"
+        "value": "布拉格（Prague）"
       },
       {
         "label": "語言",
-        "value": "希臘語、土耳其語、英語。"
+        "value": "捷克語"
       },
       {
         "label": "人口",
-        "value": "132萬人（2024）"
+        "value": "1,083萬人（2024）"
       },
       {
         "label": "面積",
-        "value": "9,251 平方公里（土裔賽人控制面積3,355平方公里）"
+        "value": "78,867平方公里"
       },
       {
         "label": "地理位置",
-        "value": "中東、地中海東北部島國"
+        "value": "中歐"
       }
     ],
     "sections": [
@@ -2818,19 +2864,39 @@
         "title": "近年大事記",
         "events": [
           {
-            "date": "2019-11",
-            "title": "北賽普勒斯土耳其共和國首度參加台北國…",
-            "desc": "北賽普勒斯土耳其共和國首度參加台北國際旅展。"
+            "date": "2024-10",
+            "title": "台灣助捷克建構半導體研究中心營運",
+            "desc": "台灣助捷克建構半導體研究中心營運。"
+          },
+          {
+            "date": "2024-08-30",
+            "title": "國安會秘書長吳釗燮率團訪捷出席「全球…",
+            "desc": "國安會秘書長吳釗燮率團訪捷出席「全球安全論壇」。"
+          },
+          {
+            "date": "2024-06",
+            "title": "布拉格與台灣加強文化及外交關係",
+            "desc": "布拉格與台灣加強文化及外交關係，捷克中心台北揭幕。"
+          },
+          {
+            "date": "2023-01",
+            "title": "捷克總統當選人帕維爾與總統蔡英文通話",
+            "desc": "捷克總統當選人帕維爾與總統蔡英文通話，3月眾議長艾達莫娃訪台，簽署合作MOU。"
+          },
+          {
+            "date": "2022-07-18",
+            "title": "至21日",
+            "desc": "至21日，立法院長游錫堃率團訪布拉格，參訪參議院。"
           }
         ]
       }
     ]
   },
-  "CZ": {
-    "iso": "CZ",
-    "name_zh": "捷克",
-    "name_en": "Czechia",
-    "flag": "🇨🇿",
+  "DK": {
+    "iso": "DK",
+    "name_zh": "丹麥",
+    "name_en": "Denmark",
+    "flag": "🇩🇰",
     "factbox": [
       {
         "label": "首都",
@@ -2872,11 +2938,11 @@
       }
     ]
   },
-  "DK": {
-    "iso": "DK",
-    "name_zh": "丹麥",
-    "name_en": "Denmark",
-    "flag": "🇩🇰",
+  "EE": {
+    "iso": "EE",
+    "name_zh": "愛沙尼亞",
+    "name_en": "Estonia",
+    "flag": "🇪🇪",
     "factbox": [
       {
         "label": "首都",
@@ -2928,11 +2994,11 @@
       }
     ]
   },
-  "EE": {
-    "iso": "EE",
-    "name_zh": "愛沙尼亞",
-    "name_en": "Estonia",
-    "flag": "🇪🇪",
+  "FI": {
+    "iso": "FI",
+    "name_zh": "芬蘭",
+    "name_en": "Finland",
+    "flag": "🇫🇮",
     "factbox": [
       {
         "label": "首都",
@@ -2979,31 +3045,31 @@
       }
     ]
   },
-  "FI": {
-    "iso": "FI",
-    "name_zh": "芬蘭",
-    "name_en": "Finland",
-    "flag": "🇫🇮",
+  "DE": {
+    "iso": "DE",
+    "name_zh": "德國",
+    "name_en": "Germany",
+    "flag": "🇩🇪",
     "factbox": [
       {
         "label": "首都",
-        "value": "巴黎（Paris）"
+        "value": "柏林（Berlin）"
       },
       {
         "label": "語言",
-        "value": "法語"
+        "value": "德語"
       },
       {
         "label": "人口",
-        "value": "1萬5,964人（2024）"
+        "value": "8,411萬人（2024）"
       },
       {
         "label": "面積",
-        "value": "142平方公里"
+        "value": "357,022平方公里"
       },
       {
         "label": "地理位置",
-        "value": "南太平洋斐濟與薩摩亞之間"
+        "value": "中歐（位於歐洲心臟地帶）"
       }
     ],
     "sections": [
@@ -3012,29 +3078,34 @@
         "title": "近年大事記",
         "events": [
           {
-            "date": "2023-04",
-            "title": "法總統馬克宏因台海言論引議論",
-            "desc": "法總統馬克宏因台海言論引議論，同月台灣立委團與法上下院議員不受影響會面。"
+            "date": "2024-05",
+            "title": "德國會友台小組主席出席總統賴清德就職",
+            "desc": "德國會友台小組主席出席總統賴清德就職，挺台國際參與。"
           },
           {
-            "date": "2022-07-24",
-            "title": "至28日",
-            "desc": "至28日，立法院長游錫堃率團參訪法國民議會。"
+            "date": "2023-01",
+            "title": "總統蔡英文會見德國資深議員代表團",
+            "desc": "總統蔡英文會見德國資深議員代表團，7月13日公布首度「對中戰略」文件，提及重視台海安全、支持台灣務實參與國際組織活動。"
           },
           {
-            "date": "2020-02",
-            "title": "文化部長鄭麗君訪法主持頒授首屆文化獎…",
-            "desc": "文化部長鄭麗君訪法主持頒授首屆文化獎章儀式。12月14日我在法南部揭牌設立「駐普羅旺斯台北辦事處」，使法成為第4個有超過一個我代表機構的歐洲國家。"
+            "date": "2022-10",
+            "title": "初",
+            "desc": "初，德國會友台小組主席威爾許一行人訪台。"
+          },
+          {
+            "date": "2020-01",
+            "title": "台德免試互換駕照上路。5月德國與美、…",
+            "desc": "台德免試互換駕照上路。5月德國與美、加等「友台聯盟」國家致函世衛組織秘書長譚德塞，支持我國以觀察員參與世衛大會。"
           }
         ]
       }
     ]
   },
-  "DE": {
-    "iso": "DE",
-    "name_zh": "德國",
-    "name_en": "Germany",
-    "flag": "🇩🇪",
+  "GR": {
+    "iso": "GR",
+    "name_zh": "希臘",
+    "name_en": "Greece",
+    "flag": "🇬🇷",
     "factbox": [
       {
         "label": "首都",
@@ -3071,11 +3142,11 @@
       }
     ]
   },
-  "GR": {
-    "iso": "GR",
-    "name_zh": "希臘",
-    "name_en": "Greece",
-    "flag": "🇬🇷",
+  "VA": {
+    "iso": "VA",
+    "name_zh": "教廷",
+    "name_en": "Vatican City",
+    "flag": "🇻🇦",
     "factbox": [
       {
         "label": "首都",
@@ -3126,11 +3197,11 @@
       }
     ]
   },
-  "VA": {
-    "iso": "VA",
-    "name_zh": "教廷",
-    "name_en": "Vatican City",
-    "flag": "🇻🇦",
+  "HU": {
+    "iso": "HU",
+    "name_zh": "匈牙利",
+    "name_en": "Hungary",
+    "flag": "🇭🇺",
     "factbox": [
       {
         "label": "首都",
@@ -3177,11 +3248,11 @@
       }
     ]
   },
-  "HU": {
-    "iso": "HU",
-    "name_zh": "匈牙利",
-    "name_en": "Hungary",
-    "flag": "🇭🇺",
+  "IS": {
+    "iso": "IS",
+    "name_zh": "冰島",
+    "name_en": "Iceland",
+    "flag": "🇮🇸",
     "factbox": [
       {
         "label": "首都",
@@ -3218,11 +3289,11 @@
       }
     ]
   },
-  "IS": {
-    "iso": "IS",
-    "name_zh": "冰島",
-    "name_en": "Iceland",
-    "flag": "🇮🇸",
+  "IE": {
+    "iso": "IE",
+    "name_zh": "愛爾蘭",
+    "name_en": "Ireland",
+    "flag": "🇮🇪",
     "factbox": [
       {
         "label": "首都",
@@ -3269,11 +3340,11 @@
       }
     ]
   },
-  "IE": {
-    "iso": "IE",
-    "name_zh": "愛爾蘭",
-    "name_en": "Ireland",
-    "flag": "🇮🇪",
+  "IT": {
+    "iso": "IT",
+    "name_zh": "義大利",
+    "name_en": "Italy",
+    "flag": "🇮🇹",
     "factbox": [
       {
         "label": "首都",
@@ -3320,11 +3391,11 @@
       }
     ]
   },
-  "IT": {
-    "iso": "IT",
-    "name_zh": "義大利",
-    "name_en": "Italy",
-    "flag": "🇮🇹",
+  "XK": {
+    "iso": "XK",
+    "name_zh": "科索沃",
+    "name_en": "Kosovo",
+    "flag": "🇽🇰",
     "factbox": [
       {
         "label": "首都",
@@ -3366,11 +3437,11 @@
       }
     ]
   },
-  "XK": {
-    "iso": "XK",
-    "name_zh": "科索沃",
-    "name_en": "Kosovo",
-    "flag": "🇽🇰",
+  "LV": {
+    "iso": "LV",
+    "name_zh": "拉脫維亞",
+    "name_en": "Latvia",
+    "flag": "🇱🇻",
     "factbox": [
       {
         "label": "首都",
@@ -3412,11 +3483,11 @@
       }
     ]
   },
-  "LV": {
-    "iso": "LV",
-    "name_zh": "拉脫維亞",
-    "name_en": "Latvia",
-    "flag": "🇱🇻",
+  "LI": {
+    "iso": "LI",
+    "name_zh": "列支敦斯登",
+    "name_en": "Liechtenstein",
+    "flag": "🇱🇮",
     "factbox": [
       {
         "label": "首都",
@@ -3453,11 +3524,11 @@
       }
     ]
   },
-  "LI": {
-    "iso": "LI",
-    "name_zh": "列支敦斯登",
-    "name_en": "Liechtenstein",
-    "flag": "🇱🇮",
+  "LT": {
+    "iso": "LT",
+    "name_zh": "立陶宛",
+    "name_en": "Lithuania",
+    "flag": "🇱🇹",
     "factbox": [
       {
         "label": "首都",
@@ -3514,57 +3585,6 @@
       }
     ]
   },
-  "LT": {
-    "iso": "LT",
-    "name_zh": "立陶宛",
-    "name_en": "Lithuania",
-    "flag": "🇱🇹",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": "盧森堡市（Luxembourg）"
-      },
-      {
-        "label": "語言",
-        "value": "盧森堡語、葡萄牙語、法語、德語。"
-      },
-      {
-        "label": "人口",
-        "value": "67萬人（2024）"
-      },
-      {
-        "label": "面積",
-        "value": "2,586平方公里"
-      },
-      {
-        "label": "地理位置",
-        "value": "西歐內陸（毗鄰法國、德國、比利時3國）"
-      }
-    ],
-    "sections": [
-      {
-        "type": "timeline",
-        "title": "近年大事記",
-        "events": [
-          {
-            "date": "2024-04",
-            "title": "盧森堡國會通過友台動議",
-            "desc": "盧森堡國會通過友台動議，支持台灣國際參與。"
-          },
-          {
-            "date": "2023-03",
-            "title": "台灣與荷蘭、比利時和盧森堡國會友好協…",
-            "desc": "台灣與荷蘭、比利時和盧森堡國會友好協會成立，促政府與民間交流；6月，外交部長吳釗燮訪歐行，會見盧森堡國會議員。"
-          },
-          {
-            "date": "2020-04",
-            "title": "台灣啟動援外口罩捐贈行動",
-            "desc": "台灣啟動援外口罩捐贈行動，運送700萬片口罩至盧森堡等11個歐洲國家。"
-          }
-        ]
-      }
-    ]
-  },
   "MT": {
     "iso": "MT",
     "name_zh": "馬爾他",
@@ -3573,32 +3593,85 @@
     "factbox": [
       {
         "label": "首都",
-        "value": "基希涅夫（Chisinau）"
+        "value": "法勒他（Valletta）"
       },
       {
         "label": "語言",
-        "value": "摩爾多瓦語、羅馬尼亞語、俄語。"
+        "value": "馬爾他語、英語。"
       },
       {
         "label": "人口",
-        "value": "360萬人（2024）"
+        "value": "46.9萬人（2024）"
       },
       {
         "label": "面積",
-        "value": "33,851平方公里"
+        "value": "316平方公里"
       },
       {
         "label": "地理位置",
-        "value": "東歐，北、東、南三面毗鄰烏克蘭、西邊以普魯特（Prut）河與羅馬尼亞為界"
+        "value": "南歐、地中海之島國"
       }
     ],
-    "sections": []
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "2011-01-11",
+            "title": "起",
+            "desc": "起，持中華民國護照者可在180天內在馬爾他停留90天，適用申根簽證規定。"
+          }
+        ]
+      }
+    ]
   },
   "MD": {
     "iso": "MD",
     "name_zh": "摩爾多瓦",
     "name_en": "Moldova",
     "flag": "🇲🇩",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "摩納哥市（Monaco）"
+      },
+      {
+        "label": "語言",
+        "value": "法語、英語、摩納哥方言、義大利語。"
+      },
+      {
+        "label": "人口",
+        "value": "3萬1,813人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "2平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "西歐、法國東南濱地中海"
+      }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "2005-11-02",
+            "title": "摩納哥旅遊局長Bertani來台開拓…",
+            "desc": "摩納哥旅遊局長Bertani來台開拓旅遊市場。"
+          }
+        ]
+      }
+    ]
+  },
+  "ME": {
+    "iso": "ME",
+    "name_zh": "蒙特內哥羅",
+    "name_en": "Montenegro",
+    "flag": "🇲🇪",
     "factbox": [
       {
         "label": "首都",
@@ -3635,31 +3708,31 @@
       }
     ]
   },
-  "ME": {
-    "iso": "ME",
-    "name_zh": "蒙特內哥羅",
-    "name_en": "Montenegro",
-    "flag": "🇲🇪",
+  "MK": {
+    "iso": "MK",
+    "name_zh": "北馬其頓",
+    "name_en": "North Macedonia",
+    "flag": "🇲🇰",
     "factbox": [
       {
         "label": "首都",
-        "value": "阿姆斯特丹（Amsterdam），政府所在地為海牙（The Hague）"
+        "value": "史高比耶（Skopje）"
       },
       {
         "label": "語言",
-        "value": "荷蘭語"
+        "value": "馬其頓語、阿爾巴尼亞語、土耳其語。"
       },
       {
         "label": "人口",
-        "value": "1,777萬人（2024）"
+        "value": "213萬人（2024）"
       },
       {
         "label": "面積",
-        "value": "180平方公里，人口：12萬5,063人（2024）。觀光與海外銀行業為當地主要產業。"
+        "value": "25,713平方公里"
       },
       {
         "label": "地理位置",
-        "value": "西歐，臨北海"
+        "value": "東南歐、希臘北邊"
       }
     ],
     "sections": [
@@ -3668,24 +3741,19 @@
         "title": "近年大事記",
         "events": [
           {
-            "date": "2024-09-10",
-            "title": "荷蘭新國會接待台灣立法院訪問團；12…",
-            "desc": "荷蘭新國會接待台灣立法院訪問團；12日國會通過動議，拒絕中國扭曲聯大2758號決議。"
-          },
-          {
-            "date": "2020-04",
-            "title": "荷蘭貿易暨投資辦事處宣布",
-            "desc": "荷蘭貿易暨投資辦事處宣布，名稱簡化為「荷蘭在台辦事處」（Netherlands Office Taipei）。"
+            "date": "2020-01",
+            "title": "我外交部宣布該項措施經兩國政府同意延…",
+            "desc": "我外交部宣布該項措施經兩國政府同意延長5年至2025年3月31日。"
           }
         ]
       }
     ]
   },
-  "MK": {
-    "iso": "MK",
-    "name_zh": "北馬其頓",
-    "name_en": "North Macedonia",
-    "flag": "🇲🇰",
+  "NO": {
+    "iso": "NO",
+    "name_zh": "挪威",
+    "name_en": "Norway",
+    "flag": "🇳🇴",
     "factbox": [
       {
         "label": "首都",
@@ -3722,31 +3790,31 @@
       }
     ]
   },
-  "NO": {
-    "iso": "NO",
-    "name_zh": "挪威",
-    "name_en": "Norway",
-    "flag": "🇳🇴",
+  "PL": {
+    "iso": "PL",
+    "name_zh": "波蘭",
+    "name_en": "Poland",
+    "flag": "🇵🇱",
     "factbox": [
       {
         "label": "首都",
-        "value": "華沙（Warsaw）"
+        "value": "里斯本（Lisbon）"
       },
       {
         "label": "語言",
-        "value": "波蘭語"
+        "value": "葡萄牙語"
       },
       {
         "label": "人口",
-        "value": "3,874萬人（2024）"
+        "value": "1,020萬人（2024）"
       },
       {
         "label": "面積",
-        "value": "312,685平方公里"
+        "value": "92,090平方公里"
       },
       {
         "label": "地理位置",
-        "value": "中歐"
+        "value": "西南歐、伊比利半島"
       }
     ],
     "sections": [
@@ -3755,34 +3823,24 @@
         "title": "近年大事記",
         "events": [
           {
-            "date": "2023-06-19",
-            "title": "波蘭眾院外委會訪團會見總統蔡英文",
-            "desc": "波蘭眾院外委會訪團會見總統蔡英文，強化各方合作。"
+            "date": "2023-04",
+            "title": "葡萄牙跨黨派議員團訪台",
+            "desc": "葡萄牙跨黨派議員團訪台，晉見副總統賴清德。"
           },
           {
-            "date": "2022-05-17",
-            "title": "波蘭發展暨技術部政次皮丘沃克率貿易團…",
-            "desc": "波蘭發展暨技術部政次皮丘沃克率貿易團訪台。台灣學術商業技術專家9月底訪波蘭簽署合作備忘錄，建立半導體產業台波工作小組。"
-          },
-          {
-            "date": "2021-09-05",
-            "title": "波蘭政府捐贈的40萬劑AZ疫苗抵台",
-            "desc": "波蘭政府捐贈的40萬劑AZ疫苗抵台。"
-          },
-          {
-            "date": "2020-04",
-            "title": "波蘭航空首航台灣載運醫療物資",
-            "desc": "波蘭航空首航台灣載運醫療物資，其後並飛航數趟客運包機。"
+            "date": "2020-06",
+            "title": "我駐葡萄牙代表張俊菲捐贈葡萄牙紅十字…",
+            "desc": "我駐葡萄牙代表張俊菲捐贈葡萄牙紅十字會等醫療機構10萬片口罩。葡萄牙國會友台小組主席奧利維拉（Paulo Rios de Oliveira）出席捐贈儀式見證。"
           }
         ]
       }
     ]
   },
-  "PL": {
-    "iso": "PL",
-    "name_zh": "波蘭",
-    "name_en": "Poland",
-    "flag": "🇵🇱",
+  "RO": {
+    "iso": "RO",
+    "name_zh": "羅馬尼亞",
+    "name_en": "Romania",
+    "flag": "🇷🇴",
     "factbox": [
       {
         "label": "首都",
@@ -3819,11 +3877,11 @@
       }
     ]
   },
-  "RO": {
-    "iso": "RO",
-    "name_zh": "羅馬尼亞",
-    "name_en": "Romania",
-    "flag": "🇷🇴",
+  "RU": {
+    "iso": "RU",
+    "name_zh": "俄羅斯",
+    "name_en": "Russia",
+    "flag": "🇷🇺",
     "factbox": [
       {
         "label": "首都",
@@ -3880,11 +3938,11 @@
       }
     ]
   },
-  "RU": {
-    "iso": "RU",
-    "name_zh": "俄羅斯",
-    "name_en": "Russia",
-    "flag": "🇷🇺",
+  "SM": {
+    "iso": "SM",
+    "name_zh": "聖馬利諾",
+    "name_en": "San Marino",
+    "flag": "🇸🇲",
     "factbox": [
       {
         "label": "首都",
@@ -3921,31 +3979,31 @@
       }
     ]
   },
-  "SM": {
-    "iso": "SM",
-    "name_zh": "聖馬利諾",
-    "name_en": "San Marino",
-    "flag": "🇸🇲",
+  "SK": {
+    "iso": "SK",
+    "name_zh": "斯洛伐克",
+    "name_en": "Slovakia",
+    "flag": "🇸🇰",
     "factbox": [
       {
         "label": "首都",
-        "value": "貝爾格勒（Belgrade）"
+        "value": "布拉第斯拉瓦（Bratislava）"
       },
       {
         "label": "語言",
-        "value": "塞爾維亞語"
+        "value": "斯洛伐克語"
       },
       {
         "label": "人口",
-        "value": "665萬人（2024）"
+        "value": "556萬人（2024）"
       },
       {
         "label": "面積",
-        "value": "77,474平方公里"
+        "value": "49,035平方公里"
       },
       {
         "label": "地理位置",
-        "value": "東南歐"
+        "value": "中歐，北臨波蘭"
       }
     ],
     "sections": [
@@ -3954,19 +4012,39 @@
         "title": "近年大事記",
         "events": [
           {
-            "date": "2024-05-09",
-            "title": "外交部駁斥塞爾維亞與中國發表台灣主權…",
-            "desc": "外交部駁斥塞爾維亞與中國發表台灣主權地位之聯合聲明。"
+            "date": "2024-09-04",
+            "title": "台灣與斯洛伐克簽第2期半導體合作協議",
+            "desc": "台灣與斯洛伐克簽第2期半導體合作協議，強化斯國車用技術。"
+          },
+          {
+            "date": "2024-08-21",
+            "title": "斯國前總理赫格在凱達格蘭論壇發表演講",
+            "desc": "斯國前總理赫格在凱達格蘭論壇發表演講，談曾犧牲民主依賴俄羅斯，指台灣是經濟韌性模範。"
+          },
+          {
+            "date": "2023-06",
+            "title": "斯國經濟部政次率團來台舉辦經濟合作諮…",
+            "desc": "斯國經濟部政次率團來台舉辦經濟合作諮商會議。"
+          },
+          {
+            "date": "2022-06",
+            "title": "斯洛伐克訪團拜會立法院",
+            "desc": "斯洛伐克訪團拜會立法院。"
+          },
+          {
+            "date": "2021-09-26",
+            "title": "斯洛伐克政府捐贈16萬劑疫苗運抵台灣…",
+            "desc": "斯洛伐克政府捐贈16萬劑疫苗運抵台灣。10月24日外交部長吳釗燮出訪歐洲，26日在斯洛伐克智庫「全球安全論壇」上發表專題演說。"
           }
         ]
       }
     ]
   },
-  "SK": {
-    "iso": "SK",
-    "name_zh": "斯洛伐克",
-    "name_en": "Slovakia",
-    "flag": "🇸🇰",
+  "SI": {
+    "iso": "SI",
+    "name_zh": "斯洛維尼亞",
+    "name_en": "Slovenia",
+    "flag": "🇸🇮",
     "factbox": [
       {
         "label": "首都",
@@ -4003,31 +4081,31 @@
       }
     ]
   },
-  "SI": {
-    "iso": "SI",
-    "name_zh": "斯洛維尼亞",
-    "name_en": "Slovenia",
-    "flag": "🇸🇮",
+  "SE": {
+    "iso": "SE",
+    "name_zh": "瑞典",
+    "name_en": "Sweden",
+    "flag": "🇸🇪",
     "factbox": [
       {
         "label": "首都",
-        "value": "馬德里（Madrid）"
+        "value": "斯德哥爾摩（Stockholm）"
       },
       {
         "label": "語言",
-        "value": "西班牙語"
+        "value": "瑞典語、英語。"
       },
       {
         "label": "人口",
-        "value": "4,728萬人（2024）"
+        "value": "1,058萬人（2024）"
       },
       {
         "label": "面積",
-        "value": "505,370平方公里"
+        "value": "450,295平方公里"
       },
       {
         "label": "地理位置",
-        "value": "西南歐、伊比利半島"
+        "value": "北歐"
       }
     ],
     "sections": [
@@ -4036,24 +4114,29 @@
         "title": "近年大事記",
         "events": [
           {
-            "date": "2023-01",
-            "title": "西班牙國會議員團抵台訪問",
-            "desc": "西班牙國會議員團抵台訪問。"
+            "date": "2024-08-15",
+            "title": "瑞典駐台代表任荷雅正式就任；8月26…",
+            "desc": "瑞典駐台代表任荷雅正式就任；8月26月至9月1日，瑞典跨黨派議員團訪台並晉見副總統蕭美琴。"
+          },
+          {
+            "date": "2023-05",
+            "title": "瑞典國會議員團訪台",
+            "desc": "瑞典國會議員團訪台，晉見總統蔡英文。"
           },
           {
             "date": "2020-04",
-            "title": "2019冠狀病毒疾病全球大流行",
-            "desc": "2019冠狀病毒疾病全球大流行，政府啟動口罩援外，運送700萬片口罩至西班牙等11個歐洲國家。"
+            "title": "政府第二波運送130萬片醫用口罩至瑞…",
+            "desc": "政府第二波運送130萬片醫用口罩至瑞典等8個歐洲國家。"
           }
         ]
       }
     ]
   },
-  "SE": {
-    "iso": "SE",
-    "name_zh": "瑞典",
-    "name_en": "Sweden",
-    "flag": "🇸🇪",
+  "CH": {
+    "iso": "CH",
+    "name_zh": "瑞士",
+    "name_en": "Switzerland",
+    "flag": "🇨🇭",
     "factbox": [
       {
         "label": "首都",
@@ -4100,52 +4183,6 @@
       }
     ]
   },
-  "CH": {
-    "iso": "CH",
-    "name_zh": "瑞士",
-    "name_en": "Switzerland",
-    "flag": "🇨🇭",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": "基輔（Kiev）"
-      },
-      {
-        "label": "語言",
-        "value": "烏克蘭語、俄語。"
-      },
-      {
-        "label": "人口",
-        "value": "3,566萬人（2024）"
-      },
-      {
-        "label": "面積",
-        "value": "603,550平方公里"
-      },
-      {
-        "label": "地理位置",
-        "value": "東歐"
-      }
-    ],
-    "sections": [
-      {
-        "type": "timeline",
-        "title": "近年大事記",
-        "events": [
-          {
-            "date": "2023-06",
-            "title": "台灣與立陶宛宣布合作協助烏克蘭重建",
-            "desc": "台灣與立陶宛宣布合作協助烏克蘭重建。"
-          },
-          {
-            "date": "2022-02-24",
-            "title": "俄烏戰爭",
-            "desc": "俄烏戰爭，我國民援贈582噸物資。"
-          }
-        ]
-      }
-    ]
-  },
   "GB": {
     "iso": "GB",
     "name_zh": "英國",
@@ -4154,32 +4191,95 @@
     "factbox": [
       {
         "label": "首都",
-        "value": ""
+        "value": "倫敦（London）"
       },
       {
         "label": "語言",
-        "value": ""
+        "value": "英語"
       },
       {
         "label": "人口",
-        "value": ""
+        "value": "6萬439人（2024）"
       },
       {
         "label": "面積",
-        "value": ""
+        "value": "948平方公里"
       },
       {
         "label": "地理位置",
-        "value": ""
+        "value": "北美，百慕達位於北卡羅萊納州以東580哩處，由約360個小島組成"
       }
     ],
-    "sections": []
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "2023-11-08",
+            "title": "兩國簽署提升貿易夥伴關係協議（ETP）",
+            "desc": "兩國簽署提升貿易夥伴關係協議（ETP）。"
+          },
+          {
+            "date": "2023-05",
+            "title": "英國前首相特拉斯（Liz Truss…",
+            "desc": "英國前首相特拉斯（Liz Truss）訪台，展現對台支持。"
+          },
+          {
+            "date": "2020-04",
+            "title": "政府運送700萬片口罩至英國等11個…",
+            "desc": "政府運送700萬片口罩至英國等11個歐洲國家。5月英國與美、加等「友台聯盟」國家致函世界衛生組織秘書長譚德塞，支持我國以觀察員身分參與世衛大會。7月牛津市自民黨議員高達德提案要求市議會研擬與台灣城市締結姊妹市，經議會投票通過。兩國間尚未有城市締結姊妹市。"
+          }
+        ]
+      }
+    ]
   },
   "AG": {
     "iso": "AG",
     "name_zh": "安提瓜及巴布達",
     "name_en": "Antigua and Barbuda",
     "flag": "🇦🇬",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "聖約翰（Saint John's）"
+      },
+      {
+        "label": "語言",
+        "value": "英語"
+      },
+      {
+        "label": "人口",
+        "value": "102,634人（2024.7）"
+      },
+      {
+        "label": "面積",
+        "value": "442.6平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "東加勒比海，小安地列斯群島中背風群島南部。"
+      }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "2017-04-05",
+            "title": "安地卡及巴布達政府宣布",
+            "desc": "安地卡及巴布達政府宣布，即日起給予中華民國護照持有者電子簽證待遇。"
+          }
+        ]
+      }
+    ]
+  },
+  "AR": {
+    "iso": "AR",
+    "name_zh": "阿根廷",
+    "name_en": "Argentina",
+    "flag": "🇦🇷",
     "factbox": [
       {
         "label": "首都",
@@ -4221,11 +4321,11 @@
       }
     ]
   },
-  "AR": {
-    "iso": "AR",
-    "name_zh": "阿根廷",
-    "name_en": "Argentina",
-    "flag": "🇦🇷",
+  "BS": {
+    "iso": "BS",
+    "name_zh": "巴哈馬",
+    "name_en": "Bahamas",
+    "flag": "🇧🇸",
     "factbox": [
       {
         "label": "首都",
@@ -4267,11 +4367,11 @@
       }
     ]
   },
-  "BS": {
-    "iso": "BS",
-    "name_zh": "巴哈馬",
-    "name_en": "Bahamas",
-    "flag": "🇧🇸",
+  "BB": {
+    "iso": "BB",
+    "name_zh": "巴貝多",
+    "name_en": "Barbados",
+    "flag": "🇧🇧",
     "factbox": [
       {
         "label": "首都",
@@ -4296,11 +4396,11 @@
     ],
     "sections": []
   },
-  "BB": {
-    "iso": "BB",
-    "name_zh": "巴貝多",
-    "name_en": "Barbados",
-    "flag": "🇧🇧",
+  "BZ": {
+    "iso": "BZ",
+    "name_zh": "貝里斯",
+    "name_en": "Belize",
+    "flag": "🇧🇿",
     "factbox": [
       {
         "label": "首都",
@@ -4351,11 +4451,11 @@
       }
     ]
   },
-  "BZ": {
-    "iso": "BZ",
-    "name_zh": "貝里斯",
-    "name_en": "Belize",
-    "flag": "🇧🇿",
+  "BO": {
+    "iso": "BO",
+    "name_zh": "玻利維亞",
+    "name_en": "Bolivia",
+    "flag": "🇧🇴",
     "factbox": [
       {
         "label": "首都",
@@ -4412,11 +4512,11 @@
       }
     ]
   },
-  "BO": {
-    "iso": "BO",
-    "name_zh": "玻利維亞",
-    "name_en": "Bolivia",
-    "flag": "🇧🇴",
+  "BR": {
+    "iso": "BR",
+    "name_zh": "巴西",
+    "name_en": "Brazil",
+    "flag": "🇧🇷",
     "factbox": [
       {
         "label": "首都",
@@ -4463,11 +4563,11 @@
       }
     ]
   },
-  "BR": {
-    "iso": "BR",
-    "name_zh": "巴西",
-    "name_en": "Brazil",
-    "flag": "🇧🇷",
+  "CA": {
+    "iso": "CA",
+    "name_zh": "加拿大",
+    "name_en": "Canada",
+    "flag": "🇨🇦",
     "factbox": [
       {
         "label": "首都",
@@ -4524,11 +4624,11 @@
       }
     ]
   },
-  "CA": {
-    "iso": "CA",
-    "name_zh": "加拿大",
-    "name_en": "Canada",
-    "flag": "🇨🇦",
+  "CL": {
+    "iso": "CL",
+    "name_zh": "智利",
+    "name_en": "Chile",
+    "flag": "🇨🇱",
     "factbox": [
       {
         "label": "首都",
@@ -4575,11 +4675,11 @@
       }
     ]
   },
-  "CL": {
-    "iso": "CL",
-    "name_zh": "智利",
-    "name_en": "Chile",
-    "flag": "🇨🇱",
+  "CO": {
+    "iso": "CO",
+    "name_zh": "哥倫比亞",
+    "name_en": "Colombia",
+    "flag": "🇨🇴",
     "factbox": [
       {
         "label": "首都",
@@ -4636,11 +4736,11 @@
       }
     ]
   },
-  "CO": {
-    "iso": "CO",
-    "name_zh": "哥倫比亞",
-    "name_en": "Colombia",
-    "flag": "🇨🇴",
+  "CR": {
+    "iso": "CR",
+    "name_zh": "哥斯大黎加",
+    "name_en": "Costa Rica",
+    "flag": "🇨🇷",
     "factbox": [
       {
         "label": "首都",
@@ -4697,11 +4797,11 @@
       }
     ]
   },
-  "CR": {
-    "iso": "CR",
-    "name_zh": "哥斯大黎加",
-    "name_en": "Costa Rica",
-    "flag": "🇨🇷",
+  "CU": {
+    "iso": "CU",
+    "name_zh": "古巴",
+    "name_en": "Cuba",
+    "flag": "🇨🇺",
     "factbox": [
       {
         "label": "首都",
@@ -4743,40 +4843,72 @@
       }
     ]
   },
-  "CU": {
-    "iso": "CU",
-    "name_zh": "古巴",
-    "name_en": "Cuba",
-    "flag": "🇨🇺",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": ""
-      },
-      {
-        "label": "語言",
-        "value": ""
-      },
-      {
-        "label": "人口",
-        "value": ""
-      },
-      {
-        "label": "面積",
-        "value": ""
-      },
-      {
-        "label": "地理位置",
-        "value": ""
-      }
-    ],
-    "sections": []
-  },
   "DM": {
     "iso": "DM",
     "name_zh": "多米尼克",
     "name_en": "Dominica",
     "flag": "🇩🇲",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "羅梭（Roseau）"
+      },
+      {
+        "label": "語言",
+        "value": "英語"
+      },
+      {
+        "label": "人口",
+        "value": "74,661人（2024.7）"
+      },
+      {
+        "label": "面積",
+        "value": "751平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "東加勒比海小安地列斯群島中，向風群島的北部。"
+      }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "2015-09-14",
+            "title": "我捐10萬美元助多國自艾瑞卡風暴災後…",
+            "desc": "我捐10萬美元助多國自艾瑞卡風暴災後重建。"
+          },
+          {
+            "date": "1998-07-30",
+            "title": "多國外交貿易部長查爾斯抵臺參加第二屆…",
+            "desc": "多國外交貿易部長查爾斯抵臺參加第二屆「中華民國與東加勒比海四國外長會議」。"
+          },
+          {
+            "date": "1995-02-11",
+            "title": "簽署友好條約",
+            "desc": "簽署友好條約。"
+          },
+          {
+            "date": "1990-08-03",
+            "title": "兩國簽署文化協定。11月簽署引渡條約",
+            "desc": "兩國簽署文化協定。11月簽署引渡條約。"
+          },
+          {
+            "date": "1983-05-10",
+            "title": "中華民國與多米尼克建交",
+            "desc": "中華民國與多米尼克建交，2004年3月23日多國與中國建交，30日我國宣布與多米尼克斷交。"
+          }
+        ]
+      }
+    ]
+  },
+  "DO": {
+    "iso": "DO",
+    "name_zh": "多明尼加",
+    "name_en": "Dominican Republic",
+    "flag": "🇩🇴",
     "factbox": [
       {
         "label": "首都",
@@ -4833,40 +4965,72 @@
       }
     ]
   },
-  "DO": {
-    "iso": "DO",
-    "name_zh": "多明尼加",
-    "name_en": "Dominican Republic",
-    "flag": "🇩🇴",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": ""
-      },
-      {
-        "label": "語言",
-        "value": ""
-      },
-      {
-        "label": "人口",
-        "value": ""
-      },
-      {
-        "label": "面積",
-        "value": ""
-      },
-      {
-        "label": "地理位置",
-        "value": ""
-      }
-    ],
-    "sections": []
-  },
   "EC": {
     "iso": "EC",
     "name_zh": "厄瓜多",
     "name_en": "Ecuador",
     "flag": "🇪🇨",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "基多（Quito）"
+      },
+      {
+        "label": "語言",
+        "value": "西班牙語"
+      },
+      {
+        "label": "人口",
+        "value": "1,831萬人（2024.7）"
+      },
+      {
+        "label": "面積",
+        "value": "283,561平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "南美洲西北部"
+      }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "2019-05",
+            "title": "世界衛生大會（WHA）",
+            "desc": "世界衛生大會（WHA），臺灣再度缺席。厄瓜多國會14名議員聯名致函世界衛生組織（WHO），支持臺灣以觀察員身分參與WHA。"
+          },
+          {
+            "date": "2017-06",
+            "title": "我代表處遭厄國政府要求更名為「臺北駐…",
+            "desc": "我代表處遭厄國政府要求更名為「臺北駐厄瓜多商務處」。"
+          },
+          {
+            "date": "2016-01",
+            "title": "我國開放含厄瓜多等27國旅客申請電子…",
+            "desc": "我國開放含厄瓜多等27國旅客申請電子簽證。"
+          },
+          {
+            "date": "1983",
+            "title": "厄國在臺設立駐華商務處",
+            "desc": "厄國在臺設立駐華商務處，後因財務關係於1988年7月關閉。"
+          },
+          {
+            "date": "1978-09",
+            "title": "兩國簽署技術合作協定",
+            "desc": "兩國簽署技術合作協定，我在厄國設立的農技團更名為技術團。"
+          }
+        ]
+      }
+    ]
+  },
+  "SV": {
+    "iso": "SV",
+    "name_zh": "薩爾瓦多",
+    "name_en": "El Salvador",
+    "flag": "🇸🇻",
     "factbox": [
       {
         "label": "首都",
@@ -4903,11 +5067,11 @@
       }
     ]
   },
-  "SV": {
-    "iso": "SV",
-    "name_zh": "薩爾瓦多",
-    "name_en": "El Salvador",
-    "flag": "🇸🇻",
+  "GD": {
+    "iso": "GD",
+    "name_zh": "格瑞那達",
+    "name_en": "Grenada",
+    "flag": "🇬🇩",
     "factbox": [
       {
         "label": "首都",
@@ -4963,35 +5127,6 @@
         ]
       }
     ]
-  },
-  "GD": {
-    "iso": "GD",
-    "name_zh": "格瑞那達",
-    "name_en": "Grenada",
-    "flag": "🇬🇩",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": ""
-      },
-      {
-        "label": "語言",
-        "value": ""
-      },
-      {
-        "label": "人口",
-        "value": ""
-      },
-      {
-        "label": "面積",
-        "value": ""
-      },
-      {
-        "label": "地理位置",
-        "value": ""
-      }
-    ],
-    "sections": []
   },
   "GT": {
     "iso": "GT",
@@ -5061,6 +5196,35 @@
     "factbox": [
       {
         "label": "首都",
+        "value": "喬治城（Georgetown）"
+      },
+      {
+        "label": "語言",
+        "value": "英語"
+      },
+      {
+        "label": "人口",
+        "value": "79.4萬人（2024.7）"
+      },
+      {
+        "label": "面積",
+        "value": "214,969平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "南美洲東北部"
+      }
+    ],
+    "sections": []
+  },
+  "HT": {
+    "iso": "HT",
+    "name_zh": "海地",
+    "name_en": "Haiti",
+    "flag": "🇭🇹",
+    "factbox": [
+      {
+        "label": "首都",
         "value": "太子港（Port-au-Prince）"
       },
       {
@@ -5108,11 +5272,11 @@
       }
     ]
   },
-  "HT": {
-    "iso": "HT",
-    "name_zh": "海地",
-    "name_en": "Haiti",
-    "flag": "🇭🇹",
+  "HN": {
+    "iso": "HN",
+    "name_zh": "宏都拉斯",
+    "name_en": "Honduras",
+    "flag": "🇭🇳",
     "factbox": [
       {
         "label": "首都",
@@ -5164,11 +5328,11 @@
       }
     ]
   },
-  "HN": {
-    "iso": "HN",
-    "name_zh": "宏都拉斯",
-    "name_en": "Honduras",
-    "flag": "🇭🇳",
+  "JM": {
+    "iso": "JM",
+    "name_zh": "牙買加",
+    "name_en": "Jamaica",
+    "flag": "🇯🇲",
     "factbox": [
       {
         "label": "首都",
@@ -5225,11 +5389,11 @@
       }
     ]
   },
-  "JM": {
-    "iso": "JM",
-    "name_zh": "牙買加",
-    "name_en": "Jamaica",
-    "flag": "🇯🇲",
+  "MX": {
+    "iso": "MX",
+    "name_zh": "墨西哥",
+    "name_en": "Mexico",
+    "flag": "🇲🇽",
     "factbox": [
       {
         "label": "首都",
@@ -5286,11 +5450,11 @@
       }
     ]
   },
-  "MX": {
-    "iso": "MX",
-    "name_zh": "墨西哥",
-    "name_en": "Mexico",
-    "flag": "🇲🇽",
+  "NI": {
+    "iso": "NI",
+    "name_zh": "尼加拉瓜",
+    "name_en": "Nicaragua",
+    "flag": "🇳🇮",
     "factbox": [
       {
         "label": "首都",
@@ -5327,67 +5491,6 @@
             "date": "2020-03",
             "title": "中旬至5月14日",
             "desc": "中旬至5月14日，駐尼國大使館贈42萬多片口罩及防護衣等以對抗Covid-19。11月中旬，尼國等中美洲4友邦遭颶風重創，我援贈各式醫療物資。"
-          }
-        ]
-      }
-    ]
-  },
-  "NI": {
-    "iso": "NI",
-    "name_zh": "尼加拉瓜",
-    "name_en": "Nicaragua",
-    "flag": "🇳🇮",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": "巴拿馬市（Panama City）"
-      },
-      {
-        "label": "語言",
-        "value": "西班牙語"
-      },
-      {
-        "label": "人口",
-        "value": "447萬人（2024.7）"
-      },
-      {
-        "label": "面積",
-        "value": "75,420平方公里"
-      },
-      {
-        "label": "地理位置",
-        "value": "中美洲"
-      }
-    ],
-    "sections": [
-      {
-        "type": "timeline",
-        "title": "近年大事記",
-        "events": [
-          {
-            "date": "2016-03",
-            "title": "兩國再度簽署新版技術合作協定。6月2…",
-            "desc": "兩國再度簽署新版技術合作協定。6月26日蔡英文總統抵達巴拿馬出席巴拿馬運河拓寬峻工儀式，次日會晤巴國總統瓦雷拉，並簽署「有關移民事務與防制人口販運合作協定」。"
-          },
-          {
-            "date": "2014-06-30",
-            "title": "馬英九總統抵達巴拿馬",
-            "desc": "馬英九總統抵達巴拿馬，參加次日總統就職典禮。"
-          },
-          {
-            "date": "2011-05-16",
-            "title": "蕭萬長副總統訪問巴拿馬",
-            "desc": "蕭萬長副總統訪問巴拿馬，拜會馬丁內利總統。"
-          },
-          {
-            "date": "2010-10-21",
-            "title": "馬丁內利總統抵臺國是訪問",
-            "desc": "馬丁內利總統抵臺國是訪問。"
-          },
-          {
-            "date": "2009-06-30",
-            "title": "馬英九總統率團參加巴國總統馬丁內利就…",
-            "desc": "馬英九總統率團參加巴國總統馬丁內利就職典禮，並於巴國國會發表演說。"
           }
         ]
       }
@@ -5442,6 +5545,71 @@
     "factbox": [
       {
         "label": "首都",
+        "value": "亞松森（Asuncion）"
+      },
+      {
+        "label": "語言",
+        "value": "西班牙語、瓜拉尼語"
+      },
+      {
+        "label": "人口",
+        "value": "753萬人（2024.7）"
+      },
+      {
+        "label": "面積",
+        "value": "406,752平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "南美洲中部（內陸國）"
+      },
+      {
+        "label": "邦交",
+        "value": "★2017年7月11至13日卡提斯總統抵台國是訪問，參加兩國建交60週年慶祝大會，並簽署經濟合作協定及免除外國公文書重複驗證協定。"
+      }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "2024-05-18",
+            "title": "潘尼亞總統率團來台參加總統賴清德就職…",
+            "desc": "潘尼亞總統率團來台參加總統賴清德就職典禮。"
+          },
+          {
+            "date": "2023-07-11",
+            "title": "巴拉圭總統當選人潘尼亞率團訪台。8月…",
+            "desc": "巴拉圭總統當選人潘尼亞率團訪台。8月12日至18日賴清德副總統以特使身分，率團出席巴拉圭新任總統潘尼亞就職典禮。潘尼亞就職演說兩度提到台灣，並指出台巴兩國是兄弟之情。"
+          },
+          {
+            "date": "2022-03-31",
+            "title": "第21屆台灣巴拉圭經濟合作會議在台北召開",
+            "desc": "第21屆台灣巴拉圭經濟合作會議在台北召開，簽署非洲豬瘟（ASF）診斷技術及人員培訓及投資暨出口推廣合作瞭解備忘錄（MOU）等。2022世界衛生大會（WHA）巴拉圭等13友邦提出「邀請臺灣以觀察員身分出席WHA」案。"
+          },
+          {
+            "date": "2021",
+            "title": "第76屆聯合國大會總辯論為臺發聲",
+            "desc": "第76屆聯合國大會總辯論為臺發聲。"
+          },
+          {
+            "date": "2020-04",
+            "title": "援贈巴拉圭28萬片口罩",
+            "desc": "援贈巴拉圭28萬片口罩，協助對抗2019冠狀病毒疾病疫情。"
+          }
+        ]
+      }
+    ]
+  },
+  "PE": {
+    "iso": "PE",
+    "name_zh": "秘魯",
+    "name_en": "Peru",
+    "flag": "🇵🇪",
+    "factbox": [
+      {
+        "label": "首都",
         "value": "利馬（Lima）"
       },
       {
@@ -5470,66 +5638,6 @@
             "date": "2022-05",
             "title": "世界衛生大會（WHA）期間",
             "desc": "世界衛生大會（WHA）期間，秘魯議員聲援台灣參與WHA。"
-          }
-        ]
-      }
-    ]
-  },
-  "PE": {
-    "iso": "PE",
-    "name_zh": "秘魯",
-    "name_en": "Peru",
-    "flag": "🇵🇪",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": "巴士地（Basseterre）"
-      },
-      {
-        "label": "語言",
-        "value": "英語"
-      },
-      {
-        "label": "人口",
-        "value": "5萬5,133人（2024.8）"
-      },
-      {
-        "label": "面積",
-        "value": "261平方公里"
-      },
-      {
-        "label": "地理位置",
-        "value": "東加勒比海小安地列斯群島中，背風群島的北部"
-      },
-      {
-        "label": "邦交",
-        "value": "1983年10月9日與中華民國建交。"
-      }
-    ],
-    "sections": [
-      {
-        "type": "timeline",
-        "title": "近年大事記",
-        "events": [
-          {
-            "date": "2024-05-18",
-            "title": "克國副總理韓利率團訪台參加總統賴清德…",
-            "desc": "克國副總理韓利率團訪台參加總統賴清德就職。5月底，WHA大會，克國等友邦再度發言挺台。"
-          },
-          {
-            "date": "2023-05-08",
-            "title": "克國副總理韓利率團訪台",
-            "desc": "克國副總理韓利率團訪台，副總統賴清德接見。5月24日，克國衛生部長艾淇伯德在WHA大會上大力挺台以觀察員身份參與WHO所有會議活動。9月16日，外交部長吳釗燮率團參加克國建國40週年慶。9月底聯合國大會，克國總理德魯挺台灣參與聯合國，10月9日，克國總督萊柏來台參加國慶活動。"
-          },
-          {
-            "date": "2022",
-            "title": "世界衛生大會（WHA）克國等13友邦…",
-            "desc": "世界衛生大會（WHA）克國等13友邦提出「邀請台灣以觀察員身份出席WHA」案。11月8日，新任總理德魯訪台，蔡總統軍禮歡迎。"
-          },
-          {
-            "date": "2020-04-15",
-            "title": "我駐克國大使館援贈4萬片口罩給克國政府",
-            "desc": "我駐克國大使館援贈4萬片口罩給克國政府，協助對抗2019冠狀病毒疾病疫情。2021年第76屆聯合國大會總辯論為台灣發聲。"
           }
         ]
       }
@@ -5608,23 +5716,23 @@
     "factbox": [
       {
         "label": "首都",
-        "value": "京斯鎮（Kingstown）"
+        "value": "卡斯翠（Castries）"
       },
       {
         "label": "語言",
-        "value": "英語"
+        "value": "英語、Patois（通用土語）"
       },
       {
         "label": "人口",
-        "value": "10萬647人（2024.8）"
+        "value": "16萬8,038人（2024.7）"
       },
       {
         "label": "面積",
-        "value": "389平方公里"
+        "value": "616平方公里"
       },
       {
         "label": "地理位置",
-        "value": "東加勒比海小安地列斯群島中，向風群島之中部。"
+        "value": "東加勒比海小安地列斯群島中，向風群島的中部。"
       },
       {
         "label": "邦交",
@@ -5638,23 +5746,23 @@
         "events": [
           {
             "date": "2024-05-18",
-            "title": "總理龔薩福來台參加總統賴清德就職典禮…",
-            "desc": "總理龔薩福來台參加總統賴清德就職典禮。5月29日聖文森及友邦在WHA大會公開發言挺台。"
+            "title": "露國總理皮耶來台參加賴清德總統就職。…",
+            "desc": "露國總理皮耶來台參加賴清德總統就職。5月29日，露國等友邦在WHA大會公開發言挺台。"
           },
           {
-            "date": "2023-09",
-            "title": "總理龔薩福聯合國大會總辯論挺台國際參…",
-            "desc": "總理龔薩福聯合國大會總辯論挺台國際參與。10月7日，聖文森總督朵根來台參加國慶活動。"
+            "date": "2023-08",
+            "title": "台灣與聖露西亞簽署刑事司法互助條約",
+            "desc": "台灣與聖露西亞簽署刑事司法互助條約，明定雙方在刑事調查、犯罪防制等相互協助。9月22日露國總理皮耶在聯合國大會總辯論敦促聯合國接納台灣。10月5日露國等11國友邦聯合致函聯合國秘書長古特瑞斯，籲支持台灣參與聯合國體系。"
           },
           {
             "date": "2022-03",
-            "title": "捐聖文森1萬劑AZ疫苗。世界衛生大會…",
-            "desc": "捐聖文森1萬劑AZ疫苗。世界衛生大會聖文森等13友邦提出「邀請臺灣以觀察員身分出席WHA」案。7月27日總理龔薩福在官方推特感謝臺灣提供6,000萬美元貸款支持聖國港口發展。8月7日至12日在中共對臺軍演期間，龔薩福第12次訪臺。"
+            "title": "捐露國1萬劑AZ疫苗。世界衛生大會聖…",
+            "desc": "捐露國1萬劑AZ疫苗。世界衛生大會聖露西亞等13友邦提出「邀請臺灣以觀察員身分出席WHA」案。11月29日，露國總理皮耶率團訪臺，總統蔡英文以隆重軍禮迎接。"
           },
           {
-            "date": "2020-04-22",
-            "title": "我駐聖文森大使館援贈4萬片口罩",
-            "desc": "我駐聖文森大使館援贈4萬片口罩，協助對抗2019冠狀病毒疾病疫情。"
+            "date": "2020-04-25",
+            "title": "我駐露大使館援贈4萬片口罩給露國政府",
+            "desc": "我駐露大使館援贈4萬片口罩給露國政府，協助對抗2019冠狀病毒疾病疫情。"
           }
         ]
       }
@@ -5733,23 +5841,23 @@
     "factbox": [
       {
         "label": "首都",
-        "value": ""
+        "value": "巴拉馬利波（Paramaribo）"
       },
       {
         "label": "語言",
-        "value": ""
+        "value": "荷蘭語、Sranan Tongo語"
       },
       {
         "label": "人口",
-        "value": ""
+        "value": "64.7萬人（2024.7）"
       },
       {
         "label": "面積",
-        "value": ""
+        "value": "163,820平方公里"
       },
       {
         "label": "地理位置",
-        "value": ""
+        "value": "南美洲東北部"
       }
     ],
     "sections": []
@@ -5762,23 +5870,52 @@
     "factbox": [
       {
         "label": "首都",
-        "value": "華盛頓特區（Washington,D.C.）"
+        "value": "西班牙港（Port of Spain）"
       },
       {
         "label": "語言",
-        "value": "英語、當地方言"
+        "value": "英語"
       },
       {
         "label": "人口",
-        "value": "5萬1,118人（2024.8）"
+        "value": "141萬人（2024.8）"
       },
       {
         "label": "面積",
-        "value": "464平方公里"
+        "value": "5,128平方公里"
       },
       {
         "label": "地理位置",
-        "value": "北太平洋，菲律賓之東，日本之南"
+        "value": "東加勒比海小安地列斯群島中，向風群島的南端"
+      }
+    ],
+    "sections": []
+  },
+  "UY": {
+    "iso": "UY",
+    "name_zh": "烏拉圭",
+    "name_en": "Uruguay",
+    "flag": "🇺🇾",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "蒙特維多（Montevideo）"
+      },
+      {
+        "label": "語言",
+        "value": "西班牙語"
+      },
+      {
+        "label": "人口",
+        "value": "342.5萬人（2024.8）"
+      },
+      {
+        "label": "面積",
+        "value": "176,215 平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "南美洲東南部、瀕大西洋"
       }
     ],
     "sections": [
@@ -5787,39 +5924,19 @@
         "title": "近年大事記",
         "events": [
           {
-            "date": "2024-01-09",
-            "title": "美國眾議院議長強生首度會晤我駐美代表…",
-            "desc": "美國眾議院議長強生首度會晤我駐美代表俞大㵢，彰顯美國會跨黨派挺台。2月22日，美眾院「中國問題特別委員會」主席蓋拉格率團訪台，展現對台支持。4月11日為台灣關係法45週年，美參眾兩院提決議重申對台承諾。5月19日，前白宮國家經濟會議總監狄斯率團慶祝總統賴清德就職。6月20日美宣布售台1011套彈簧刀300型及ALTIUS 600M-V等攻擊型無人機。7月9日，新任AIT台北辦事處處長谷立言就任，並於10日晉見賴總統，7月13日，美國總統大選之共和黨參選人川普遇襲輕傷，賴總統及外長林佳龍在社群關切，並致電AIT表達關心。"
-          },
-          {
-            "date": "2023-07",
-            "title": "美國聯邦眾議院通過「台灣國際團結法案…",
-            "desc": "美國聯邦眾議院通過「台灣國際團結法案」（Taiwan International Solidarity Act），明確指出聯合國大會第2758號決議，「並未處理台灣或其人民在聯合國或其他相關組織內的代表權問題」。11月13日美國總統拜登與中國國家主席習近平在舊金山APEC會議碰面，拜登會前重申助台自我防衛。11月底，俞大㵢出任我駐美代表。"
-          },
-          {
-            "date": "2022-01-25",
-            "title": "至30日副總統賴清德出訪宏都拉斯、過…",
-            "desc": "至30日副總統賴清德出訪宏都拉斯、過境美國洛杉磯及舊金山，1月28日在宏都拉斯總統就職典禮上與美國副總統賀錦麗（Kamala Harris）互動。美國總統拜登（Joe Biden）上任後首趟亞洲行，訪日本的5月23日，對媒體問及若台灣發生與烏克蘭同樣狀況，美國是否會軍事介入時，拜登答說：「會。」他說：「這是我們做過的承諾。」6月1日臺美21世紀貿易倡議啟動；6月27日首次會議在華府舉行。8月2日眾議院議長裴洛西（Nancy Pelosi）搭乘專機抵台，總統蔡英文3日接見並頒授「特種大綬卿雲勳章」。裴洛西是繼1997年眾院議長金瑞契（Newt Gingrich）後，25年來訪台層級最高的美國政要，也是自1971年8月眾院議長艾伯特（Carl Albert）到訪立法院後，睽違51年再度有美國眾議院議長造訪立院。裴洛西3日傍晚離台。共軍4日起在台灣周邊共6個海空域軍演射擊。"
-          },
-          {
-            "date": "2021-01-09",
-            "title": "國務院宣布取消美臺交往限制。4月9日…",
-            "desc": "國務院宣布取消美臺交往限制。4月9日國務院宣布最新對台交往準則。6月6日，美方宣布供臺75萬劑疫苗；19日AIT宣布再捐贈175萬劑疫苗。7月15日，美國在臺協會處長孫曉雅抵臺履新。10月31日，AIT宣布再捐150萬劑莫德納疫苗。"
-          },
-          {
-            "date": "2020-03-04",
-            "title": "美眾院通過「臺北法」（TAIPEI …",
-            "desc": "美眾院通過「臺北法」（TAIPEI Act），3月11日參議院一致同意通過，3月26日總統川普簽署後生效。臺北法全名「臺灣友邦國際保護及加強倡議法」（Taiwan Allies International Protection and Enhancement Initiative Act，簡稱TAIPEI Act）。臺北法是繼臺灣旅行法後，美國再一個以台灣為名的國內法。5月21日美宣布售臺18枚MK48重型魚雷。8月10日，美國衛生部長艾薩（Alex Azar）抵臺訪問3天。9月17日，國務院主管經濟發展與環境能源的次卿柯拉克（Keith Krach）訪台，出席19日的前總統李登輝追思禮拜。10月12日我駐關島辦事處正式營運。10月21日美宣布售臺海馬斯多管火箭、增程型距外陸攻飛彈及F-16新式偵照莢艙。10月26日宣布售台100枚魚叉海岸防禦系統。11月3日宣布售台4架MQ-9B無人機。"
+            "date": "1992-07",
+            "title": "我國在烏國首都蒙特維多設立「臺北經濟…",
+            "desc": "我國在烏國首都蒙特維多設立「臺北經濟文化辦事處」，重新建立經貿交流管道。該處於2002年關閉。"
           }
         ]
       }
     ]
   },
-  "UY": {
-    "iso": "UY",
-    "name_zh": "烏拉圭",
-    "name_en": "Uruguay",
-    "flag": "🇺🇾",
+  "VE": {
+    "iso": "VE",
+    "name_zh": "委內瑞拉",
+    "name_en": "Venezuela",
+    "flag": "🇻🇪",
     "factbox": [
       {
         "label": "首都",
@@ -5856,35 +5973,6 @@
       }
     ]
   },
-  "VE": {
-    "iso": "VE",
-    "name_zh": "委內瑞拉",
-    "name_en": "Venezuela",
-    "flag": "🇻🇪",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": ""
-      },
-      {
-        "label": "語言",
-        "value": ""
-      },
-      {
-        "label": "人口",
-        "value": ""
-      },
-      {
-        "label": "面積",
-        "value": ""
-      },
-      {
-        "label": "地理位置",
-        "value": ""
-      }
-    ],
-    "sections": []
-  },
   "DZ": {
     "iso": "DZ",
     "name_zh": "阿爾及利亞",
@@ -5893,23 +5981,23 @@
     "factbox": [
       {
         "label": "首都",
-        "value": ""
+        "value": "阿爾及爾（Algiers）"
       },
       {
         "label": "語言",
-        "value": ""
+        "value": "阿拉伯語、法語、柏柏語（Berber），1998年7月5日，政府宣布阿拉伯語為唯一的官方語言。"
       },
       {
         "label": "人口",
-        "value": ""
+        "value": "4,702萬人（2024）"
       },
       {
         "label": "面積",
-        "value": ""
+        "value": "2,381,740平方公里"
       },
       {
         "label": "地理位置",
-        "value": ""
+        "value": "北非、北濱地中海。"
       }
     ],
     "sections": []
@@ -5919,6 +6007,47 @@
     "name_zh": "安哥拉",
     "name_en": "Angola",
     "flag": "🇦🇴",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "魯安達（Luanda）"
+      },
+      {
+        "label": "語言",
+        "value": "葡萄牙語"
+      },
+      {
+        "label": "人口",
+        "value": "3,720萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "1,246,700平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "西南非海岸"
+      }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "1992-03-14",
+            "title": "我與安哥拉簽署協議",
+            "desc": "我與安哥拉簽署協議，並於同年9月在安京魯安達設立駐安哥拉代表處；該處於2000年8月30日裁撤。"
+          }
+        ]
+      }
+    ]
+  },
+  "BJ": {
+    "iso": "BJ",
+    "name_zh": "貝南",
+    "name_en": "Benin",
+    "flag": "🇧🇯",
     "factbox": [
       {
         "label": "首都",
@@ -5955,40 +6084,52 @@
       }
     ]
   },
-  "BJ": {
-    "iso": "BJ",
-    "name_zh": "貝南",
-    "name_en": "Benin",
-    "flag": "🇧🇯",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": ""
-      },
-      {
-        "label": "語言",
-        "value": ""
-      },
-      {
-        "label": "人口",
-        "value": ""
-      },
-      {
-        "label": "面積",
-        "value": ""
-      },
-      {
-        "label": "地理位置",
-        "value": ""
-      }
-    ],
-    "sections": []
-  },
   "BW": {
     "iso": "BW",
     "name_zh": "波札那",
     "name_en": "Botswana",
     "flag": "🇧🇼",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "嘉伯隆里（Gaborone）"
+      },
+      {
+        "label": "語言",
+        "value": "英語、Setswana語。"
+      },
+      {
+        "label": "人口",
+        "value": "245萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "581,730平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "南部非洲內陸"
+      }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "1966-12-30",
+            "title": "波札那與中華民國建交",
+            "desc": "波札那與中華民國建交，1974年3月25日波札那承認中國，4月5日與我斷交。"
+          }
+        ]
+      }
+    ]
+  },
+  "BF": {
+    "iso": "BF",
+    "name_zh": "布吉納法索",
+    "name_en": "Burkina Faso",
+    "flag": "🇧🇫",
     "factbox": [
       {
         "label": "首都",
@@ -6045,11 +6186,11 @@
       }
     ]
   },
-  "BF": {
-    "iso": "BF",
-    "name_zh": "布吉納法索",
-    "name_en": "Burkina Faso",
-    "flag": "🇧🇫",
+  "BI": {
+    "iso": "BI",
+    "name_zh": "蒲隆地",
+    "name_en": "Burundi",
+    "flag": "🇧🇮",
     "factbox": [
       {
         "label": "首都",
@@ -6074,11 +6215,11 @@
     ],
     "sections": []
   },
-  "BI": {
-    "iso": "BI",
-    "name_zh": "蒲隆地",
-    "name_en": "Burundi",
-    "flag": "🇧🇮",
+  "CM": {
+    "iso": "CM",
+    "name_zh": "喀麥隆",
+    "name_en": "Cameroon",
+    "flag": "🇨🇲",
     "factbox": [
       {
         "label": "首都",
@@ -6115,11 +6256,11 @@
       }
     ]
   },
-  "CM": {
-    "iso": "CM",
-    "name_zh": "喀麥隆",
-    "name_en": "Cameroon",
-    "flag": "🇨🇲",
+  "CV": {
+    "iso": "CV",
+    "name_zh": "佛得角",
+    "name_en": "Cape Verde",
+    "flag": "🇨🇻",
     "factbox": [
       {
         "label": "首都",
@@ -6156,40 +6297,62 @@
       }
     ]
   },
-  "CV": {
-    "iso": "CV",
-    "name_zh": "佛得角",
-    "name_en": "Cape Verde",
-    "flag": "🇨🇻",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": ""
-      },
-      {
-        "label": "語言",
-        "value": ""
-      },
-      {
-        "label": "人口",
-        "value": ""
-      },
-      {
-        "label": "面積",
-        "value": ""
-      },
-      {
-        "label": "地理位置",
-        "value": ""
-      }
-    ],
-    "sections": []
-  },
   "CF": {
     "iso": "CF",
     "name_zh": "中非共和國",
     "name_en": "Central African Republic",
     "flag": "🇨🇫",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "班基（Bangui）"
+      },
+      {
+        "label": "語言",
+        "value": "Sangho語、法語。"
+      },
+      {
+        "label": "人口",
+        "value": "565萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "622,984平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "非洲中部"
+      }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "1998-01-29",
+            "title": "中非與中共復交",
+            "desc": "中非與中共復交，外交部宣布中止和中非的外交關係。"
+          },
+          {
+            "date": "1997-06-26",
+            "title": "行政院通過我與中非共和國農業技術合作…",
+            "desc": "行政院通過我與中非共和國農業技術合作協定。"
+          },
+          {
+            "date": "1962-04-13",
+            "title": "中非與中華民國建交",
+            "desc": "中非與中華民國建交，1964年9月29日與中國建交後，同年11月5日與我國斷交。1966年1月6日中非與中共斷交，1968年5月6日與我國復交。1976年8月20日中非與中共復交，我國於8月23日與中非斷交。1991年7月8日中非與我復交，同日中共宣布與中非斷交。"
+          }
+        ]
+      }
+    ]
+  },
+  "TD": {
+    "iso": "TD",
+    "name_zh": "查德",
+    "name_en": "Chad",
+    "flag": "🇹🇩",
     "factbox": [
       {
         "label": "首都",
@@ -6226,11 +6389,11 @@
       }
     ]
   },
-  "TD": {
-    "iso": "TD",
-    "name_zh": "查德",
-    "name_en": "Chad",
-    "flag": "🇹🇩",
+  "KM": {
+    "iso": "KM",
+    "name_zh": "葛摩",
+    "name_en": "Comoros",
+    "flag": "🇰🇲",
     "factbox": [
       {
         "label": "首都",
@@ -6267,11 +6430,11 @@
       }
     ]
   },
-  "KM": {
-    "iso": "KM",
-    "name_zh": "葛摩",
-    "name_en": "Comoros",
-    "flag": "🇰🇲",
+  "CD": {
+    "iso": "CD",
+    "name_zh": "剛果民主共和國",
+    "name_en": "Democratic Republic of the Congo",
+    "flag": "🇨🇩",
     "factbox": [
       {
         "label": "首都",
@@ -6318,35 +6481,6 @@
       }
     ]
   },
-  "CD": {
-    "iso": "CD",
-    "name_zh": "剛果民主共和國",
-    "name_en": "Democratic Republic of the Congo",
-    "flag": "🇨🇩",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": ""
-      },
-      {
-        "label": "語言",
-        "value": ""
-      },
-      {
-        "label": "人口",
-        "value": ""
-      },
-      {
-        "label": "面積",
-        "value": ""
-      },
-      {
-        "label": "地理位置",
-        "value": ""
-      }
-    ],
-    "sections": []
-  },
   "CG": {
     "iso": "CG",
     "name_zh": "剛果共和國",
@@ -6355,23 +6489,23 @@
     "factbox": [
       {
         "label": "首都",
-        "value": "雅瑪索克羅（Yamoussoukro）為法定首都，阿必尚（Abidjan）為行政中心"
+        "value": "布拉薩市（Brazzaville）"
       },
       {
         "label": "語言",
-        "value": "法語"
+        "value": "法語、Lingala語、Monokutuba語。"
       },
       {
         "label": "人口",
-        "value": "2,998萬人（2024）"
+        "value": "609萬人（2024）"
       },
       {
         "label": "面積",
-        "value": "322,463平方公里"
+        "value": "342,000平方公里"
       },
       {
         "label": "地理位置",
-        "value": "非洲西部"
+        "value": "非洲中部、西臨大西洋。"
       }
     ],
     "sections": [
@@ -6380,9 +6514,9 @@
         "title": "近年大事記",
         "events": [
           {
-            "date": "2022-11",
-            "title": "台灣恢復駐象牙海岸代表處",
-            "desc": "台灣恢復駐象牙海岸代表處。"
+            "date": "1960-09-10",
+            "title": "剛果與中華民國建交",
+            "desc": "剛果與中華民國建交，1964年2月22日與中國建交，4月17日我國宣布與剛果斷交。"
           }
         ]
       }
@@ -6393,6 +6527,35 @@
     "name_zh": "吉布地",
     "name_en": "Djibouti",
     "flag": "🇩🇯",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "吉布地（Djibouti）"
+      },
+      {
+        "label": "語言",
+        "value": "阿拉伯語、法語、Afar語、Somali語。"
+      },
+      {
+        "label": "人口",
+        "value": "99.4萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "23,200平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "非洲東北角，濱紅海南端出口"
+      }
+    ],
+    "sections": []
+  },
+  "EG": {
+    "iso": "EG",
+    "name_zh": "埃及",
+    "name_en": "Egypt",
+    "flag": "🇪🇬",
     "factbox": [
       {
         "label": "首都",
@@ -6417,40 +6580,40 @@
     ],
     "sections": []
   },
-  "EG": {
-    "iso": "EG",
-    "name_zh": "埃及",
-    "name_en": "Egypt",
-    "flag": "🇪🇬",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": ""
-      },
-      {
-        "label": "語言",
-        "value": ""
-      },
-      {
-        "label": "人口",
-        "value": ""
-      },
-      {
-        "label": "面積",
-        "value": ""
-      },
-      {
-        "label": "地理位置",
-        "value": ""
-      }
-    ],
-    "sections": []
-  },
   "GQ": {
     "iso": "GQ",
     "name_zh": "赤道幾內亞",
     "name_en": "Equatorial Guinea",
     "flag": "🇬🇶",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "馬拉波（Malabo）"
+      },
+      {
+        "label": "語言",
+        "value": "西班牙語、法語、Fang語、Bubi語。"
+      },
+      {
+        "label": "人口",
+        "value": "179萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "28,051平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "非洲中西部，西臨大西洋"
+      }
+    ],
+    "sections": []
+  },
+  "ER": {
+    "iso": "ER",
+    "name_zh": "厄利垂亞",
+    "name_en": "Eritrea",
+    "flag": "🇪🇷",
     "factbox": [
       {
         "label": "首都",
@@ -6475,11 +6638,11 @@
     ],
     "sections": []
   },
-  "ER": {
-    "iso": "ER",
-    "name_zh": "厄利垂亞",
-    "name_en": "Eritrea",
-    "flag": "🇪🇷",
+  "SZ": {
+    "iso": "SZ",
+    "name_zh": "史瓦帝尼",
+    "name_en": "Eswatini",
+    "flag": "🇸🇿",
     "factbox": [
       {
         "label": "首都",
@@ -6540,11 +6703,11 @@
       }
     ]
   },
-  "SZ": {
-    "iso": "SZ",
-    "name_zh": "史瓦帝尼",
-    "name_en": "Eswatini",
-    "flag": "🇸🇿",
+  "ET": {
+    "iso": "ET",
+    "name_zh": "衣索比亞",
+    "name_en": "Ethiopia",
+    "flag": "🇪🇹",
     "factbox": [
       {
         "label": "首都",
@@ -6569,11 +6732,11 @@
     ],
     "sections": []
   },
-  "ET": {
-    "iso": "ET",
-    "name_zh": "衣索比亞",
-    "name_en": "Ethiopia",
-    "flag": "🇪🇹",
+  "GA": {
+    "iso": "GA",
+    "name_zh": "加彭",
+    "name_en": "Gabon",
+    "flag": "🇬🇦",
     "factbox": [
       {
         "label": "首都",
@@ -6610,11 +6773,11 @@
       }
     ]
   },
-  "GA": {
-    "iso": "GA",
-    "name_zh": "加彭",
-    "name_en": "Gabon",
-    "flag": "🇬🇦",
+  "GM": {
+    "iso": "GM",
+    "name_zh": "甘比亞",
+    "name_en": "Gambia",
+    "flag": "🇬🇲",
     "factbox": [
       {
         "label": "首都",
@@ -6671,11 +6834,11 @@
       }
     ]
   },
-  "GM": {
-    "iso": "GM",
-    "name_zh": "甘比亞",
-    "name_en": "Gambia",
-    "flag": "🇬🇲",
+  "GH": {
+    "iso": "GH",
+    "name_zh": "迦納",
+    "name_en": "Ghana",
+    "flag": "🇬🇭",
     "factbox": [
       {
         "label": "首都",
@@ -6700,11 +6863,11 @@
     ],
     "sections": []
   },
-  "GH": {
-    "iso": "GH",
-    "name_zh": "迦納",
-    "name_en": "Ghana",
-    "flag": "🇬🇭",
+  "GN": {
+    "iso": "GN",
+    "name_zh": "幾內亞",
+    "name_en": "Guinea",
+    "flag": "🇬🇳",
     "factbox": [
       {
         "label": "首都",
@@ -6729,11 +6892,11 @@
     ],
     "sections": []
   },
-  "GN": {
-    "iso": "GN",
-    "name_zh": "幾內亞",
-    "name_en": "Guinea",
-    "flag": "🇬🇳",
+  "GW": {
+    "iso": "GW",
+    "name_zh": "幾內亞比紹",
+    "name_en": "Guinea-Bissau",
+    "flag": "🇬🇼",
     "factbox": [
       {
         "label": "首都",
@@ -6770,11 +6933,11 @@
       }
     ]
   },
-  "GW": {
-    "iso": "GW",
-    "name_zh": "幾內亞比紹",
-    "name_en": "Guinea-Bissau",
-    "flag": "🇬🇼",
+  "KE": {
+    "iso": "KE",
+    "name_zh": "肯亞",
+    "name_en": "Kenya",
+    "flag": "🇰🇪",
     "factbox": [
       {
         "label": "首都",
@@ -6811,11 +6974,11 @@
       }
     ]
   },
-  "KE": {
-    "iso": "KE",
-    "name_zh": "肯亞",
-    "name_en": "Kenya",
-    "flag": "🇰🇪",
+  "LS": {
+    "iso": "LS",
+    "name_zh": "賴索托",
+    "name_en": "Lesotho",
+    "flag": "🇱🇸",
     "factbox": [
       {
         "label": "首都",
@@ -6852,11 +7015,11 @@
       }
     ]
   },
-  "LS": {
-    "iso": "LS",
-    "name_zh": "賴索托",
-    "name_en": "Lesotho",
-    "flag": "🇱🇸",
+  "LR": {
+    "iso": "LR",
+    "name_zh": "賴比瑞亞",
+    "name_en": "Liberia",
+    "flag": "🇱🇷",
     "factbox": [
       {
         "label": "首都",
@@ -6913,11 +7076,11 @@
       }
     ]
   },
-  "LR": {
-    "iso": "LR",
-    "name_zh": "賴比瑞亞",
-    "name_en": "Liberia",
-    "flag": "🇱🇷",
+  "LY": {
+    "iso": "LY",
+    "name_zh": "利比亞",
+    "name_en": "Libya",
+    "flag": "🇱🇾",
     "factbox": [
       {
         "label": "首都",
@@ -6974,11 +7137,11 @@
       }
     ]
   },
-  "LY": {
-    "iso": "LY",
-    "name_zh": "利比亞",
-    "name_en": "Libya",
-    "flag": "🇱🇾",
+  "MG": {
+    "iso": "MG",
+    "name_zh": "馬達加斯加",
+    "name_en": "Madagascar",
+    "flag": "🇲🇬",
     "factbox": [
       {
         "label": "首都",
@@ -7025,31 +7188,31 @@
       }
     ]
   },
-  "MG": {
-    "iso": "MG",
-    "name_zh": "馬達加斯加",
-    "name_en": "Madagascar",
-    "flag": "🇲🇬",
+  "ML": {
+    "iso": "ML",
+    "name_zh": "馬利",
+    "name_en": "Mali",
+    "flag": "🇲🇱",
     "factbox": [
       {
         "label": "首都",
-        "value": "里朗威（Lilongwe）"
+        "value": "巴馬科（Bamako）"
       },
       {
         "label": "語言",
-        "value": "英語、Chichewa語。"
+        "value": "法語、Bambara語及其他多種土語。"
       },
       {
         "label": "人口",
-        "value": "2,176萬人（2024）"
+        "value": "2,199萬人（2024）"
       },
       {
         "label": "面積",
-        "value": "118,484平方公里"
+        "value": "1,240,192平方公里"
       },
       {
         "label": "地理位置",
-        "value": "非洲東南部內陸"
+        "value": "西非內陸"
       }
     ],
     "sections": [
@@ -7058,39 +7221,19 @@
         "title": "近年大事記",
         "events": [
           {
-            "date": "2007-07-05",
-            "title": "外交部長、總統特使黃志芳飛抵馬拉威訪問",
-            "desc": "外交部長、總統特使黃志芳飛抵馬拉威訪問，晉見莫泰加總統，面呈陳總統之「第一屆台非元首高峰會議」邀請函。9月8日莫泰加總統來台參加這場高峰會議。"
-          },
-          {
-            "date": "2005-01-10",
-            "title": "馬拉威總統莫泰加伉儷訪台5天。9月2…",
-            "desc": "馬拉威總統莫泰加伉儷訪台5天。9月20日莫泰加總統在聯合國大會為台灣加入聯合國發言。"
-          },
-          {
-            "date": "2004-05-24",
-            "title": "司法院長翁岳生率領中華民國特使團出席…",
-            "desc": "司法院長翁岳生率領中華民國特使團出席莫泰加總統就職典禮。10月8日馬國國會議長姆年捏貝抵台訪問5天。"
-          },
-          {
-            "date": "2002-07-05",
-            "title": "至7日",
-            "desc": "至7日，陳水扁總統率團訪問馬拉威，與莫魯士總統簽署聯合公報，重申繼續加強合作。"
-          },
-          {
-            "date": "1999-11-30",
-            "title": "莫魯士總統率團抵台訪問5天",
-            "desc": "莫魯士總統率團抵台訪問5天。"
+            "date": "1960-06-20",
+            "title": "馬利聯邦宣布成立",
+            "desc": "馬利聯邦宣布成立，同日中華民國宣布與馬利建立外交關係；10月21日馬利承認中國並於27日建交，我與馬利斷交。"
           }
         ]
       }
     ]
   },
-  "ML": {
-    "iso": "ML",
-    "name_zh": "馬利",
-    "name_en": "Mali",
-    "flag": "🇲🇱",
+  "MR": {
+    "iso": "MR",
+    "name_zh": "茅利塔尼亞",
+    "name_en": "Mauritania",
+    "flag": "🇲🇷",
     "factbox": [
       {
         "label": "首都",
@@ -7127,11 +7270,11 @@
       }
     ]
   },
-  "MR": {
-    "iso": "MR",
-    "name_zh": "茅利塔尼亞",
-    "name_en": "Mauritania",
-    "flag": "🇲🇷",
+  "MU": {
+    "iso": "MU",
+    "name_zh": "模里西斯",
+    "name_en": "Mauritius",
+    "flag": "🇲🇺",
     "factbox": [
       {
         "label": "首都",
@@ -7173,40 +7316,40 @@
       }
     ]
   },
-  "MU": {
-    "iso": "MU",
-    "name_zh": "模里西斯",
-    "name_en": "Mauritius",
-    "flag": "🇲🇺",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": ""
-      },
-      {
-        "label": "語言",
-        "value": ""
-      },
-      {
-        "label": "人口",
-        "value": ""
-      },
-      {
-        "label": "面積",
-        "value": ""
-      },
-      {
-        "label": "地理位置",
-        "value": ""
-      }
-    ],
-    "sections": []
-  },
   "MA": {
     "iso": "MA",
     "name_zh": "摩洛哥",
     "name_en": "Morocco",
     "flag": "🇲🇦",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "拉巴特（Rabat）"
+      },
+      {
+        "label": "語言",
+        "value": "阿拉伯語、法語。"
+      },
+      {
+        "label": "人口",
+        "value": "3,738萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "446,550平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "非洲西北部，隔直布羅陀海峽與西班牙相對。"
+      }
+    ],
+    "sections": []
+  },
+  "MZ": {
+    "iso": "MZ",
+    "name_zh": "莫三比克",
+    "name_en": "Mozambique",
+    "flag": "🇲🇿",
     "factbox": [
       {
         "label": "首都",
@@ -7231,11 +7374,11 @@
     ],
     "sections": []
   },
-  "MZ": {
-    "iso": "MZ",
-    "name_zh": "莫三比克",
-    "name_en": "Mozambique",
-    "flag": "🇲🇿",
+  "NA": {
+    "iso": "NA",
+    "name_zh": "納米比亞",
+    "name_en": "Namibia",
+    "flag": "🇳🇦",
     "factbox": [
       {
         "label": "首都",
@@ -7260,11 +7403,11 @@
     ],
     "sections": []
   },
-  "NA": {
-    "iso": "NA",
-    "name_zh": "納米比亞",
-    "name_en": "Namibia",
-    "flag": "🇳🇦",
+  "NE": {
+    "iso": "NE",
+    "name_zh": "尼日",
+    "name_en": "Niger",
+    "flag": "🇳🇪",
     "factbox": [
       {
         "label": "首都",
@@ -7311,11 +7454,11 @@
       }
     ]
   },
-  "NE": {
-    "iso": "NE",
-    "name_zh": "尼日",
-    "name_en": "Niger",
-    "flag": "🇳🇪",
+  "NG": {
+    "iso": "NG",
+    "name_zh": "奈及利亞",
+    "name_en": "Nigeria",
+    "flag": "🇳🇬",
     "factbox": [
       {
         "label": "首都",
@@ -7372,11 +7515,11 @@
       }
     ]
   },
-  "NG": {
-    "iso": "NG",
-    "name_zh": "奈及利亞",
-    "name_en": "Nigeria",
-    "flag": "🇳🇬",
+  "RW": {
+    "iso": "RW",
+    "name_zh": "盧安達",
+    "name_en": "Rwanda",
+    "flag": "🇷🇼",
     "factbox": [
       {
         "label": "首都",
@@ -7413,11 +7556,11 @@
       }
     ]
   },
-  "RW": {
-    "iso": "RW",
-    "name_zh": "盧安達",
-    "name_en": "Rwanda",
-    "flag": "🇷🇼",
+  "ST": {
+    "iso": "ST",
+    "name_zh": "聖多美普林西比",
+    "name_en": "São Tomé and Príncipe",
+    "flag": "🇸🇹",
     "factbox": [
       {
         "label": "首都",
@@ -7474,11 +7617,11 @@
       }
     ]
   },
-  "ST": {
-    "iso": "ST",
-    "name_zh": "聖多美普林西比",
-    "name_en": "São Tomé and Príncipe",
-    "flag": "🇸🇹",
+  "SN": {
+    "iso": "SN",
+    "name_zh": "塞內加爾",
+    "name_en": "Senegal",
+    "flag": "🇸🇳",
     "factbox": [
       {
         "label": "首都",
@@ -7535,11 +7678,11 @@
       }
     ]
   },
-  "SN": {
-    "iso": "SN",
-    "name_zh": "塞內加爾",
-    "name_en": "Senegal",
-    "flag": "🇸🇳",
+  "SC": {
+    "iso": "SC",
+    "name_zh": "塞席爾",
+    "name_en": "Seychelles",
+    "flag": "🇸🇨",
     "factbox": [
       {
         "label": "首都",
@@ -7564,40 +7707,52 @@
     ],
     "sections": []
   },
-  "SC": {
-    "iso": "SC",
-    "name_zh": "塞席爾",
-    "name_en": "Seychelles",
-    "flag": "🇸🇨",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": ""
-      },
-      {
-        "label": "語言",
-        "value": ""
-      },
-      {
-        "label": "人口",
-        "value": ""
-      },
-      {
-        "label": "面積",
-        "value": ""
-      },
-      {
-        "label": "地理位置",
-        "value": ""
-      }
-    ],
-    "sections": []
-  },
   "SL": {
     "iso": "SL",
     "name_zh": "獅子山",
     "name_en": "Sierra Leone",
     "flag": "🇸🇱",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "自由市（Freetown）"
+      },
+      {
+        "label": "語言",
+        "value": "英語、Krio語。"
+      },
+      {
+        "label": "人口",
+        "value": "912萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "71,740平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "非洲西部，臨大西洋。"
+      }
+    ],
+    "sections": [
+      {
+        "type": "timeline",
+        "title": "近年大事記",
+        "events": [
+          {
+            "date": "1963-09-28",
+            "title": "獅子山與中華民國建交。1971年7月…",
+            "desc": "獅子山與中華民國建交。1971年7月獅子山與中國建交，8月20日我與獅子山斷交。"
+          }
+        ]
+      }
+    ]
+  },
+  "SO": {
+    "iso": "SO",
+    "name_zh": "索馬利亞",
+    "name_en": "Somalia",
+    "flag": "🇸🇴",
     "factbox": [
       {
         "label": "首都",
@@ -7639,11 +7794,11 @@
       }
     ]
   },
-  "SO": {
-    "iso": "SO",
-    "name_zh": "索馬利亞",
-    "name_en": "Somalia",
-    "flag": "🇸🇴",
+  "ZA": {
+    "iso": "ZA",
+    "name_zh": "南非",
+    "name_en": "South Africa",
+    "flag": "🇿🇦",
     "factbox": [
       {
         "label": "首都",
@@ -7685,11 +7840,11 @@
       }
     ]
   },
-  "ZA": {
-    "iso": "ZA",
-    "name_zh": "南非",
-    "name_en": "South Africa",
-    "flag": "🇿🇦",
+  "SS": {
+    "iso": "SS",
+    "name_zh": "南蘇丹",
+    "name_en": "South Sudan",
+    "flag": "🇸🇸",
     "factbox": [
       {
         "label": "首都",
@@ -7714,40 +7869,40 @@
     ],
     "sections": []
   },
-  "SS": {
-    "iso": "SS",
-    "name_zh": "南蘇丹",
-    "name_en": "South Sudan",
-    "flag": "🇸🇸",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": ""
-      },
-      {
-        "label": "語言",
-        "value": ""
-      },
-      {
-        "label": "人口",
-        "value": ""
-      },
-      {
-        "label": "面積",
-        "value": ""
-      },
-      {
-        "label": "地理位置",
-        "value": ""
-      }
-    ],
-    "sections": []
-  },
   "SD": {
     "iso": "SD",
     "name_zh": "蘇丹",
     "name_en": "Sudan",
     "flag": "🇸🇩",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "喀土木（Khartoum）"
+      },
+      {
+        "label": "語言",
+        "value": "阿拉伯語、英語。"
+      },
+      {
+        "label": "人口",
+        "value": "5,046萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "1,861,484平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "非洲東北部，東臨紅海。"
+      }
+    ],
+    "sections": []
+  },
+  "TZ": {
+    "iso": "TZ",
+    "name_zh": "坦尚尼亞",
+    "name_en": "Tanzania",
+    "flag": "🇹🇿",
     "factbox": [
       {
         "label": "首都",
@@ -7772,11 +7927,11 @@
     ],
     "sections": []
   },
-  "TZ": {
-    "iso": "TZ",
-    "name_zh": "坦尚尼亞",
-    "name_en": "Tanzania",
-    "flag": "🇹🇿",
+  "TG": {
+    "iso": "TG",
+    "name_zh": "多哥",
+    "name_en": "Togo",
+    "flag": "🇹🇬",
     "factbox": [
       {
         "label": "首都",
@@ -7818,40 +7973,40 @@
       }
     ]
   },
-  "TG": {
-    "iso": "TG",
-    "name_zh": "多哥",
-    "name_en": "Togo",
-    "flag": "🇹🇬",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": "突尼斯（Tunis）"
-      },
-      {
-        "label": "語言",
-        "value": "阿拉伯語、法語。"
-      },
-      {
-        "label": "人口",
-        "value": "1,204萬人（2024）"
-      },
-      {
-        "label": "面積",
-        "value": "163,610平方公里"
-      },
-      {
-        "label": "地理位置",
-        "value": "北非、濱地中海。"
-      }
-    ],
-    "sections": []
-  },
   "UG": {
     "iso": "UG",
     "name_zh": "烏干達",
     "name_en": "Uganda",
     "flag": "🇺🇬",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "康培拉（Kampala）"
+      },
+      {
+        "label": "語言",
+        "value": "英語、Swahili語、Luganda語。"
+      },
+      {
+        "label": "人口",
+        "value": "4,928萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "241,038平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "東非內陸"
+      }
+    ],
+    "sections": []
+  },
+  "ZM": {
+    "iso": "ZM",
+    "name_zh": "尚比亞",
+    "name_en": "Zambia",
+    "flag": "🇿🇲",
     "factbox": [
       {
         "label": "首都",
@@ -7876,11 +8031,11 @@
     ],
     "sections": []
   },
-  "ZM": {
-    "iso": "ZM",
-    "name_zh": "尚比亞",
-    "name_en": "Zambia",
-    "flag": "🇿🇲",
+  "ZW": {
+    "iso": "ZW",
+    "name_zh": "辛巴威",
+    "name_en": "Zimbabwe",
+    "flag": "🇿🇼",
     "factbox": [
       {
         "label": "首都",
@@ -7901,35 +8056,6 @@
       {
         "label": "地理位置",
         "value": "非洲南部內陸"
-      }
-    ],
-    "sections": []
-  },
-  "ZW": {
-    "iso": "ZW",
-    "name_zh": "辛巴威",
-    "name_en": "Zimbabwe",
-    "flag": "🇿🇼",
-    "factbox": [
-      {
-        "label": "首都",
-        "value": ""
-      },
-      {
-        "label": "語言",
-        "value": ""
-      },
-      {
-        "label": "人口",
-        "value": ""
-      },
-      {
-        "label": "面積",
-        "value": ""
-      },
-      {
-        "label": "地理位置",
-        "value": ""
       }
     ],
     "sections": []
