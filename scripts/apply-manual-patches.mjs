@@ -184,6 +184,8 @@ function main() {
     'CF': { iso: 'CF', name_zh: '中非共和國', name_en: 'Central African Republic', flag: '🇨🇫', factbox: fb('班基', '桑戈語、法語', '480萬人（2024）', '622,984平方公里', '中非'), sections: [] },
     'CI': { iso: 'CI', name_zh: '象牙海岸', name_en: "Côte d'Ivoire", flag: '🇨🇮', factbox: fb('亞穆蘇克羅', '法語', '2,750萬人（2024）', '322,463平方公里', '西非'), sections: [] },
     'SZ': { iso: 'SZ', name_zh: '史瓦帝尼', name_en: 'Eswatini', flag: '🇸🇿', factbox: fb('姆巴巴內', '英語、西瓦替語', '116萬人（2024）', '17,364平方公里', '南非'), sections: [] },
+    'MW': { iso: 'MW', name_zh: '馬拉威', name_en: 'Malawi', flag: '🇲🇼', factbox: fb('利隆圭', '英語、齊切瓦語', '1,900萬人（2024）', '118,484平方公里', '南非'), sections: [] },
+    'TN': { iso: 'TN', name_zh: '突尼西亞', name_en: 'Tunisia', flag: '🇹🇳', factbox: fb('突尼斯', '阿拉伯語、法語', '1,250萬人（2024）', '163,610平方公里', '北非'), sections: [] },
   };
 
   for (const [iso, entry] of Object.entries(missing)) {

@@ -5842,5 +5842,63 @@
       }
     ],
     "sections": []
+  },
+  "MW": {
+    "iso": "MW",
+    "name_zh": "馬拉威",
+    "name_en": "Malawi",
+    "flag": "🇲🇼",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "利隆圭"
+      },
+      {
+        "label": "語言",
+        "value": "英語、齊切瓦語"
+      },
+      {
+        "label": "人口",
+        "value": "1,900萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "118,484平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "南非"
+      }
+    ],
+    "sections": []
+  },
+  "TN": {
+    "iso": "TN",
+    "name_zh": "突尼西亞",
+    "name_en": "Tunisia",
+    "flag": "🇹🇳",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "突尼斯"
+      },
+      {
+        "label": "語言",
+        "value": "阿拉伯語、法語"
+      },
+      {
+        "label": "人口",
+        "value": "1,250萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "163,610平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "北非"
+      }
+    ],
+    "sections": []
   }
 }
