@@ -311,8 +311,14 @@ function segmentBlocks(html, fileName) {
     const blockEnd = next ? next.index : html.length;
     const block = html.slice(blockStart, blockEnd);
 
-    const relationsMatch = /class="D2各國簡介_(?:與我關係|國際關係)[^"]*"[^>]*>([\s\S]*?)(?=<p class="D2各國簡介_[^"]*"|<div|<table|$)/i.exec(block);
-    const relationsText = relationsMatch ? decodeEntities(stripTags(relationsMatch[1])).trim() : null;
+    // Find "與我關係" or "國際關係" header, then grab the following "D2各國簡介_本文" paragraph
+    const headerMatch = /class="D2各國簡介_(?:與我關係|國際關係)[^"]*"/i.exec(block);
+    let relationsText = null;
+    if (headerMatch) {
+      const afterHeader = block.slice(headerMatch.index + headerMatch[0].length);
+      const contentMatch = /<p[^>]*class="D2各國簡介_本文[^"]*"[^>]*>([\s\S]*?)<\/p>/i.exec(afterHeader);
+      relationsText = contentMatch ? decodeEntities(stripTags(contentMatch[1])).trim() : null;
+    }
 
     const foundingMatch = /class="D2各國簡介_建國簡史[^"]*"[^>]*>([\s\S]*?)(?=<p class="D2各國簡介_[^"]*"|<table|$)/i.exec(block);
     const foundingHistoryText = foundingMatch ? decodeEntities(stripTags(foundingMatch[1])).trim() : '';
