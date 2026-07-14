@@ -20,6 +20,18 @@ const BOUNDARY = {
   joinProp: 'iso_3166_1',
 };
 
+// country-boundaries-v1 ships multiple overlapping boundary features for
+// disputed territories, each tagged with a single `worldview` value (e.g.
+// a "CN" worldview feature draws Taiwan folded into mainland China's
+// territory; a "US"/"all" worldview feature draws them as separate
+// territories). Without this filter, both features exist in the source and
+// which one a query/click hits depends on Mapbox's internal feature
+// ordering — not guaranteed to keep Taiwan and China visually or
+// functionally separate. Restricting every boundary-reading layer to the
+// "US"/"all" worldview view fixes the selection and click-hit-test to a
+// single, consistent variant where they are always distinct territories.
+const WORLDVIEW_FILTER = ['match', ['get', 'worldview'], ['US', 'all'], true, false];
+
 /** Resolve a Mapbox token from opt-in config only; never hardcode a token. */
 function resolveMapboxToken() {
   const fromGlobal = typeof window !== 'undefined' && window.WORLD_ALMANAC_MAPBOX_TOKEN;
@@ -92,12 +104,16 @@ export class MapEngine {
     map.addLayer({ id: HIGHLIGHT_FILL, type: 'fill', paint: { 'fill-color': ACCENT, 'fill-opacity': 0.45 }, ...layerBase });
     map.addLayer({ id: HIGHLIGHT_LINE, type: 'line', paint: { 'line-color': ACCENT, 'line-width': 1.5 }, ...layerBase });
 
-    // Invisible, unfiltered fill layer for hit-testing clicks
+    // Invisible fill layer for hit-testing clicks. Filtered to the same
+    // single worldview variant as the highlight layers, so a click on
+    // Taiwan's territory always resolves to TW, never to a CN-worldview
+    // feature that happens to be drawn on top at that pixel.
     map.addLayer({
       id: HIT_LAYER,
       type: 'fill',
       source: HIGHLIGHT_SRC,
       'source-layer': BOUNDARY.sourceLayer,
+      filter: WORLDVIEW_FILTER,
       paint: { 'fill-color': '#000', 'fill-opacity': 0 },
     });
 
@@ -161,7 +177,9 @@ export class MapEngine {
 
   _applyHighlight(iso) {
     if (!this.map) return;
-    const filter = iso ? ['==', ['get', this.joinProp], iso] : this._noMatchFilter;
+    const filter = iso
+      ? ['all', ['==', ['get', this.joinProp], iso], WORLDVIEW_FILTER]
+      : this._noMatchFilter;
     this.map.setFilter(HIGHLIGHT_FILL, filter);
     this.map.setFilter(HIGHLIGHT_LINE, filter);
 
