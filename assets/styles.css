@@ -34,13 +34,22 @@ html, body {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 12px;
   padding: 16px 18px;
   background: linear-gradient(135deg, #1a4d7a 0%, #2d5a8c 100%);
   color: white;
   border-bottom: 3px solid #0f3050;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cna-logo {
+  height: 28px;
+  width: auto;
+  flex-shrink: 0;
 }
 .title {
   font-size: 18px;
