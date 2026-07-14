@@ -2,12 +2,22 @@
   "JP": {
     "iso": "JP",
     "name_zh": "日本",
-    "name_en": "Japan"
+    "name_en": "Japan",
+    "capital": {
+      "name": "Tokyo",
+      "lat": 35.68882,
+      "lng": 139.692526
+    }
   },
   "JM": {
     "iso": "JM",
     "name_zh": "牙買加",
-    "name_en": "Jamaica"
+    "name_en": "Jamaica",
+    "capital": {
+      "name": "Kingston",
+      "lat": 18.017589,
+      "lng": -76.80273
+    }
   },
   "US": {
     "name_zh": "美國",
@@ -17,12 +27,22 @@
       24.4,
       -66.9,
       49.4
-    ]
+    ],
+    "capital": {
+      "name": "華盛頓",
+      "lat": 38.90253,
+      "lng": -77.039386
+    }
   },
   "DE": {
     "iso": "DE",
     "name_zh": "德國",
-    "name_en": "Germany"
+    "name_en": "Germany",
+    "capital": {
+      "name": "Berlin",
+      "lat": 52.517389,
+      "lng": 13.395131
+    }
   },
   "FR": {
     "name_zh": "法國",
@@ -32,32 +52,62 @@
       41.3,
       9.6,
       51.1
-    ]
+    ],
+    "capital": {
+      "name": "巴黎",
+      "lat": 48.853495,
+      "lng": 2.348392
+    }
   },
   "GB": {
     "iso": "GB",
     "name_zh": "英國",
-    "name_en": "United Kingdom"
+    "name_en": "United Kingdom",
+    "capital": {
+      "name": "London",
+      "lat": 51.5073,
+      "lng": -0.127647
+    }
   },
   "CN": {
     "iso": "CN",
     "name_zh": "中國大陸",
-    "name_en": "China"
+    "name_en": "China",
+    "capital": {
+      "name": "北京",
+      "lat": 39.905714,
+      "lng": 116.391297
+    }
   },
   "KR": {
     "iso": "KR",
     "name_zh": "南韓",
-    "name_en": "South Korea"
+    "name_en": "South Korea",
+    "capital": {
+      "name": "Seoul",
+      "lat": 37.566679,
+      "lng": 126.978291
+    }
   },
   "TW": {
     "iso": "TW",
     "name_zh": "台灣",
-    "name_en": "Taiwan"
+    "name_en": "Taiwan",
+    "capital": {
+      "name": "Taipei",
+      "lat": 25.044743,
+      "lng": 121.53953
+    }
   },
   "IN": {
     "iso": "IN",
     "name_zh": "印度",
-    "name_en": "India"
+    "name_en": "India",
+    "capital": {
+      "name": "New Delhi",
+      "lat": 28.613928,
+      "lng": 77.20877
+    }
   },
   "ID": {
     "iso": "ID",
@@ -67,42 +117,82 @@
   "IT": {
     "iso": "IT",
     "name_zh": "義大利",
-    "name_en": "Italy"
+    "name_en": "Italy",
+    "capital": {
+      "name": "Rome",
+      "lat": 41.899986,
+      "lng": 12.476713
+    }
   },
   "IE": {
     "iso": "IE",
     "name_zh": "愛爾蘭",
-    "name_en": "Ireland"
+    "name_en": "Ireland",
+    "capital": {
+      "name": "Dublin",
+      "lat": 53.34938,
+      "lng": -6.260559
+    }
   },
   "IL": {
     "iso": "IL",
     "name_zh": "以色列",
-    "name_en": "Israel"
+    "name_en": "Israel",
+    "capital": {
+      "name": "Jerusalem",
+      "lat": 31.773315,
+      "lng": 35.18679
+    }
   },
   "IR": {
     "iso": "IR",
     "name_zh": "伊朗",
-    "name_en": "Iran"
+    "name_en": "Iran",
+    "capital": {
+      "name": "Tehran",
+      "lat": 35.696,
+      "lng": 51.401
+    }
   },
   "CA": {
     "iso": "CA",
     "name_zh": "加拿大",
-    "name_en": "Canada"
+    "name_en": "Canada",
+    "capital": {
+      "name": "Ottawa",
+      "lat": 45.420204,
+      "lng": -75.69779
+    }
   },
   "BR": {
     "iso": "BR",
     "name_zh": "巴西",
-    "name_en": "Brazil"
+    "name_en": "Brazil",
+    "capital": {
+      "name": "Brasilia",
+      "lat": -15.796119,
+      "lng": -47.888252
+    }
   },
   "AU": {
     "iso": "AU",
     "name_zh": "澳大利亞",
-    "name_en": "Australia"
+    "name_en": "Australia",
+    "capital": {
+      "name": "Canberra",
+      "lat": -35.279522,
+      "lng": 149.12927
+    }
   },
   "RU": {
     "iso": "RU",
     "name_zh": "俄羅斯",
-    "name_en": "Russia"
+    "name_en": "Russia",
+    "capital": {
+      "name": "Moscow",
+      "lat": 55.750541,
+      "lng": 37.617478
+    }
   },
   "ES": {
     "name_zh": "西班牙",
@@ -112,7 +202,12 @@
       36,
       3.3,
       43.8
-    ]
+    ],
+    "capital": {
+      "name": "馬德里",
+      "lat": 40.421345,
+      "lng": -3.701219
+    }
   },
   "PT": {
     "name_zh": "葡萄牙",
@@ -122,7 +217,12 @@
       36.9,
       -6.2,
       42.2
-    ]
+    ],
+    "capital": {
+      "name": "里斯本",
+      "lat": 38.7173,
+      "lng": -9.14305
+    }
   },
   "NL": {
     "name_zh": "荷蘭",
@@ -132,42 +232,82 @@
       50.8,
       7.2,
       53.6
-    ]
+    ],
+    "capital": {
+      "name": "阿姆斯特丹",
+      "lat": 52.378,
+      "lng": 4.9
+    }
   },
   "SE": {
     "iso": "SE",
     "name_zh": "瑞典",
-    "name_en": "Sweden"
+    "name_en": "Sweden",
+    "capital": {
+      "name": "Stockholm",
+      "lat": 59.324337,
+      "lng": 18.06902
+    }
   },
   "CH": {
     "iso": "CH",
     "name_zh": "瑞士",
-    "name_en": "Switzerland"
+    "name_en": "Switzerland",
+    "capital": {
+      "name": "Bern",
+      "lat": 46.948715,
+      "lng": 7.443638
+    }
   },
   "MX": {
     "iso": "MX",
     "name_zh": "墨西哥",
-    "name_en": "Mexico"
+    "name_en": "Mexico",
+    "capital": {
+      "name": "Mexico City",
+      "lat": 19.43263,
+      "lng": -99.133178
+    }
   },
   "ZA": {
     "iso": "ZA",
     "name_zh": "南非",
-    "name_en": "South Africa"
+    "name_en": "South Africa",
+    "capital": {
+      "name": "Pretoria",
+      "lat": -25.746304,
+      "lng": 28.190533
+    }
   },
   "EG": {
     "iso": "EG",
     "name_zh": "埃及",
-    "name_en": "Egypt"
+    "name_en": "Egypt",
+    "capital": {
+      "name": "Cairo",
+      "lat": 30.047558,
+      "lng": 31.241106
+    }
   },
   "SA": {
     "iso": "SA",
     "name_zh": "沙烏地阿拉伯",
-    "name_en": "Saudi Arabia"
+    "name_en": "Saudi Arabia",
+    "capital": {
+      "name": "Riyadh",
+      "lat": 24.633333,
+      "lng": 46.716667
+    }
   },
   "TR": {
     "iso": "TR",
     "name_zh": "土耳其",
-    "name_en": "Turkey"
+    "name_en": "Turkey",
+    "capital": {
+      "name": "Ankara",
+      "lat": 39.920789,
+      "lng": 32.854048
+    }
   },
   "TH": {
     "name_zh": "泰國",
@@ -177,7 +317,12 @@
       5.6,
       105.6,
       20.5
-    ]
+    ],
+    "capital": {
+      "name": "曼谷",
+      "lat": 13.752494,
+      "lng": 100.493509
+    }
   },
   "VN": {
     "name_zh": "越南",
@@ -187,22 +332,42 @@
       8.2,
       109.5,
       23.4
-    ]
+    ],
+    "capital": {
+      "name": "河內",
+      "lat": 21.028333,
+      "lng": 105.854041
+    }
   },
   "PH": {
     "iso": "PH",
     "name_zh": "菲律賓",
-    "name_en": "Philippines"
+    "name_en": "Philippines",
+    "capital": {
+      "name": "Manila",
+      "lat": 14.590449,
+      "lng": 120.980362
+    }
   },
   "AR": {
     "iso": "AR",
     "name_zh": "阿根廷",
-    "name_en": "Argentina"
+    "name_en": "Argentina",
+    "capital": {
+      "name": "Buenos Aires",
+      "lat": -34.609558,
+      "lng": -58.38879
+    }
   },
   "PL": {
     "iso": "PL",
     "name_zh": "波蘭",
-    "name_en": "Poland"
+    "name_en": "Poland",
+    "capital": {
+      "name": "Lisbon",
+      "lat": 38.7173,
+      "lng": -9.14305
+    }
   },
   "UA": {
     "name_zh": "烏克蘭",
@@ -212,42 +377,82 @@
       44.4,
       40.2,
       52.4
-    ]
+    ],
+    "capital": {
+      "name": "基輔",
+      "lat": 50.450034,
+      "lng": 30.524136
+    }
   },
   "AF": {
     "iso": "AF",
     "name_zh": "阿富汗",
-    "name_en": "Afghanistan"
+    "name_en": "Afghanistan",
+    "capital": {
+      "name": "Kabul",
+      "lat": 34.52695,
+      "lng": 69.185058
+    }
   },
   "AM": {
     "iso": "AM",
     "name_zh": "亞美尼亞",
-    "name_en": "Armenia"
+    "name_en": "Armenia",
+    "capital": {
+      "name": "Yerevan",
+      "lat": 40.177711,
+      "lng": 44.512623
+    }
   },
   "AZ": {
     "iso": "AZ",
     "name_zh": "亞塞拜然",
-    "name_en": "Azerbaijan"
+    "name_en": "Azerbaijan",
+    "capital": {
+      "name": "Baku",
+      "lat": 40.375589,
+      "lng": 49.832801
+    }
   },
   "BH": {
     "iso": "BH",
     "name_zh": "巴林",
-    "name_en": "Bahrain"
+    "name_en": "Bahrain",
+    "capital": {
+      "name": "Manama",
+      "lat": 26.223963,
+      "lng": 50.583763
+    }
   },
   "BD": {
     "iso": "BD",
     "name_zh": "孟加拉",
-    "name_en": "Bangladesh"
+    "name_en": "Bangladesh",
+    "capital": {
+      "name": "Dhaka",
+      "lat": 23.764288,
+      "lng": 90.38896
+    }
   },
   "BT": {
     "iso": "BT",
     "name_zh": "不丹",
-    "name_en": "Bhutan"
+    "name_en": "Bhutan",
+    "capital": {
+      "name": "Thimphu",
+      "lat": 27.471355,
+      "lng": 89.633673
+    }
   },
   "GE": {
     "iso": "GE",
     "name_zh": "喬治亞",
-    "name_en": "Georgia"
+    "name_en": "Georgia",
+    "capital": {
+      "name": "Tbilisi",
+      "lat": 41.693459,
+      "lng": 44.80145
+    }
   },
   "HK": {
     "iso": "HK",
@@ -257,37 +462,72 @@
   "IQ": {
     "iso": "IQ",
     "name_zh": "伊拉克",
-    "name_en": "Iraq"
+    "name_en": "Iraq",
+    "capital": {
+      "name": "Baghdad",
+      "lat": 33.30617,
+      "lng": 44.387221
+    }
   },
   "JO": {
     "iso": "JO",
     "name_zh": "約旦",
-    "name_en": "Jordan"
+    "name_en": "Jordan",
+    "capital": {
+      "name": "Amman",
+      "lat": 31.952248,
+      "lng": 35.932407
+    }
   },
   "KZ": {
     "iso": "KZ",
     "name_zh": "哈薩克",
-    "name_en": "Kazakhstan"
+    "name_en": "Kazakhstan",
+    "capital": {
+      "name": "Nur-Sultan",
+      "lat": 51.128221,
+      "lng": 71.430668
+    }
   },
   "KP": {
     "iso": "KP",
     "name_zh": "北韓",
-    "name_en": "North Korea"
+    "name_en": "North Korea",
+    "capital": {
+      "name": "Pyongyang",
+      "lat": 39.01692,
+      "lng": 125.747665
+    }
   },
   "KW": {
     "iso": "KW",
     "name_zh": "科威特",
-    "name_en": "Kuwait"
+    "name_en": "Kuwait",
+    "capital": {
+      "name": "Kuwait City",
+      "lat": 29.379653,
+      "lng": 47.973417
+    }
   },
   "KG": {
     "iso": "KG",
     "name_zh": "吉爾吉斯",
-    "name_en": "Kyrgyzstan"
+    "name_en": "Kyrgyzstan",
+    "capital": {
+      "name": "Bishkek",
+      "lat": 42.876142,
+      "lng": 74.603672
+    }
   },
   "LB": {
     "iso": "LB",
     "name_zh": "黎巴嫩",
-    "name_en": "Lebanon"
+    "name_en": "Lebanon",
+    "capital": {
+      "name": "Beirut",
+      "lat": 33.89625,
+      "lng": 35.477367
+    }
   },
   "MO": {
     "iso": "MO",
@@ -297,671 +537,1471 @@
   "MV": {
     "iso": "MV",
     "name_zh": "馬爾地夫",
-    "name_en": "Maldives"
+    "name_en": "Maldives",
+    "capital": {
+      "name": "Male",
+      "lat": 4.177988,
+      "lng": 73.510739
+    }
   },
   "MN": {
     "iso": "MN",
     "name_zh": "蒙古",
-    "name_en": "Mongolia"
+    "name_en": "Mongolia",
+    "capital": {
+      "name": "Ulaanbaatar",
+      "lat": 47.918468,
+      "lng": 106.917702
+    }
   },
   "NP": {
     "iso": "NP",
     "name_zh": "尼泊爾",
-    "name_en": "Nepal"
+    "name_en": "Nepal",
+    "capital": {
+      "name": "Kathmandu",
+      "lat": 27.714186,
+      "lng": 85.31094
+    }
   },
   "OM": {
     "iso": "OM",
     "name_zh": "阿曼",
-    "name_en": "Oman"
+    "name_en": "Oman",
+    "capital": {
+      "name": "Muscat",
+      "lat": 23.587278,
+      "lng": 58.38213
+    }
   },
   "PK": {
     "iso": "PK",
     "name_zh": "巴基斯坦",
-    "name_en": "Pakistan"
+    "name_en": "Pakistan",
+    "capital": {
+      "name": "Islamabad",
+      "lat": 33.696762,
+      "lng": 73.06307
+    }
   },
   "PS": {
     "iso": "PS",
     "name_zh": "巴勒斯坦",
-    "name_en": "Palestine"
+    "name_en": "Palestine",
+    "capital": {
+      "name": "Jerusalem",
+      "lat": 31.773315,
+      "lng": 35.18679
+    }
   },
   "QA": {
     "iso": "QA",
     "name_zh": "卡達",
-    "name_en": "Qatar"
+    "name_en": "Qatar",
+    "capital": {
+      "name": "Doha",
+      "lat": 22.834694,
+      "lng": 74.25914
+    }
   },
   "SG": {
     "iso": "SG",
     "name_zh": "新加坡",
-    "name_en": "Singapore"
+    "name_en": "Singapore",
+    "capital": {
+      "name": "Singapore",
+      "lat": 1.351616,
+      "lng": 103.808053
+    }
   },
   "LK": {
     "iso": "LK",
     "name_zh": "斯里蘭卡",
-    "name_en": "Sri Lanka"
+    "name_en": "Sri Lanka",
+    "capital": {
+      "name": "Colombo",
+      "lat": 6.933951,
+      "lng": 79.844734
+    }
   },
   "SY": {
     "iso": "SY",
     "name_zh": "敘利亞",
-    "name_en": "Syria"
+    "name_en": "Syria",
+    "capital": {
+      "name": "Damascus",
+      "lat": 33.51307,
+      "lng": 36.309581
+    }
   },
   "TJ": {
     "iso": "TJ",
     "name_zh": "塔吉克",
-    "name_en": "Tajikistan"
+    "name_en": "Tajikistan",
+    "capital": {
+      "name": "Dushanbe",
+      "lat": 38.576705,
+      "lng": 68.785433
+    }
   },
   "TL": {
     "iso": "TL",
     "name_zh": "東帝汶",
-    "name_en": "Timor-Leste"
+    "name_en": "Timor-Leste",
+    "capital": {
+      "name": "Dili",
+      "lat": 40.797775,
+      "lng": 44.901653
+    }
   },
   "TM": {
     "iso": "TM",
     "name_zh": "土庫曼",
-    "name_en": "Turkmenistan"
+    "name_en": "Turkmenistan",
+    "capital": {
+      "name": "Ashgabat",
+      "lat": 37.940465,
+      "lng": 58.382349
+    }
   },
   "AE": {
     "iso": "AE",
     "name_zh": "阿拉伯聯合大公國",
-    "name_en": "United Arab Emirates"
+    "name_en": "United Arab Emirates",
+    "capital": {
+      "name": "Abu Dhabi",
+      "lat": 24.453524,
+      "lng": 54.377438
+    }
   },
   "UZ": {
     "iso": "UZ",
     "name_zh": "烏茲別克",
-    "name_en": "Uzbekistan"
+    "name_en": "Uzbekistan",
+    "capital": {
+      "name": "Tashkent",
+      "lat": 41.312336,
+      "lng": 69.278708
+    }
   },
   "YE": {
     "iso": "YE",
     "name_zh": "葉門",
-    "name_en": "Yemen"
+    "name_en": "Yemen",
+    "capital": {
+      "name": "Sanaa",
+      "lat": 15.353857,
+      "lng": 44.205884
+    }
   },
   "FJ": {
     "iso": "FJ",
     "name_zh": "斐濟",
-    "name_en": "Fiji"
+    "name_en": "Fiji",
+    "capital": {
+      "name": "Suva",
+      "lat": -18.135982,
+      "lng": 178.442814
+    }
   },
   "KI": {
     "iso": "KI",
     "name_zh": "吉里巴斯",
-    "name_en": "Kiribati"
+    "name_en": "Kiribati",
+    "capital": {
+      "name": "Tarawa",
+      "lat": 1.360374,
+      "lng": 173.155174
+    }
   },
   "MH": {
     "iso": "MH",
     "name_zh": "馬紹爾群島",
-    "name_en": "Marshall Islands"
+    "name_en": "Marshall Islands",
+    "capital": {
+      "name": "Majuro",
+      "lat": 7.090992,
+      "lng": 171.381635
+    }
   },
   "FM": {
     "iso": "FM",
     "name_zh": "密克羅尼西亞聯邦",
-    "name_en": "Micronesia"
+    "name_en": "Micronesia",
+    "capital": {
+      "name": "Palikir",
+      "lat": 6.920744,
+      "lng": 158.162714
+    }
   },
   "NR": {
     "iso": "NR",
     "name_zh": "諾魯",
-    "name_en": "Nauru"
+    "name_en": "Nauru",
+    "capital": {
+      "name": "Yaren",
+      "lat": -0.547106,
+      "lng": 166.916348
+    }
   },
   "NZ": {
     "iso": "NZ",
     "name_zh": "紐西蘭",
-    "name_en": "New Zealand"
+    "name_en": "New Zealand",
+    "capital": {
+      "name": "Wellington",
+      "lat": -41.28559,
+      "lng": 174.77672
+    }
   },
   "PW": {
     "iso": "PW",
     "name_zh": "帛琉",
-    "name_en": "Palau"
+    "name_en": "Palau",
+    "capital": {
+      "name": "Ngerulmud",
+      "lat": 7.500645,
+      "lng": 134.624286
+    }
   },
   "PG": {
     "iso": "PG",
     "name_zh": "巴布亞紐幾內亞",
-    "name_en": "Papua New Guinea"
+    "name_en": "Papua New Guinea",
+    "capital": {
+      "name": "Port Moresby",
+      "lat": -9.47433,
+      "lng": 147.15995
+    }
   },
   "WS": {
     "iso": "WS",
     "name_zh": "薩摩亞",
-    "name_en": "Samoa"
+    "name_en": "Samoa",
+    "capital": {
+      "name": "Apia",
+      "lat": -13.836945,
+      "lng": -171.802879
+    }
   },
   "SB": {
     "iso": "SB",
     "name_zh": "索羅門群島",
-    "name_en": "Solomon Islands"
+    "name_en": "Solomon Islands",
+    "capital": {
+      "name": "Honiara",
+      "lat": -9.431077,
+      "lng": 159.955255
+    }
   },
   "TO": {
     "iso": "TO",
     "name_zh": "東加",
-    "name_en": "Tonga"
+    "name_en": "Tonga",
+    "capital": {
+      "name": "alofa",
+      "lat": -14.27489,
+      "lng": -170.60379
+    }
   },
   "TV": {
     "iso": "TV",
     "name_zh": "吐瓦魯",
-    "name_en": "Tuvalu"
+    "name_en": "Tuvalu",
+    "capital": {
+      "name": "Funafuti",
+      "lat": -8.519963,
+      "lng": 179.198255
+    }
   },
   "VU": {
     "iso": "VU",
     "name_zh": "萬那杜",
-    "name_en": "Vanuatu"
+    "name_en": "Vanuatu",
+    "capital": {
+      "name": "Port Vila",
+      "lat": -17.731392,
+      "lng": 168.306222
+    }
   },
   "AL": {
     "iso": "AL",
     "name_zh": "阿爾巴尼亞",
-    "name_en": "Albania"
+    "name_en": "Albania",
+    "capital": {
+      "name": "Tirana",
+      "lat": 41.320507,
+      "lng": 19.81611
+    }
   },
   "AT": {
     "iso": "AT",
     "name_zh": "奧地利",
-    "name_en": "Austria"
+    "name_en": "Austria",
+    "capital": {
+      "name": "Vienna",
+      "lat": 48.208354,
+      "lng": 16.372504
+    }
   },
   "BY": {
     "iso": "BY",
     "name_zh": "白俄羅斯",
-    "name_en": "Belarus"
+    "name_en": "Belarus",
+    "capital": {
+      "name": "Minsk",
+      "lat": 53.902472,
+      "lng": 27.561823
+    }
   },
   "BA": {
     "iso": "BA",
     "name_zh": "波士尼亞與赫塞哥維納",
-    "name_en": "Bosnia and Herzegovina"
+    "name_en": "Bosnia and Herzegovina",
+    "capital": {
+      "name": "Sarajevo",
+      "lat": 43.85251,
+      "lng": 18.38529
+    }
   },
   "BG": {
     "iso": "BG",
     "name_zh": "保加利亞",
-    "name_en": "Bulgaria"
+    "name_en": "Bulgaria",
+    "capital": {
+      "name": "Sofia",
+      "lat": 42.69489,
+      "lng": 23.320782
+    }
   },
   "HR": {
     "iso": "HR",
     "name_zh": "克羅埃西亞",
-    "name_en": "Croatia"
+    "name_en": "Croatia",
+    "capital": {
+      "name": "Zagreb",
+      "lat": 45.813778,
+      "lng": 15.976789
+    }
   },
   "CZ": {
     "iso": "CZ",
     "name_zh": "捷克",
-    "name_en": "Czechia"
+    "name_en": "Czechia",
+    "capital": {
+      "name": "Prague",
+      "lat": 50.08584,
+      "lng": 14.422954
+    }
   },
   "DK": {
     "iso": "DK",
     "name_zh": "丹麥",
-    "name_en": "Denmark"
+    "name_en": "Denmark",
+    "capital": {
+      "name": "Copenhagen",
+      "lat": 55.675313,
+      "lng": 12.569734
+    }
   },
   "EE": {
     "iso": "EE",
     "name_zh": "愛沙尼亞",
-    "name_en": "Estonia"
+    "name_en": "Estonia",
+    "capital": {
+      "name": "Tallinn",
+      "lat": 59.436745,
+      "lng": 24.746462
+    }
   },
   "FI": {
     "iso": "FI",
     "name_zh": "芬蘭",
-    "name_en": "Finland"
+    "name_en": "Finland",
+    "capital": {
+      "name": "Helsinki",
+      "lat": 60.167507,
+      "lng": 24.941822
+    }
   },
   "GR": {
     "iso": "GR",
     "name_zh": "希臘",
-    "name_en": "Greece"
+    "name_en": "Greece",
+    "capital": {
+      "name": "Athens",
+      "lat": 37.97757,
+      "lng": 23.729275
+    }
   },
   "VA": {
     "iso": "VA",
     "name_zh": "教廷",
-    "name_en": "Vatican City"
+    "name_en": "Vatican City",
+    "capital": {
+      "name": "Vatican City",
+      "lat": 41.903536,
+      "lng": 12.451772
+    }
   },
   "HU": {
     "iso": "HU",
     "name_zh": "匈牙利",
-    "name_en": "Hungary"
+    "name_en": "Hungary",
+    "capital": {
+      "name": "Budapest",
+      "lat": 47.497879,
+      "lng": 19.040238
+    }
   },
   "IS": {
     "iso": "IS",
     "name_zh": "冰島",
-    "name_en": "Iceland"
+    "name_en": "Iceland",
+    "capital": {
+      "name": "Reykjavik",
+      "lat": 64.145847,
+      "lng": -21.9436
+    }
   },
   "XK": {
     "iso": "XK",
     "name_zh": "科索沃",
-    "name_en": "Kosovo"
+    "name_en": "Kosovo",
+    "capital": {
+      "name": "Pristina",
+      "lat": 42.663877,
+      "lng": 21.164085
+    }
   },
   "LV": {
     "iso": "LV",
     "name_zh": "拉脫維亞",
-    "name_en": "Latvia"
+    "name_en": "Latvia",
+    "capital": {
+      "name": "Riga",
+      "lat": 56.949398,
+      "lng": 24.105185
+    }
   },
   "LI": {
     "iso": "LI",
     "name_zh": "列支敦斯登",
-    "name_en": "Liechtenstein"
+    "name_en": "Liechtenstein",
+    "capital": {
+      "name": "Vaduz",
+      "lat": 47.139286,
+      "lng": 9.522796
+    }
   },
   "LT": {
     "iso": "LT",
     "name_zh": "立陶宛",
-    "name_en": "Lithuania"
+    "name_en": "Lithuania",
+    "capital": {
+      "name": "Vilnius",
+      "lat": 54.687046,
+      "lng": 25.282911
+    }
   },
   "MT": {
     "iso": "MT",
     "name_zh": "馬爾他",
-    "name_en": "Malta"
+    "name_en": "Malta",
+    "capital": {
+      "name": "Valletta",
+      "lat": 35.898998,
+      "lng": 14.513661
+    }
   },
   "MD": {
     "iso": "MD",
     "name_zh": "摩爾多瓦",
-    "name_en": "Moldova"
+    "name_en": "Moldova",
+    "capital": {
+      "name": "Monaco",
+      "lat": 43.732482,
+      "lng": 7.418962
+    }
   },
   "ME": {
     "iso": "ME",
     "name_zh": "蒙特內哥羅",
-    "name_en": "Montenegro"
+    "name_en": "Montenegro",
+    "capital": {
+      "name": "Podgorica",
+      "lat": 42.441524,
+      "lng": 19.262108
+    }
   },
   "MK": {
     "iso": "MK",
     "name_zh": "北馬其頓",
-    "name_en": "North Macedonia"
+    "name_en": "North Macedonia",
+    "capital": {
+      "name": "Skopje",
+      "lat": 41.996182,
+      "lng": 21.431921
+    }
   },
   "NO": {
     "iso": "NO",
     "name_zh": "挪威",
-    "name_en": "Norway"
+    "name_en": "Norway",
+    "capital": {
+      "name": "Oslo",
+      "lat": 59.91333,
+      "lng": 10.73897
+    }
   },
   "RO": {
     "iso": "RO",
     "name_zh": "羅馬尼亞",
-    "name_en": "Romania"
+    "name_en": "Romania",
+    "capital": {
+      "name": "Bucharest",
+      "lat": 44.436141,
+      "lng": 26.102684
+    }
   },
   "SM": {
     "iso": "SM",
     "name_zh": "聖馬利諾",
-    "name_en": "San Marino"
+    "name_en": "San Marino",
+    "capital": {
+      "name": "San Marino",
+      "lat": 43.9364,
+      "lng": 12.446699
+    }
   },
   "SK": {
     "iso": "SK",
     "name_zh": "斯洛伐克",
-    "name_en": "Slovakia"
+    "name_en": "Slovakia",
+    "capital": {
+      "name": "Bratislava",
+      "lat": 48.1438,
+      "lng": 17.108387
+    }
   },
   "SI": {
     "iso": "SI",
     "name_zh": "斯洛維尼亞",
-    "name_en": "Slovenia"
+    "name_en": "Slovenia",
+    "capital": {
+      "name": "Ljubljana",
+      "lat": 46.050027,
+      "lng": 14.506929
+    }
   },
   "AG": {
     "iso": "AG",
     "name_zh": "安提瓜及巴布達",
-    "name_en": "Antigua and Barbuda"
+    "name_en": "Antigua and Barbuda",
+    "capital": {
+      "name": "Saint John's",
+      "lat": 47.5617,
+      "lng": -52.7151
+    }
   },
   "BS": {
     "iso": "BS",
     "name_zh": "巴哈馬",
-    "name_en": "Bahamas"
+    "name_en": "Bahamas",
+    "capital": {
+      "name": "Nassau",
+      "lat": 25.032412,
+      "lng": -77.39811
+    }
   },
   "BB": {
     "iso": "BB",
     "name_zh": "巴貝多",
-    "name_en": "Barbados"
+    "name_en": "Barbados",
+    "capital": {
+      "name": "Bridgetown",
+      "lat": 13.103221,
+      "lng": -59.603597
+    }
   },
   "BZ": {
     "iso": "BZ",
     "name_zh": "貝里斯",
-    "name_en": "Belize"
+    "name_en": "Belize",
+    "capital": {
+      "name": "Belmopan",
+      "lat": 17.257179,
+      "lng": -88.78447
+    }
   },
   "BO": {
     "iso": "BO",
     "name_zh": "玻利維亞",
-    "name_en": "Bolivia"
+    "name_en": "Bolivia",
+    "capital": {
+      "name": "Sucre",
+      "lat": -19.046934,
+      "lng": -65.257965
+    }
   },
   "CL": {
     "iso": "CL",
     "name_zh": "智利",
-    "name_en": "Chile"
+    "name_en": "Chile",
+    "capital": {
+      "name": "Santiago",
+      "lat": -33.440643,
+      "lng": -70.64937
+    }
   },
   "CO": {
     "iso": "CO",
     "name_zh": "哥倫比亞",
-    "name_en": "Colombia"
+    "name_en": "Colombia",
+    "capital": {
+      "name": "Bogota",
+      "lat": 4.653382,
+      "lng": -74.083633
+    }
   },
   "CR": {
     "iso": "CR",
     "name_zh": "哥斯大黎加",
-    "name_en": "Costa Rica"
+    "name_en": "Costa Rica",
+    "capital": {
+      "name": "San Jose",
+      "lat": 37.336157,
+      "lng": -121.890608
+    }
   },
   "CU": {
     "iso": "CU",
     "name_zh": "古巴",
-    "name_en": "Cuba"
+    "name_en": "Cuba",
+    "capital": {
+      "name": "Havana",
+      "lat": 23.135305,
+      "lng": -82.358963
+    }
   },
   "DM": {
     "iso": "DM",
     "name_zh": "多米尼克",
-    "name_en": "Dominica"
+    "name_en": "Dominica",
+    "capital": {
+      "name": "Roseau",
+      "lat": 15.299192,
+      "lng": -61.387287
+    }
   },
   "EC": {
     "iso": "EC",
     "name_zh": "厄瓜多",
-    "name_en": "Ecuador"
+    "name_en": "Ecuador",
+    "capital": {
+      "name": "Quito",
+      "lat": -0.221173,
+      "lng": -78.51131
+    }
   },
   "SV": {
     "iso": "SV",
     "name_zh": "薩爾瓦多",
-    "name_en": "El Salvador"
+    "name_en": "El Salvador",
+    "capital": {
+      "name": "San Salvador",
+      "lat": 13.698965,
+      "lng": -89.19143
+    }
   },
   "GD": {
     "iso": "GD",
     "name_zh": "格瑞那達",
-    "name_en": "Grenada"
+    "name_en": "Grenada",
+    "capital": {
+      "name": "Saint George's",
+      "lat": 46.121708,
+      "lng": -70.67437
+    }
   },
   "GT": {
     "iso": "GT",
     "name_zh": "瓜地馬拉",
-    "name_en": "Guatemala"
+    "name_en": "Guatemala",
+    "capital": {
+      "name": "Guatemala City",
+      "lat": 14.6228,
+      "lng": -90.5314
+    }
   },
   "GY": {
     "iso": "GY",
     "name_zh": "蓋亞那",
-    "name_en": "Guyana"
+    "name_en": "Guyana",
+    "capital": {
+      "name": "Georgetown",
+      "lat": 6.809843,
+      "lng": -58.159283
+    }
   },
   "HT": {
     "iso": "HT",
     "name_zh": "海地",
-    "name_en": "Haiti"
+    "name_en": "Haiti",
+    "capital": {
+      "name": "Port-au-Prince",
+      "lat": 18.539766,
+      "lng": -72.33548
+    }
   },
   "HN": {
     "iso": "HN",
     "name_zh": "宏都拉斯",
-    "name_en": "Honduras"
+    "name_en": "Honduras",
+    "capital": {
+      "name": "Tegucigalpa",
+      "lat": 14.105943,
+      "lng": -87.205345
+    }
   },
   "NI": {
     "iso": "NI",
     "name_zh": "尼加拉瓜",
-    "name_en": "Nicaragua"
+    "name_en": "Nicaragua",
+    "capital": {
+      "name": "Managua",
+      "lat": 12.14,
+      "lng": -86.274
+    }
   },
   "PA": {
     "iso": "PA",
     "name_zh": "巴拿馬",
-    "name_en": "Panama"
+    "name_en": "Panama",
+    "capital": {
+      "name": "Panama City",
+      "lat": 8.982861,
+      "lng": -79.52339
+    }
   },
   "PY": {
     "iso": "PY",
     "name_zh": "巴拉圭",
-    "name_en": "Paraguay"
+    "name_en": "Paraguay",
+    "capital": {
+      "name": "Asuncion",
+      "lat": -25.280046,
+      "lng": -57.634381
+    }
   },
   "PE": {
     "iso": "PE",
     "name_zh": "秘魯",
-    "name_en": "Peru"
+    "name_en": "Peru",
+    "capital": {
+      "name": "Lima",
+      "lat": -12.06973,
+      "lng": -77.03542
+    }
   },
   "KN": {
     "iso": "KN",
     "name_zh": "聖克里斯多福及尼維斯",
-    "name_en": "Saint Kitts and Nevis"
+    "name_en": "Saint Kitts and Nevis",
+    "capital": {
+      "name": "Basseterre",
+      "lat": 17.296974,
+      "lng": -62.72172
+    }
   },
   "LC": {
     "iso": "LC",
     "name_zh": "聖露西亞",
-    "name_en": "Saint Lucia"
+    "name_en": "Saint Lucia",
+    "capital": {
+      "name": "Castries",
+      "lat": 14.011047,
+      "lng": -60.98979
+    }
   },
   "VC": {
     "iso": "VC",
     "name_zh": "聖文森及格瑞那丁",
-    "name_en": "Saint Vincent and the Grenadines"
+    "name_en": "Saint Vincent and the Grenadines",
+    "capital": {
+      "name": "Kingstown",
+      "lat": 13.161647,
+      "lng": -61.221612
+    }
   },
   "SR": {
     "iso": "SR",
     "name_zh": "蘇利南",
-    "name_en": "Suriname"
+    "name_en": "Suriname",
+    "capital": {
+      "name": "Paramaribo",
+      "lat": 5.824763,
+      "lng": -55.170394
+    }
   },
   "UY": {
     "iso": "UY",
     "name_zh": "烏拉圭",
-    "name_en": "Uruguay"
+    "name_en": "Uruguay",
+    "capital": {
+      "name": "Montevideo",
+      "lat": -34.906334,
+      "lng": -56.20423
+    }
   },
   "VE": {
     "iso": "VE",
     "name_zh": "委內瑞拉",
-    "name_en": "Venezuela"
+    "name_en": "Venezuela",
+    "capital": {
+      "name": "Caracas",
+      "lat": 10.506539,
+      "lng": -66.91498
+    }
   },
   "DZ": {
     "iso": "DZ",
     "name_zh": "阿爾及利亞",
-    "name_en": "Algeria"
+    "name_en": "Algeria",
+    "capital": {
+      "name": "Algiers",
+      "lat": 36.772933,
+      "lng": 3.058845
+    }
   },
   "AO": {
     "iso": "AO",
     "name_zh": "安哥拉",
-    "name_en": "Angola"
+    "name_en": "Angola",
+    "capital": {
+      "name": "Luanda",
+      "lat": -8.81668,
+      "lng": 13.235822
+    }
   },
   "BJ": {
     "iso": "BJ",
     "name_zh": "貝南",
-    "name_en": "Benin"
+    "name_en": "Benin",
+    "capital": {
+      "name": "Porto Novo",
+      "lat": 6.487424,
+      "lng": 2.621176
+    }
   },
   "BW": {
     "iso": "BW",
     "name_zh": "波札那",
-    "name_en": "Botswana"
+    "name_en": "Botswana",
+    "capital": {
+      "name": "Gaborone",
+      "lat": -24.657564,
+      "lng": 25.916878
+    }
   },
   "BF": {
     "iso": "BF",
     "name_zh": "布吉納法索",
-    "name_en": "Burkina Faso"
+    "name_en": "Burkina Faso",
+    "capital": {
+      "name": "Ouagadougou",
+      "lat": 12.363142,
+      "lng": -1.529773
+    }
   },
   "BI": {
     "iso": "BI",
     "name_zh": "蒲隆地",
-    "name_en": "Burundi"
+    "name_en": "Burundi",
+    "capital": {
+      "name": "Gitega",
+      "lat": -3.428495,
+      "lng": 29.924972
+    }
   },
   "CM": {
     "iso": "CM",
     "name_zh": "喀麥隆",
-    "name_en": "Cameroon"
+    "name_en": "Cameroon",
+    "capital": {
+      "name": "Yaounde",
+      "lat": 3.864768,
+      "lng": 11.520526
+    }
   },
   "CV": {
     "iso": "CV",
     "name_zh": "佛得角",
-    "name_en": "Cape Verde"
+    "name_en": "Cape Verde",
+    "capital": {
+      "name": "Praia",
+      "lat": -24.011335,
+      "lng": -46.414394
+    }
   },
   "TD": {
     "iso": "TD",
     "name_zh": "查德",
-    "name_en": "Chad"
+    "name_en": "Chad",
+    "capital": {
+      "name": "Djamena",
+      "lat": 10.198524,
+      "lng": 22.917851
+    }
   },
   "KM": {
     "iso": "KM",
     "name_zh": "葛摩",
-    "name_en": "Comoros"
+    "name_en": "Comoros",
+    "capital": {
+      "name": "Moroni",
+      "lat": -11.702447,
+      "lng": 43.245591
+    }
   },
   "CD": {
     "iso": "CD",
     "name_zh": "剛果民主共和國",
-    "name_en": "Democratic Republic of the Congo"
+    "name_en": "Democratic Republic of the Congo",
+    "capital": {
+      "name": "Kinshasa",
+      "lat": -4.325152,
+      "lng": 15.312853
+    }
   },
   "CG": {
     "iso": "CG",
     "name_zh": "剛果共和國",
-    "name_en": "Republic of the Congo"
+    "name_en": "Republic of the Congo",
+    "capital": {
+      "name": "Brazzaville",
+      "lat": -4.269441,
+      "lng": 15.271226
+    }
   },
   "DJ": {
     "iso": "DJ",
     "name_zh": "吉布地",
-    "name_en": "Djibouti"
+    "name_en": "Djibouti",
+    "capital": {
+      "name": "Djibouti",
+      "lat": 11.59369,
+      "lng": 43.147272
+    }
   },
   "GQ": {
     "iso": "GQ",
     "name_zh": "赤道幾內亞",
-    "name_en": "Equatorial Guinea"
+    "name_en": "Equatorial Guinea",
+    "capital": {
+      "name": "Malabo",
+      "lat": 3.725428,
+      "lng": 8.757188
+    }
   },
   "ER": {
     "iso": "ER",
     "name_zh": "厄利垂亞",
-    "name_en": "Eritrea"
+    "name_en": "Eritrea",
+    "capital": {
+      "name": "Asmara",
+      "lat": 15.348032,
+      "lng": 38.945567
+    }
   },
   "ET": {
     "iso": "ET",
     "name_zh": "衣索比亞",
-    "name_en": "Ethiopia"
+    "name_en": "Ethiopia",
+    "capital": {
+      "name": "Addis Ababa",
+      "lat": 9.035829,
+      "lng": 38.752413
+    }
   },
   "GA": {
     "iso": "GA",
     "name_zh": "加彭",
-    "name_en": "Gabon"
+    "name_en": "Gabon",
+    "capital": {
+      "name": "Libreville",
+      "lat": 0.400015,
+      "lng": 9.456696
+    }
   },
   "GM": {
     "iso": "GM",
     "name_zh": "甘比亞",
-    "name_en": "Gambia"
+    "name_en": "Gambia",
+    "capital": {
+      "name": "Banjul",
+      "lat": 13.45535,
+      "lng": -16.575646
+    }
   },
   "GH": {
     "iso": "GH",
     "name_zh": "迦納",
-    "name_en": "Ghana"
+    "name_en": "Ghana",
+    "capital": {
+      "name": "Accra",
+      "lat": 5.58505,
+      "lng": -0.210768
+    }
   },
   "GN": {
     "iso": "GN",
     "name_zh": "幾內亞",
-    "name_en": "Guinea"
+    "name_en": "Guinea",
+    "capital": {
+      "name": "Conakry",
+      "lat": 9.51706,
+      "lng": -13.699843
+    }
   },
   "GW": {
     "iso": "GW",
     "name_zh": "幾內亞比紹",
-    "name_en": "Guinea-Bissau"
+    "name_en": "Guinea-Bissau",
+    "capital": {
+      "name": "Bissau",
+      "lat": 11.860353,
+      "lng": -15.583228
+    }
   },
   "KE": {
     "iso": "KE",
     "name_zh": "肯亞",
-    "name_en": "Kenya"
+    "name_en": "Kenya",
+    "capital": {
+      "name": "Nairobi",
+      "lat": -1.289001,
+      "lng": 36.817281
+    }
   },
   "LS": {
     "iso": "LS",
     "name_zh": "賴索托",
-    "name_en": "Lesotho"
+    "name_en": "Lesotho",
+    "capital": {
+      "name": "Maseru",
+      "lat": -29.344175,
+      "lng": 27.496523
+    }
   },
   "LR": {
     "iso": "LR",
     "name_zh": "賴比瑞亞",
-    "name_en": "Liberia"
+    "name_en": "Liberia",
+    "capital": {
+      "name": "Monrovia",
+      "lat": 6.328034,
+      "lng": -10.797788
+    }
   },
   "LY": {
     "iso": "LY",
     "name_zh": "利比亞",
-    "name_en": "Libya"
+    "name_en": "Libya",
+    "capital": {
+      "name": "Tripoli",
+      "lat": 32.892,
+      "lng": 13.178
+    }
   },
   "MG": {
     "iso": "MG",
     "name_zh": "馬達加斯加",
-    "name_en": "Madagascar"
+    "name_en": "Madagascar",
+    "capital": {
+      "name": "Antananarivo",
+      "lat": -18.909775,
+      "lng": 47.52709
+    }
   },
   "ML": {
     "iso": "ML",
     "name_zh": "馬利",
-    "name_en": "Mali"
+    "name_en": "Mali",
+    "capital": {
+      "name": "Bamako",
+      "lat": 12.649319,
+      "lng": -8.000337
+    }
   },
   "MR": {
     "iso": "MR",
     "name_zh": "茅利塔尼亞",
-    "name_en": "Mauritania"
+    "name_en": "Mauritania",
+    "capital": {
+      "name": "Nouakchott",
+      "lat": 18.079238,
+      "lng": -15.978007
+    }
   },
   "MU": {
     "iso": "MU",
     "name_zh": "模里西斯",
-    "name_en": "Mauritius"
+    "name_en": "Mauritius",
+    "capital": {
+      "name": "Port Louis",
+      "lat": -20.162452,
+      "lng": 57.502804
+    }
   },
   "MA": {
     "iso": "MA",
     "name_zh": "摩洛哥",
-    "name_en": "Morocco"
+    "name_en": "Morocco",
+    "capital": {
+      "name": "Rabat",
+      "lat": 34.016323,
+      "lng": -6.834995
+    }
   },
   "MZ": {
     "iso": "MZ",
     "name_zh": "莫三比克",
-    "name_en": "Mozambique"
+    "name_en": "Mozambique",
+    "capital": {
+      "name": "Maputo",
+      "lat": -25.966213,
+      "lng": 32.56745
+    }
   },
   "NA": {
     "iso": "NA",
     "name_zh": "納米比亞",
-    "name_en": "Namibia"
+    "name_en": "Namibia",
+    "capital": {
+      "name": "Windhoek",
+      "lat": -22.560084,
+      "lng": 17.072984
+    }
   },
   "NE": {
     "iso": "NE",
     "name_zh": "尼日",
-    "name_en": "Niger"
+    "name_en": "Niger",
+    "capital": {
+      "name": "Niamey",
+      "lat": 13.52,
+      "lng": 2.109
+    }
   },
   "NG": {
     "iso": "NG",
     "name_zh": "奈及利亞",
-    "name_en": "Nigeria"
+    "name_en": "Nigeria",
+    "capital": {
+      "name": "Abuja",
+      "lat": 9.073523,
+      "lng": 7.475731
+    }
   },
   "RW": {
     "iso": "RW",
     "name_zh": "盧安達",
-    "name_en": "Rwanda"
+    "name_en": "Rwanda",
+    "capital": {
+      "name": "Kigali",
+      "lat": -1.953436,
+      "lng": 30.114009
+    }
   },
   "ST": {
     "iso": "ST",
     "name_zh": "聖多美普林西比",
-    "name_en": "São Tomé and Príncipe"
+    "name_en": "São Tomé and Príncipe",
+    "capital": {
+      "name": "Sao Tome",
+      "lat": 8.938499,
+      "lng": -64.13212
+    }
   },
   "SN": {
     "iso": "SN",
     "name_zh": "塞內加爾",
-    "name_en": "Senegal"
+    "name_en": "Senegal",
+    "capital": {
+      "name": "Dakar",
+      "lat": 14.712019,
+      "lng": -17.457171
+    }
   },
   "SC": {
     "iso": "SC",
     "name_zh": "塞席爾",
-    "name_en": "Seychelles"
+    "name_en": "Seychelles",
+    "capital": {
+      "name": "Victoria",
+      "lat": 48.426594,
+      "lng": -123.36747
+    }
   },
   "SL": {
     "iso": "SL",
     "name_zh": "獅子山",
-    "name_en": "Sierra Leone"
+    "name_en": "Sierra Leone",
+    "capital": {
+      "name": "Freetown",
+      "lat": 8.462246,
+      "lng": -13.178415
+    }
   },
   "SO": {
     "iso": "SO",
     "name_zh": "索馬利亞",
-    "name_en": "Somalia"
+    "name_en": "Somalia",
+    "capital": {
+      "name": "Mogadishu",
+      "lat": 2.035447,
+      "lng": 45.34276
+    }
   },
   "SS": {
     "iso": "SS",
     "name_zh": "南蘇丹",
-    "name_en": "South Sudan"
+    "name_en": "South Sudan",
+    "capital": {
+      "name": "Juba",
+      "lat": 4.845925,
+      "lng": 31.595917
+    }
   },
   "SD": {
     "iso": "SD",
     "name_zh": "蘇丹",
-    "name_en": "Sudan"
+    "name_en": "Sudan",
+    "capital": {
+      "name": "Khartoum",
+      "lat": 15.588,
+      "lng": 32.525
+    }
   },
   "TZ": {
     "iso": "TZ",
     "name_zh": "坦尚尼亞",
-    "name_en": "Tanzania"
+    "name_en": "Tanzania",
+    "capital": {
+      "name": "Dodoma",
+      "lat": -6.178034,
+      "lng": 35.746886
+    }
   },
   "TG": {
     "iso": "TG",
     "name_zh": "多哥",
-    "name_en": "Togo"
+    "name_en": "Togo",
+    "capital": {
+      "name": "Lome",
+      "lat": 6.132853,
+      "lng": 1.230922
+    }
   },
   "UG": {
     "iso": "UG",
     "name_zh": "烏干達",
-    "name_en": "Uganda"
+    "name_en": "Uganda",
+    "capital": {
+      "name": "Kampala",
+      "lat": 0.317714,
+      "lng": 32.581354
+    }
   },
   "ZM": {
     "iso": "ZM",
     "name_zh": "尚比亞",
-    "name_en": "Zambia"
+    "name_en": "Zambia",
+    "capital": {
+      "name": "Lusaka",
+      "lat": -15.419,
+      "lng": 28.282
+    }
   },
   "ZW": {
     "iso": "ZW",
     "name_zh": "辛巴威",
-    "name_en": "Zimbabwe"
+    "name_en": "Zimbabwe",
+    "capital": {
+      "name": "Harare",
+      "lat": -17.831773,
+      "lng": 31.045686
+    }
   },
   "DO": {
     "iso": "DO",
     "name_zh": "多明尼加",
-    "name_en": "Dominican Republic"
+    "name_en": "Dominican Republic",
+    "capital": {
+      "name": "Santo Domingo",
+      "lat": 18.479528,
+      "lng": -69.94257
+    }
   },
   "TT": {
     "iso": "TT",
     "name_zh": "千里達及托巴哥",
-    "name_en": "Trinidad and Tobago"
+    "name_en": "Trinidad and Tobago",
+    "capital": {
+      "name": "Port of Spain",
+      "lat": 10.657268,
+      "lng": -61.518017
+    }
   },
   "CF": {
     "iso": "CF",
     "name_zh": "中非共和國",
-    "name_en": "Central African Republic"
+    "name_en": "Central African Republic",
+    "capital": {
+      "name": "Bangui",
+      "lat": 4.363512,
+      "lng": 18.583591
+    }
   },
   "SZ": {
     "iso": "SZ",
     "name_zh": "史瓦帝尼",
-    "name_en": "Eswatini"
+    "name_en": "Eswatini",
+    "capital": {
+      "name": "Mbabane",
+      "lat": -26.314901,
+      "lng": 31.13396
+    }
+  },
+  "BN": {
+    "iso": "BN",
+    "name_zh": "汶萊",
+    "name_en": "Brunei",
+    "capital": {
+      "name": "斯里巴加灣",
+      "lat": 4.889977,
+      "lng": 114.94248
+    }
+  },
+  "MM": {
+    "iso": "MM",
+    "name_zh": "緬甸",
+    "name_en": "Myanmar",
+    "capital": {
+      "name": "奈比多",
+      "lat": 19.753683,
+      "lng": 96.1339
+    }
+  },
+  "KH": {
+    "iso": "KH",
+    "name_zh": "柬埔寨",
+    "name_en": "Cambodia",
+    "capital": {
+      "name": "金邊",
+      "lat": 11.568271,
+      "lng": 104.922443
+    }
+  },
+  "LA": {
+    "iso": "LA",
+    "name_zh": "寮國",
+    "name_en": "Laos",
+    "capital": {
+      "name": "永珍",
+      "lat": 17.964099,
+      "lng": 102.613371
+    }
+  },
+  "MY": {
+    "iso": "MY",
+    "name_zh": "馬來西亞",
+    "name_en": "Malaysia",
+    "capital": {
+      "name": "吉隆坡",
+      "lat": 3.151696,
+      "lng": 101.694237
+    }
+  },
+  "AD": {
+    "iso": "AD",
+    "name_zh": "安道爾",
+    "name_en": "Andorra",
+    "capital": {
+      "name": "安道爾城",
+      "lat": 42.506939,
+      "lng": 1.521247
+    }
+  },
+  "BE": {
+    "iso": "BE",
+    "name_zh": "比利時",
+    "name_en": "Belgium",
+    "capital": {
+      "name": "布魯塞爾",
+      "lat": 50.8551,
+      "lng": 4.35121
+    }
+  },
+  "CY": {
+    "iso": "CY",
+    "name_zh": "賽普勒斯",
+    "name_en": "Cyprus",
+    "capital": {
+      "name": "尼科西亞",
+      "lat": 35.16923,
+      "lng": 33.360275
+    }
+  },
+  "LU": {
+    "iso": "LU",
+    "name_zh": "盧森堡",
+    "name_en": "Luxembourg",
+    "capital": {
+      "name": "盧森堡市",
+      "lat": 49.61152,
+      "lng": 6.129678
+    }
+  },
+  "MC": {
+    "iso": "MC",
+    "name_zh": "摩納哥",
+    "name_en": "Monaco"
+  },
+  "RS": {
+    "iso": "RS",
+    "name_zh": "塞爾維亞",
+    "name_en": "Serbia",
+    "capital": {
+      "name": "貝爾格萊德",
+      "lat": 44.817813,
+      "lng": 20.456897
+    }
+  },
+  "CI": {
+    "iso": "CI",
+    "name_zh": "象牙海岸",
+    "name_en": "Côte d'Ivoire"
+  },
+  "MW": {
+    "iso": "MW",
+    "name_zh": "馬拉威",
+    "name_en": "Malawi",
+    "capital": {
+      "name": "利隆圭",
+      "lat": -13.987511,
+      "lng": 33.768144
+    }
+  },
+  "TN": {
+    "iso": "TN",
+    "name_zh": "突尼西亞",
+    "name_en": "Tunisia",
+    "capital": {
+      "name": "突尼斯",
+      "lat": 36.800207,
+      "lng": 10.185776
+    }
   }
 }
