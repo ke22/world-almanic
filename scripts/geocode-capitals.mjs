@@ -108,6 +108,11 @@ async function main() {
 
     const capitalName = parseCapitalName(capField.value);
     if (!capitalName) {
+      // Clear any stale cached capital — e.g. a country whose 首都 text
+      // previously named a real place (before an upstream factbox fix)
+      // but now correctly has no capital concept should not keep showing
+      // a leftover marker for the old, wrong name.
+      if (countries[iso] && countries[iso].capital) delete countries[iso].capital;
       skippedNoCapital++;
       continue;
     }

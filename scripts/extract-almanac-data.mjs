@@ -434,35 +434,79 @@ function detectRelations(relationsText) {
   return last && last.type === 'establish' ? `${last.sentence}。` : null;
 }
 
+// A bare date is often followed directly by a qualifier word with no comma
+// in between — "起" (since), "初/中/底" or "上旬/中旬/下旬" (part of the
+// month), "凌晨" (time of day), or a range-closing "至/到X日" or
+// "至/到X月Y日" (same-month or cross-month range end) — before the real
+// substantive clause begins. Left unconsumed, that qualifier becomes the
+// sole text before the first comma and produces a meaningless title (e.g.
+// "2015年起，我國國民…" -> title "起" instead of the real clause). Longer
+// qualifiers are listed before any single-character prefix they contain
+// (中旬/上旬/下旬 before 中), and the cross-month range form before the
+// same-month form, so the alternation doesn't stop early on a partial match.
+const DATE_QUALIFIER = '(?:中旬|上旬|下旬|起|初|底|中|凌晨|[至到]\\d{1,2}月\\d{1,2}日|[至到]\\d{1,2}日)?';
+
 function parseStarBullets(relationsText, windowed = true) {
   if (!relationsText) return [];
   const bullets = relationsText.split('★').slice(1);
   const out = [];
   for (const raw of bullets) {
-    // A bare date is often followed directly by a qualifier word with no
-    // comma in between — "起" (since), "初/中/底" or "上旬/中旬/下旬" (part
-    // of the month), "凌晨" (time of day), or a range-closing "至/到X日"
-    // or "至/到X月Y日" (same-month or cross-month range end) — before the
-    // real substantive clause begins. Left unconsumed, that qualifier
-    // becomes the sole text before the first comma and produces a
-    // meaningless title (e.g. "2015年起，我國國民…" -> title "起" instead
-    // of the real clause). Longer qualifiers are listed before any
-    // single-character prefix they contain (中旬/上旬/下旬 before 中), and
-    // the cross-month range form before the same-month form, so the
-    // alternation doesn't stop early on a partial match.
-    const QUALIFIER = '(?:中旬|上旬|下旬|起|初|底|中|凌晨|[至到]\\d{1,2}月\\d{1,2}日|[至到]\\d{1,2}日)?';
-    const dm = new RegExp(`^(\\d{4})年(?:(\\d{1,2})月(?:(\\d{1,2})日)?)?${QUALIFIER}`).exec(raw.trim());
-    if (!dm) continue;
-    const year = parseInt(dm[1], 10);
-    if (year > TIMELINE_MAX_YEAR) continue;
-    if (windowed && year < TIMELINE_MIN_YEAR) continue;
-    const month = dm[2] ? dm[2].padStart(2, '0') : null;
-    const day = dm[3] ? dm[3].padStart(2, '0') : null;
-    const date = month ? `${year}-${month}${day ? '-' + day : ''}` : `${year}`;
-    const rest = raw.trim().slice(dm[0].length).replace(/^[，,]\s*/, '').trim();
-    if (!rest) continue;
-    const sentence = rest.endsWith('。') ? rest : `${rest}。`;
-    out.push({ year, date, sentence, sortKey: `${year}-${month || '00'}-${day || '00'}` });
+    const trimmed = raw.trim();
+    const leadingRe = new RegExp(`^(\\d{4})年(?:(\\d{1,2})月(?:(\\d{1,2})日)?)?${DATE_QUALIFIER}`);
+    const leadingMatch = leadingRe.exec(trimmed);
+    if (!leadingMatch) continue;
+    const bulletYear = parseInt(leadingMatch[1], 10);
+    const leadingMonth = leadingMatch[2] || null;
+    const leadingDay = leadingMatch[3] || null;
+
+    const afterLeading = trimmed.slice(leadingMatch[0].length).replace(/^[，,]\s*/, '');
+
+    // A single ★ bullet in the source often bundles MULTIPLE dated
+    // sub-events under one shared leading year, written as consecutive
+    // 。- or ；-terminated clauses where each subsequent clause begins with
+    // its own "[YYYY年]X月Y日" marker instead of starting a new ★ (e.g.
+    // Japan's 2024年2月6日 bullet runs on through five distinct dated
+    // events — TSMC's Kumamoto fab, the Emperor's birthday reception, a
+    // fishing-season agreement, the Hualien earthquake, and a Diet
+    // delegation visit — with no ★ separating them). Split on clause
+    // boundaries and treat any clause beginning with its own date marker
+    // as a separate event, inheriting the bullet's leading year when a
+    // clause doesn't restate one.
+    const sentences = afterLeading.split(/(?<=[。；])/).map((s) => s.trim()).filter(Boolean);
+    // Sub-events' own dates can be followed by the same trailing qualifier
+    // words as a bullet's leading date (e.g. "6月21日起，陸委會宣布…" or
+    // "11月中旬，貝里斯…遭颶風重創…") — reuse DATE_QUALIFIER here too, or
+    // the qualifier is left dangling as the sub-event's entire title.
+    const subDateRe = new RegExp(`^(?:(\\d{4})年)?(\\d{1,2})月(?:(\\d{1,2})日)?${DATE_QUALIFIER}`);
+
+    let current = { year: bulletYear, month: leadingMonth, day: leadingDay, parts: [] };
+    const bulletEvents = [];
+    for (const sentence of sentences) {
+      const dm = subDateRe.exec(sentence);
+      if (dm) {
+        if (current.parts.length > 0) bulletEvents.push(current);
+        const year = dm[1] ? parseInt(dm[1], 10) : bulletYear;
+        const remainder = sentence.slice(dm[0].length).replace(/^[，,]\s*/, '');
+        current = { year, month: dm[2], day: dm[3] || null, parts: remainder ? [remainder] : [] };
+      } else {
+        current.parts.push(sentence);
+      }
+    }
+    if (current.parts.length > 0) bulletEvents.push(current);
+
+    for (const ev of bulletEvents) {
+      const year = ev.year;
+      if (year > TIMELINE_MAX_YEAR) continue;
+      if (windowed && year < TIMELINE_MIN_YEAR) continue;
+      const month = ev.month ? ev.month.padStart(2, '0') : null;
+      const day = ev.day ? ev.day.padStart(2, '0') : null;
+      const date = month ? `${year}-${month}${day ? '-' + day : ''}` : `${year}`;
+      let sentence = ev.parts.join('').trim();
+      if (!sentence) continue;
+      sentence = sentence.replace(/；$/, '。');
+      if (!sentence.endsWith('。')) sentence = `${sentence}。`;
+      out.push({ year, date, sentence, sortKey: `${year}-${month || '00'}-${day || '00'}` });
+    }
   }
   return out;
 }
@@ -554,8 +598,18 @@ function main() {
     }
   }
 
+  // Merge per-key with existing fields as the base, so enrichment data
+  // added by later scripts (capital/bbox geocoding) survives a re-run of
+  // this extraction — newCountries only ever sets {iso, name_zh, name_en},
+  // so overlaying it onto existing[iso] refreshes just those three fields
+  // without discarding bbox/capital. A flat `{...existing, ...newCountries}`
+  // spread (the previous approach) put newCountries last, silently wiping
+  // out bbox/capital for every country touched by this run on each re-run.
   const existing = fs.existsSync(COUNTRIES_PATH) ? JSON.parse(fs.readFileSync(COUNTRIES_PATH, 'utf-8')) : {};
-  const merged = { ...existing, ...newCountries };
+  const merged = { ...existing };
+  for (const [iso, rec] of Object.entries(newCountries)) {
+    merged[iso] = { ...existing[iso], ...rec };
+  }
 
   fs.writeFileSync(ALMANAC_PATH, `${JSON.stringify(almanac, null, 2)}\n`, 'utf-8');
   fs.writeFileSync(COUNTRIES_PATH, `${JSON.stringify(merged, null, 2)}\n`, 'utf-8');
