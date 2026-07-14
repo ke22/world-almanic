@@ -439,7 +439,19 @@ function parseStarBullets(relationsText, windowed = true) {
   const bullets = relationsText.split('★').slice(1);
   const out = [];
   for (const raw of bullets) {
-    const dm = /^(\d{4})年(?:(\d{1,2})月(?:(\d{1,2})日)?)?/.exec(raw.trim());
+    // A bare date is often followed directly by a qualifier word with no
+    // comma in between — "起" (since), "初/中/底" or "上旬/中旬/下旬" (part
+    // of the month), "凌晨" (time of day), or a range-closing "至/到X日"
+    // or "至/到X月Y日" (same-month or cross-month range end) — before the
+    // real substantive clause begins. Left unconsumed, that qualifier
+    // becomes the sole text before the first comma and produces a
+    // meaningless title (e.g. "2015年起，我國國民…" -> title "起" instead
+    // of the real clause). Longer qualifiers are listed before any
+    // single-character prefix they contain (中旬/上旬/下旬 before 中), and
+    // the cross-month range form before the same-month form, so the
+    // alternation doesn't stop early on a partial match.
+    const QUALIFIER = '(?:中旬|上旬|下旬|起|初|底|中|凌晨|[至到]\\d{1,2}月\\d{1,2}日|[至到]\\d{1,2}日)?';
+    const dm = new RegExp(`^(\\d{4})年(?:(\\d{1,2})月(?:(\\d{1,2})日)?)?${QUALIFIER}`).exec(raw.trim());
     if (!dm) continue;
     const year = parseInt(dm[1], 10);
     if (year > TIMELINE_MAX_YEAR) continue;
