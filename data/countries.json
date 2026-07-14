@@ -958,5 +958,10 @@
     "iso": "CF",
     "name_zh": "中非共和國",
     "name_en": "Central African Republic"
+  },
+  "SZ": {
+    "iso": "SZ",
+    "name_zh": "史瓦帝尼",
+    "name_en": "Eswatini"
   }
 }

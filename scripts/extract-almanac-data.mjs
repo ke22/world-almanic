@@ -98,6 +98,8 @@ const COUNTRY_META = {
   Yemen: ['YE', '葉門', 'Yemen', '🇾🇪'],
   // Oceania
   Australia: ['AU', '澳大利亞', 'Australia', '🇦🇺'],
+  Samoa: ['WS', '薩摩亞', 'Samoa', '🇼🇸'],
+  Norway: ['NO', '挪威', 'Norway', '🇳🇴'],
   Fiji: ['FJ', '斐濟', 'Fiji', '🇫🇯'],
   Kiribati: ['KI', '吉里巴斯', 'Kiribati', '🇰🇮'],
   Marshall_Islands: ['MH', '馬紹爾群島', 'Marshall Islands', '🇲🇭'],
@@ -168,6 +170,7 @@ const COUNTRY_META = {
   Cuba: ['CU', '古巴', 'Cuba', '🇨🇺'],
   Dominica: ['DM', '多米尼克', 'Dominica', '🇩🇲'],
   Dominican_Republic: ['DO', '多明尼加', 'Dominican Republic', '🇩🇴'],
+  Dominican: ['DO', '多明尼加', 'Dominican Republic', '🇩🇴'], // HTML filename alias
   Ecuador: ['EC', '厄瓜多', 'Ecuador', '🇪🇨'],
   El_Salvador: ['SV', '薩爾瓦多', 'El Salvador', '🇸🇻'],
   Grenada: ['GD', '格瑞那達', 'Grenada', '🇬🇩'],
@@ -186,6 +189,7 @@ const COUNTRY_META = {
   Saint_Vincent_and_the_Grenadines: ['VC', '聖文森及格瑞那丁', 'Saint Vincent and the Grenadines', '🇻🇨'],
   Suriname: ['SR', '蘇利南', 'Suriname', '🇸🇷'],
   Trinidad_and_Tobago: ['TT', '千里達及托巴哥', 'Trinidad and Tobago', '🇹🇹'],
+  Trinidad: ['TT', '千里達及托巴哥', 'Trinidad and Tobago', '🇹🇹'], // HTML filename alias
   United_States: ['US', '美國', 'United States', '🇺🇸'],
   Uruguay: ['UY', '烏拉圭', 'Uruguay', '🇺🇾'],
   Venezuela: ['VE', '委內瑞拉', 'Venezuela', '🇻🇪'],
@@ -199,16 +203,19 @@ const COUNTRY_META = {
   Cameroon: ['CM', '喀麥隆', 'Cameroon', '🇨🇲'],
   Cape_Verde: ['CV', '佛得角', 'Cape Verde', '🇨🇻'],
   Central_African_Republic: ['CF', '中非共和國', 'Central African Republic', '🇨🇫'],
+  Central_African: ['CF', '中非共和國', 'Central African Republic', '🇨🇫'], // HTML filename alias
   Chad: ['TD', '查德', 'Chad', '🇹🇩'],
   Comoros: ['KM', '葛摩', 'Comoros', '🇰🇲'],
   Congo_Democratic_Republic: ['CD', '剛果民主共和國', 'Democratic Republic of the Congo', '🇨🇩'],
   Congo: ['CG', '剛果共和國', 'Republic of the Congo', '🇨🇬'],
   Cote_d_Ivoire: ['CI', '象牙海岸', "Côte d'Ivoire", '🇨🇮'],
+  'Cote_d&apos;Ivoire': ['CI', '象牙海岸', "Côte d'Ivoire", '🇨🇮'], // HTML filename alias with entity
   Djibouti: ['DJ', '吉布地', 'Djibouti', '🇩🇯'],
   Egypt: ['EG', '埃及', 'Egypt', '🇪🇬'],
   Equatorial_Guinea: ['GQ', '赤道幾內亞', 'Equatorial Guinea', '🇬🇶'],
   Eritrea: ['ER', '厄利垂亞', 'Eritrea', '🇪🇷'],
   Ethiopia: ['ET', '衣索比亞', 'Ethiopia', '🇪🇹'],
+  Swaziland: ['SZ', '史瓦帝尼', 'Eswatini', '🇸🇿'], // HTML filename (old name for Eswatini)
   Gabon: ['GA', '加彭', 'Gabon', '🇬🇦'],
   Gambia: ['GM', '甘比亞', 'Gambia', '🇬🇲'],
   Ghana: ['GH', '迦納', 'Ghana', '🇬🇭'],
@@ -313,23 +320,6 @@ function segmentBlocks(html, fileName) {
     const tableMatch = /<table[^>]*>[\s\S]*?<\/table>/i.exec(block);
     const tableHtml = tableMatch ? tableMatch[0] : '';
 
-    // Map HTML filename keys to COUNTRY_META keys
-    const KEY_MAPPING = {
-      'Myanmar': 'Myanmar',
-      'Laos': 'Laos',
-      'Malaysia': 'Malaysia',
-      'Thailand': 'Thailand',
-      'Vietnam': 'Vietnam',
-      'Czech': 'Czech',
-      'Cote_d&apos;Ivoire': 'Cote_d_Ivoire',
-      'Central_African': 'Central_African_Republic',
-      'Dominican': 'Dominican_Republic',
-      'Trinidad': 'Trinidad_and_Tobago',
-      'Swaziland': 'Eswatini',
-      'Congo': 'Congo',
-      'Congo_Democratic_Republic': 'Congo_Democratic_Republic',
-    };
-
     let key;
     if (isSelfEntryFile && selfIndex === 0) {
       key = 'Taiwan';
@@ -338,8 +328,8 @@ function segmentBlocks(html, fileName) {
       key = 'China';
       selfIndex++;
     } else {
-      // Try direct match first, then check mapping
-      key = (current.key in COUNTRY_META) ? current.key : (KEY_MAPPING[current.key] || null);
+      // Direct match in COUNTRY_META
+      key = (current.key in COUNTRY_META) ? current.key : null;
     }
 
     if (key && COUNTRY_META[key]) {

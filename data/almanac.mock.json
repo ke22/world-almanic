@@ -2389,6 +2389,35 @@
     ],
     "sections": []
   },
+  "NO": {
+    "iso": "NO",
+    "name_zh": "挪威",
+    "name_en": "Norway",
+    "flag": "🇳🇴",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "華沙（Warsaw）"
+      },
+      {
+        "label": "語言",
+        "value": "波蘭語"
+      },
+      {
+        "label": "人口",
+        "value": "3,874萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "312,685平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "中歐"
+      }
+    ],
+    "sections": []
+  },
   "PL": {
     "iso": "PL",
     "name_zh": "波蘭",
@@ -4244,6 +4273,35 @@
       {
         "label": "地理位置",
         "value": "非洲南部，介於南非與莫三比克間。"
+      }
+    ],
+    "sections": []
+  },
+  "SZ": {
+    "iso": "SZ",
+    "name_zh": "史瓦帝尼",
+    "name_en": "Eswatini",
+    "flag": "🇸🇿",
+    "factbox": [
+      {
+        "label": "首都",
+        "value": "阿迪斯阿貝巴（Addis Ababa）"
+      },
+      {
+        "label": "語言",
+        "value": "阿姆哈拉（Amharic）語、泰古林亞語、阿拉伯語、英語。"
+      },
+      {
+        "label": "人口",
+        "value": "1億1,855萬人（2024）"
+      },
+      {
+        "label": "面積",
+        "value": "1,104,300平方公里"
+      },
+      {
+        "label": "地理位置",
+        "value": "非洲東部，臨紅海。"
       }
     ],
     "sections": []
