@@ -3,13 +3,17 @@ import path from "node:path";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
+const client = path.join(dist, "client");
 
 await rm(dist, { recursive: true, force: true });
 await mkdir(path.join(dist, "server"), { recursive: true });
+await mkdir(client, { recursive: true });
 
-for (const item of ["index.html", "assets", "data", "emoji", "src", ".openai"]) {
-  await cp(path.join(root, item), path.join(dist, item), { recursive: true });
+for (const item of ["index.html", "assets", "data", "emoji", "src"]) {
+  await cp(path.join(root, item), path.join(client, item), { recursive: true });
 }
+
+await cp(path.join(root, ".openai"), path.join(dist, ".openai"), { recursive: true });
 
 await writeFile(
   path.join(dist, "server", "index.js"),
