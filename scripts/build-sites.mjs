@@ -13,6 +13,9 @@ for (const item of ["index.html", "assets", "data", "emoji", "src"]) {
   await cp(path.join(root, item), path.join(client, item), { recursive: true });
 }
 
+await cp(path.join(client, "index.html"), path.join(client, "404.html"));
+await writeFile(path.join(client, ".nojekyll"), "");
+
 await cp(path.join(root, ".openai"), path.join(dist, ".openai"), { recursive: true });
 
 await writeFile(
