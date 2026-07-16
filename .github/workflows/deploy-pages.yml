@@ -26,6 +26,8 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build static site
+        env:
+          MAPBOX_TOKEN: ${{ secrets.MAPBOX_TOKEN }}
         run: npm run build
 
       - name: Upload Pages artifact

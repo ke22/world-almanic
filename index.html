@@ -17,9 +17,10 @@
   <script src="https://unpkg.com/@mapbox/mapbox-gl-language@1.0.1/index.js"></script>
 
   <!-- Optional: provide a Mapbox token to enable the Mapbox engine.
-       config.local.js is gitignored — create it locally and set
-       window.WORLD_ALMANAC_MAPBOX_TOKEN = 'pk....'; there.
-       (or append ?mbtoken=pk... to the URL instead) -->
+       For deployed builds, GitHub Actions can generate config.local.js
+       from the MAPBOX_TOKEN repository secret. For local development,
+       create config.local.js and set window.WORLD_ALMANAC_MAPBOX_TOKEN,
+       or append ?mbtoken=pk... to the URL. -->
   <script src="config.local.js" onerror="console.info('[world-almanic] config.local.js not found — Mapbox token unset, MapLibre still works')"></script>
 
   <link rel="stylesheet" href="assets/styles.css?v=199" />

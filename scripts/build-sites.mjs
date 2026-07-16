@@ -13,6 +13,14 @@ for (const item of ["index.html", "assets", "data", "emoji", "src"]) {
   await cp(path.join(root, item), path.join(client, item), { recursive: true });
 }
 
+const mapboxToken = process.env.WORLD_ALMANAC_MAPBOX_TOKEN || process.env.MAPBOX_TOKEN || "";
+if (mapboxToken.trim()) {
+  await writeFile(
+    path.join(client, "config.local.js"),
+    `window.WORLD_ALMANAC_MAPBOX_TOKEN = ${JSON.stringify(mapboxToken.trim())};\n`
+  );
+}
+
 await cp(path.join(client, "index.html"), path.join(client, "404.html"));
 await writeFile(path.join(client, ".nojekyll"), "");
 
