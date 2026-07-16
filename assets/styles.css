@@ -153,13 +153,28 @@ html, body {
 /* Entry panel content */
 .entry-head {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 8px;
   padding: 2px 0 10px;
   border-bottom: 1px solid var(--border);
   position: sticky; top: 0; background: var(--bg);
 }
-.entry-head .flag { font-size: 26px; line-height: 1; }
+.entry-head .flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  font-size: 26px;
+  line-height: 1;
+}
+.entry-head .flag-img {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
 .entry-head .names { display: flex; flex-direction: column; }
 .entry-head .zh { font-size: 18px; font-weight: 700; }
 .entry-head .en { font-size: 12px; color: var(--muted); }

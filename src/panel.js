@@ -9,6 +9,27 @@ function esc(v) {
     .replace(/"/g, '&quot;');
 }
 
+function flagAssetName(iso) {
+  const code = String(iso || '').toUpperCase();
+  if (!/^[A-Z]{2}$/.test(code)) return null;
+  return [...code]
+    .map((char) => (0x1f1e6 + char.charCodeAt(0) - 65).toString(16))
+    .join('-') + '.svg';
+}
+
+function renderFlag(entry) {
+  const assetName = flagAssetName(entry.iso);
+  if (!assetName) return `<span class="flag">${esc(entry.flag)}</span>`;
+  return (
+    `<span class="flag">` +
+    `<img class="flag-img" src="emoji/${assetName}" alt="${esc(entry.name_zh)}國旗" ` +
+    `loading="lazy" decoding="async" ` +
+    `onerror="this.hidden=true;this.nextElementSibling.hidden=false">` +
+    `<span class="flag-fallback" hidden>${esc(entry.flag)}</span>` +
+    `</span>`
+  );
+}
+
 function renderFactbox(factbox) {
   if (!Array.isArray(factbox) || factbox.length === 0) return '';
   const rows = factbox
@@ -63,7 +84,7 @@ export function renderPanel(el, entry, iso) {
   }
   const header =
     `<header class="entry-head">` +
-    `<span class="flag">${esc(entry.flag)}</span>` +
+    renderFlag(entry) +
     `<span class="names"><span class="zh">${esc(entry.name_zh)}</span>` +
     `<span class="en">${esc(entry.name_en)}</span></span>` +
     `<span class="iso">${esc(entry.iso)}</span></header>`;

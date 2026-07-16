@@ -1,5 +1,5 @@
 // extract-almanac-data.mjs
-// One-off extraction: parses the 2025 yearbook HTML export (HTML/D2_1..D2_5)
+// One-off extraction: parses the 2026 yearbook HTML export (03_HTML/D2_1..D2_5)
 // into data/almanac.mock.json (factbox + 近年大事記 timeline) and expands
 // data/countries.json with ISO alpha-2 entries for every resolved country.
 //
@@ -12,21 +12,21 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const HTML_DIR = path.join(ROOT, 'HTML');
+const HTML_DIR = path.join(ROOT, '03_HTML');
 const ALMANAC_PATH = path.join(ROOT, 'data', 'almanac.mock.json');
 const COUNTRIES_PATH = path.join(ROOT, 'data', 'countries.json');
 
 const REGION_FILES = [
-  'D2_1_2025亞洲_1126.html',
-  'D2_2_2025大洋洲.html',
-  'D2_3_2025歐洲.html',
-  'D2_4_2025美洲.html',
-  'D2_5_2025非洲.html',
+  'D2_1_2026亞洲.html',
+  'D2_2_2026大洋洲.html',
+  'D2_3_2026歐洲.html',
+  'D2_4_2026美洲.html',
+  'D2_5_2026非洲.html',
 ];
 
-// 2025 yearbook edition -> timeline window is the last 5 calendar years covered.
-const TIMELINE_MAX_YEAR = 2024;
-const TIMELINE_MIN_YEAR = TIMELINE_MAX_YEAR - 4; // 2020
+// 2026 yearbook edition -> timeline window is the last 5 calendar years covered.
+const TIMELINE_MAX_YEAR = 2025;
+const TIMELINE_MIN_YEAR = TIMELINE_MAX_YEAR - 4; // 2021
 const TIMELINE_CAP = 5;
 
 // Lexicographic event ranking: year always wins first (recency is the
@@ -67,6 +67,7 @@ const COUNTRY_META = {
   Bhutan: ['BT', '不丹', 'Bhutan', '🇧🇹'],
   Brunei: ['BN', '汶萊', 'Brunei', '🇧🇳'],
   Myanmar: ['MM', '緬甸', 'Myanmar', '🇲🇲'],
+  Burma: ['MM', '緬甸', 'Myanmar', '🇲🇲'], // HTML filename alias
   Cambodia: ['KH', '柬埔寨', 'Cambodia', '🇰🇭'],
   Georgia: ['GE', '喬治亞', 'Georgia', '🇬🇪'],
   Hong_Kong: ['HK', '香港', 'Hong Kong', '🇭🇰'],
@@ -82,8 +83,10 @@ const COUNTRY_META = {
   Korea_North: ['KP', '北韓', 'North Korea', '🇰🇵'],
   Kuwait: ['KW', '科威特', 'Kuwait', '🇰🇼'],
   Kyrgyzstan: ['KG', '吉爾吉斯', 'Kyrgyzstan', '🇰🇬'],
+  Laos: ['LA', '寮國', 'Laos', '🇱🇦'],
   Lebanon: ['LB', '黎巴嫩', 'Lebanon', '🇱🇧'],
   Macau: ['MO', '澳門', 'Macau', '🇲🇴'],
+  Malaysia: ['MY', '馬來西亞', 'Malaysia', '🇲🇾'],
   Maldives: ['MV', '馬爾地夫', 'Maldives', '🇲🇻'],
   Mongolia: ['MN', '蒙古', 'Mongolia', '🇲🇳'],
   Nepal: ['NP', '尼泊爾', 'Nepal', '🇳🇵'],
@@ -97,11 +100,13 @@ const COUNTRY_META = {
   Sri_Lanka: ['LK', '斯里蘭卡', 'Sri Lanka', '🇱🇰'],
   Syria: ['SY', '敘利亞', 'Syria', '🇸🇾'],
   Tajikistan: ['TJ', '塔吉克', 'Tajikistan', '🇹🇯'],
+  Thailand: ['TH', '泰國', 'Thailand', '🇹🇭'],
   East_Timor: ['TL', '東帝汶', 'Timor-Leste', '🇹🇱'],
   Turkey: ['TR', '土耳其', 'Turkey', '🇹🇷'],
   Turkmenistan: ['TM', '土庫曼', 'Turkmenistan', '🇹🇲'],
   United_Arab_Emirates: ['AE', '阿拉伯聯合大公國', 'United Arab Emirates', '🇦🇪'],
   Uzbekistan: ['UZ', '烏茲別克', 'Uzbekistan', '🇺🇿'],
+  Vietnam: ['VN', '越南', 'Vietnam', '🇻🇳'],
   Yemen: ['YE', '葉門', 'Yemen', '🇾🇪'],
   // Oceania
   Australia: ['AU', '澳大利亞', 'Australia', '🇦🇺'],
@@ -154,13 +159,17 @@ const COUNTRY_META = {
   Netherlands: ['NL', '荷蘭', 'Netherlands', '🇳🇱'],
   Macedonia: ['MK', '北馬其頓', 'North Macedonia', '🇲🇰'],
   Poland: ['PL', '波蘭', 'Poland', '🇵🇱'],
+  Portugal: ['PT', '葡萄牙', 'Portugal', '🇵🇹'],
   Romania: ['RO', '羅馬尼亞', 'Romania', '🇷🇴'],
   Russia: ['RU', '俄羅斯', 'Russia', '🇷🇺'],
   San_Marino: ['SM', '聖馬利諾', 'San Marino', '🇸🇲'],
+  Serbia: ['RS', '塞爾維亞', 'Serbia', '🇷🇸'],
   Slovakia: ['SK', '斯洛伐克', 'Slovakia', '🇸🇰'],
   Slovenia: ['SI', '斯洛維尼亞', 'Slovenia', '🇸🇮'],
+  Spain: ['ES', '西班牙', 'Spain', '🇪🇸'],
   Sweden: ['SE', '瑞典', 'Sweden', '🇸🇪'],
   Switzerland: ['CH', '瑞士', 'Switzerland', '🇨🇭'],
+  Ukraine: ['UA', '烏克蘭', 'Ukraine', '🇺🇦'],
   United_Kingdom: ['GB', '英國', 'United Kingdom', '🇬🇧'],
   // Americas
   Antigua_and_Barbuda: ['AG', '安提瓜及巴布達', 'Antigua and Barbuda', '🇦🇬'],
@@ -216,6 +225,7 @@ const COUNTRY_META = {
   Congo_Democratic_Republic: ['CD', '剛果民主共和國', 'Democratic Republic of the Congo', '🇨🇩'],
   Congo: ['CG', '剛果共和國', 'Republic of the Congo', '🇨🇬'],
   Cote_d_Ivoire: ['CI', '象牙海岸', "Côte d'Ivoire", '🇨🇮'],
+  "Cote_d'Ivoire": ['CI', '象牙海岸', "Côte d'Ivoire", '🇨🇮'], // decoded HTML entity alias
   'Cote_d&apos;Ivoire': ['CI', '象牙海岸', "Côte d'Ivoire", '🇨🇮'], // HTML filename alias with entity
   Djibouti: ['DJ', '吉布地', 'Djibouti', '🇩🇯'],
   Egypt: ['EG', '埃及', 'Egypt', '🇪🇬'],
@@ -275,105 +285,53 @@ function decodeEntities(text) {
   return text.replace(/&[a-zA-Z]+;/g, (m) => entities[m] || m);
 }
 
-function extractRelationsText(proseHtml) {
-  const headerRe = /<p class="D2各國簡介_(?:與我關係|國際關係)[^"]*"[^>]*>[\s\S]*?<\/p>/;
-  const hm = headerRe.exec(proseHtml);
-  if (!hm) return null;
-  const headerEnd = hm.index + hm[0].length;
-  const nextHeader = /<p class="D2各國簡介[^"]*"[^>]*>[\s\S]*?<\/p>/.exec(proseHtml.slice(headerEnd));
-  const endIdx = nextHeader ? headerEnd + nextHeader.index : proseHtml.length;
-  const scoped = proseHtml.slice(headerEnd, endIdx);
-  return decodeEntities(stripTags(scoped)).trim();
+function cleanText(text) {
+  return decodeEntities(text)
+    .replace(/\u00a0/g, ' ')
+    .replace(/[ \t\r\n]+/g, ' ')
+    .trim();
 }
 
-function extractFoundingHistoryText(proseHtml) {
-  const headerRe = /<p class="D2各國簡介_(?:與我關係|國際關係)[^"]*"[^>]*>[\s\S]*?<\/p>/;
-  const hm = headerRe.exec(proseHtml);
-  const scoped = hm ? proseHtml.slice(0, hm.index) : proseHtml;
-  // Strip out the 建國簡史 heading paragraph itself so its literal text
-  // doesn't bleed into the narrative.
-  const headingRemoved = scoped.replace(/<p class="D2各國簡介_建國簡史[^"]*"[^>]*>[\s\S]*?<\/p>/, '');
-  return decodeEntities(stripTags(headingRemoved)).trim();
+function textFromHtml(html) {
+  return cleanText(stripTags(html));
 }
 
-function segmentBlocks(html) {
+function segmentBlocks(html, file) {
   const blocks = [];
 
-  // Each country's content is laid out as:
-  //   [relations header] [relations text] [table] <img M_<key>.jpg /> [founding history]
-  // The image tag — which carries the country's identifying key — sits in the
-  // MIDDLE of a country's own content (after its table, before its founding
-  // history), not at a clean boundary between countries. Segmenting by image
-  // position (as this function previously did) therefore bundles one
-  // country's founding history with the FOLLOWING country's relations text
-  // and table, silently shifting every factbox/relations/timeline field by
-  // one country across the whole dataset. The correct boundary is the
-  // relations header itself.
-  const headerPattern = /class="D2各國簡介_(?:與我關係|國際關係)[^"]*"/gi;
-  const headerPositions = [];
-  let headerMatchIter;
-  while ((headerMatchIter = headerPattern.exec(html))) {
-    headerPositions.push(headerMatchIter.index);
-  }
-
-  const imagePatternGlobal = /<img[^>]*src="[^"]*image\/M_(\w+)\.jpg"[^>]*\/>/g;
-  const allImages = [];
-  let imgMatchIter;
-  while ((imgMatchIter = imagePatternGlobal.exec(html))) {
-    allImages.push({ pos: imgMatchIter.index, key: imgMatchIter[1] });
-  }
-
-  const spans = headerPositions.map((start, i) => {
-    const end = i + 1 < headerPositions.length ? headerPositions[i + 1] : html.length;
-    return { start, end, text: html.slice(start, end) };
-  });
-
-  // Bucket each image strictly by which header-to-header span it physically
-  // falls in. Occasionally two country photos are laid out adjacent to each
-  // other in print, both landing inside the SECOND country's span while the
-  // FIRST country's span gets none — a print-layout quirk, not a data error.
-  // When a span holds 2+ images, the last one (closest to that span's own
-  // founding-history text) is its own; earlier ones are surplus, donated to
-  // the immediately preceding image-less span below.
-  const imagesPerSpan = spans.map((s) => allImages.filter((img) => img.pos >= s.start && img.pos < s.end));
-  const assignedKey = new Array(spans.length).fill(null);
-  const donatable = new Array(spans.length).fill(null);
-
-  for (let i = 0; i < imagesPerSpan.length; i++) {
-    const imgs = imagesPerSpan[i];
-    if (imgs.length === 1) {
-      assignedKey[i] = imgs[0].key;
-    } else if (imgs.length > 1) {
-      assignedKey[i] = imgs[imgs.length - 1].key;
-      donatable[i] = imgs.slice(0, imgs.length - 1);
-    }
-  }
-  for (let i = 0; i < assignedKey.length; i++) {
-    if (assignedKey[i] === null && donatable[i + 1] && donatable[i + 1].length > 0) {
-      assignedKey[i] = donatable[i + 1].shift().key;
-    }
-  }
-
-  for (let i = 0; i < spans.length; i++) {
-    const span = spans[i].text;
-    const key = assignedKey[i];
+  // In the 2026 export, each country block ends with its own M_<key> image.
+  // The block before that image contains the country's founding history,
+  // relations section, and table, so image-bounded segmentation keeps all
+  // extracted values traceable to the same source block.
+  const imagePatternGlobal = /<img[^>]*src="[^"]*image\/M_([^/"]+?)\.(?:jpg|png)"[^>]*\/?>/gi;
+  let start = 0;
+  let imgMatch;
+  while ((imgMatch = imagePatternGlobal.exec(html))) {
+    const key = decodeEntities(imgMatch[1]);
+    const span = html.slice(start, imgMatch.index + imgMatch[0].length);
+    start = imgMatch.index + imgMatch[0].length;
     if (!key || !(key in COUNTRY_META)) continue;
 
-    const headerMatch = /class="D2各國簡介_(?:與我關係|國際關係)[^"]*"/i.exec(span);
+    const headerMatch = /<p[^>]*class="D2各國簡介_(?:與我關係|國際關係)[^"]*"[^>]*>([\s\S]*?)<\/p>/i.exec(span);
+    const relationHeader = headerMatch ? textFromHtml(headerMatch[1]) : '';
     let relationsText = null;
+    let relationsHtml = '';
     if (headerMatch) {
       const afterHeader = span.slice(headerMatch.index + headerMatch[0].length);
       const contentMatch = /<p[^>]*class="D2各國簡介_本文[^"]*"[^>]*>([\s\S]*?)<\/p>/i.exec(afterHeader);
-      relationsText = contentMatch ? decodeEntities(stripTags(contentMatch[1])).trim() : null;
+      relationsHtml = contentMatch ? contentMatch[1] : '';
+      relationsText = contentMatch ? textFromHtml(contentMatch[1]) : null;
     }
 
-    const foundingMatch = /class="D2各國簡介_建國簡史[^"]*"[^>]*>([\s\S]*?)(?=<p class="D2各國簡介_[^"]*"|<table|$)/i.exec(span);
-    const foundingHistoryText = foundingMatch ? decodeEntities(stripTags(foundingMatch[1])).trim() : '';
+    const beforeRelations = headerMatch ? span.slice(0, headerMatch.index) : span;
+    const foundingHistoryText = textFromHtml(
+      beforeRelations.replace(/<p[^>]*class="D2各國簡介_建國簡史[^"]*"[^>]*>[\s\S]*?<\/p>/gi, '')
+    );
 
     const tableMatch = /<table[^>]*>[\s\S]*?<\/table>/i.exec(span);
     const tableHtml = tableMatch ? tableMatch[0] : '';
 
-    blocks.push({ key, relationsText, foundingHistoryText, tableHtml });
+    blocks.push({ key, file, relationsText, relationsHtml, relationHeader, foundingHistoryText, tableHtml });
   }
 
   return blocks;
@@ -446,7 +404,7 @@ function detectRelations(relationsText) {
 // same-month form, so the alternation doesn't stop early on a partial match.
 const DATE_QUALIFIER = '(?:中旬|上旬|下旬|起|初|底|中|凌晨|[至到]\\d{1,2}月\\d{1,2}日|[至到]\\d{1,2}日)?';
 
-function parseStarBullets(relationsText, windowed = true) {
+function parseStarBullets(relationsText, windowed = true, source = {}) {
   if (!relationsText) return [];
   const bullets = relationsText.split('★').slice(1);
   const out = [];
@@ -459,7 +417,10 @@ function parseStarBullets(relationsText, windowed = true) {
     const leadingMonth = leadingMatch[2] || null;
     const leadingDay = leadingMatch[3] || null;
 
-    const afterLeading = trimmed.slice(leadingMatch[0].length).replace(/^[，,]\s*/, '');
+    const afterLeading = trimmed
+      .slice(leadingMatch[0].length)
+      .replace(/^、\d{1,2}日[，,]?\s*/, '')
+      .replace(/^[，,]\s*/, '');
 
     // A single ★ bullet in the source often bundles MULTIPLE dated
     // sub-events under one shared leading year, written as consecutive
@@ -486,7 +447,10 @@ function parseStarBullets(relationsText, windowed = true) {
       if (dm) {
         if (current.parts.length > 0) bulletEvents.push(current);
         const year = dm[1] ? parseInt(dm[1], 10) : bulletYear;
-        const remainder = sentence.slice(dm[0].length).replace(/^[，,]\s*/, '');
+        const remainder = sentence
+          .slice(dm[0].length)
+          .replace(/^、\d{1,2}日[，,]?\s*/, '')
+          .replace(/^[，,]\s*/, '');
         current = { year, month: dm[2], day: dm[3] || null, parts: remainder ? [remainder] : [] };
       } else {
         current.parts.push(sentence);
@@ -505,13 +469,19 @@ function parseStarBullets(relationsText, windowed = true) {
       if (!sentence) continue;
       sentence = sentence.replace(/；$/, '。');
       if (!sentence.endsWith('。')) sentence = `${sentence}。`;
-      out.push({ year, date, sentence, sortKey: `${year}-${month || '00'}-${day || '00'}` });
+      out.push({
+        year,
+        date,
+        sentence,
+        sortKey: `${year}-${month || '00'}-${day || '00'}`,
+        source: { ...source, quote: sentence },
+      });
     }
   }
   return out;
 }
 
-function parseDatedSentences(text) {
+function parseDatedSentences(text, source = {}) {
   if (!text) return [];
   const sentences = text.split(/(?<=。)/).map((s) => s.trim()).filter(Boolean);
   const out = [];
@@ -523,23 +493,61 @@ function parseDatedSentences(text) {
     const month = ym[2] ? ym[2].padStart(2, '0') : null;
     const day = ym[3] ? ym[3].padStart(2, '0') : null;
     const date = month ? `${year}-${month}${day ? '-' + day : ''}` : `${year}`;
-    out.push({ year, date, sentence, sortKey: `${year}-${month || '00'}-${day || '00'}` });
+    out.push({
+      year,
+      date,
+      sentence,
+      sortKey: `${year}-${month || '00'}-${day || '00'}`,
+      source: { ...source, quote: sentence },
+    });
   }
   return out;
 }
 
-function buildTimelineEvents(relationsText, foundingHistoryText) {
-  let candidates = parseStarBullets(relationsText, true);
-  if (candidates.length === 0) candidates = parseStarBullets(relationsText, false);
-  if (candidates.length === 0) candidates = parseDatedSentences(foundingHistoryText);
-  if (candidates.length === 0) return [];
+function makeTitle(sentence, countryName) {
+  const firstClause = sentence.split(/[，,。]/)[0].replace(/[（(][^）)]*[）)]/g, '').trim();
+  if (/^(復交|斷交|建交|來訪|訪台|訪問|簽署|簽訂)$/.test(firstClause) && countryName) {
+    return `${countryName}${firstClause}`;
+  }
+  return firstClause;
+}
+
+function buildTimelineSection(block, countryName) {
+  const relationSource = {
+    file: `03_HTML/${block.file}`,
+    country: countryName,
+    section: block.relationHeader || '與我關係',
+  };
+  const foundingSource = {
+    file: `03_HTML/${block.file}`,
+    country: countryName,
+    section: '建國簡史',
+  };
+
+  let kind = 'recent';
+  let candidates = parseStarBullets(block.relationsText, true, relationSource);
+  if (candidates.length === 0) {
+    kind = 'relations';
+    candidates = parseStarBullets(block.relationsText, false, relationSource);
+  }
+  if (candidates.length === 0) {
+    kind = 'history';
+    candidates = parseDatedSentences(block.foundingHistoryText, foundingSource);
+  }
+  if (candidates.length === 0) return null;
 
   const scored = candidates.map((c) => ({ ...c, scoreTuple: scoreEventTuple(c.sentence, c.year) }));
   scored.sort((a, b) => compareScoreTuplesDesc(a.scoreTuple, b.scoreTuple) || b.sortKey.localeCompare(a.sortKey));
   const top = scored.slice(0, TIMELINE_CAP);
   top.sort((a, b) => b.sortKey.localeCompare(a.sortKey));
 
-  return top.map(({ date, sentence }) => {
+  const title = kind === 'recent'
+    ? `近年大事記（${TIMELINE_MIN_YEAR}-${TIMELINE_MAX_YEAR}）`
+    : kind === 'relations'
+      ? '關係大事記'
+      : '建國簡史摘錄';
+
+  const events = top.map(({ date, sentence, source }) => {
     // The title is the complete first clause — up to the first comma OR
     // period, whichever comes first — never character-count-truncated
     // with an ellipsis. A fixed-length cutoff regularly severed the
@@ -558,10 +566,10 @@ function buildTimelineEvents(relationsText, foundingHistoryText) {
     // delimiters was tried and rejected: it routinely severed the subject
     // from its own verb (e.g. "阿聯親王、阿聯酋航空董事會主席...搭乘...來訪"
     // collapsed to just "阿聯親王", losing the entire action).
-    const firstClause = sentence.split(/[，,。]/)[0];
-    const title = firstClause.replace(/[（(][^）)]*[）)]/g, '');
-    return { date, title, desc: sentence };
+    return { date, title: makeTitle(sentence, countryName), desc: sentence, source };
   });
+
+  return { type: 'timeline', title, events };
 }
 
 function main() {
@@ -577,10 +585,11 @@ function main() {
     if (!fs.existsSync(filePath)) continue;
     const html = fs.readFileSync(filePath, 'utf-8');
 
-    const blocks = segmentBlocks(html);
+    const blocks = segmentBlocks(html, file);
     blocksScanned += blocks.length;
 
-    for (const { key, relationsText, foundingHistoryText, tableHtml } of blocks) {
+    for (const block of blocks) {
+      const { key, relationsText, tableHtml } = block;
       const meta = COUNTRY_META[key];
       if (!meta) {
         unresolved.push(`[unresolved] key '${key}' not in COUNTRY_META, file ${file}`);
@@ -607,10 +616,18 @@ function main() {
         factbox.push({ label: '邦交', value: relationsField });
       }
 
-      const events = buildTimelineEvents(relationsText, foundingHistoryText);
-      const sections = events.length > 0 ? [{ type: 'timeline', title: '近年大事記', events }] : [];
+      const timelineSection = buildTimelineSection(block, name_zh);
+      const sections = timelineSection ? [timelineSection] : [];
 
-      almanac[iso] = { iso, name_zh, name_en, flag, factbox, sections };
+      almanac[iso] = {
+        iso,
+        name_zh,
+        name_en,
+        flag,
+        source: { file: `03_HTML/${file}`, key },
+        factbox,
+        sections,
+      };
       newCountries[iso] = { iso, name_zh, name_en };
       resolvedCount++;
     }

@@ -21,6 +21,16 @@
   <link rel="stylesheet" href="assets/styles.css?v=199" />
 </head>
 <body>
+  <script>
+    if (location.protocol === 'file:') {
+      document.addEventListener('DOMContentLoaded', () => {
+        const notice = document.getElementById('notice');
+        if (!notice) return;
+        notice.textContent = '請用 static server 開啟此頁：在專案目錄執行 python3 -m http.server 8080，然後開啟 http://localhost:8080/。直接用 file:// 會被瀏覽器 CORS 政策阻擋 ES modules 與 JSON 載入。';
+        notice.hidden = false;
+      });
+    }
+  </script>
   <div class="page">
     <div class="panel">
       <header class="header">
