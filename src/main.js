@@ -2,7 +2,7 @@
 // and implements the URL contract (?country=<ISO>&expand=1).
 
 import { getEntry, hasEntry, normalizeIso } from './data-adapter.js';
-import { MapEngine, mapboxAvailable } from './map.js';
+import { MapEngine, mapEngineAvailable } from './map.js';
 import { initSearch } from './search.js';
 import { renderPanel, renderPrompt } from './panel.js';
 
@@ -58,8 +58,8 @@ async function main() {
     hasEntry,
   });
 
-  if (!mapboxAvailable()) {
-    showNotice('Mapbox 需要 access token 才能使用地圖。請設定 window.WORLD_ALMANAC_MAPBOX_TOKEN，或加上 ?mbtoken=pk... 後重新載入。');
+  if (!mapEngineAvailable()) {
+    showNotice('找不到可用的地圖引擎。請確認 MapLibre GL JS 已載入；若要使用 Mapbox，請設定 window.WORLD_ALMANAC_MAPBOX_TOKEN，或加上 ?mbtoken=pk... 後重新載入。');
     return;
   }
 

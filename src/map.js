@@ -1,7 +1,7 @@
 // map.js
-// MapEngine: Mapbox GL JS only implementation
-// Highlights countries using Mapbox's official country-boundaries tileset
-// Supports click-to-select and Traditional Chinese labels
+// MapEngine: MapLibre by default, Mapbox when an opt-in token is provided.
+// The no-token MapLibre path uses local country GeoJSON for highlighting.
+// Mapbox keeps the official country-boundaries tileset when configured.
 
 const ACCENT = '#2563eb';
 const CAPITAL_ACCENT = '#dc2626';
@@ -12,6 +12,8 @@ const HIGHLIGHT_LINE = 'country-highlight-line';
 const HIT_LAYER = 'country-hit-layer';
 const CAPITAL_SRC = 'capital-markers';
 const CAPITAL_LAYER = 'capital-markers-layer';
+
+const COUNTRY_GEOJSON_URL = new URL('../data/world-countries.geojson?v=199', import.meta.url);
 
 const BOUNDARY = {
   type: 'vector',
@@ -52,6 +54,12 @@ export function mapboxAvailable() {
   return true;
 }
 
+export function mapEngineAvailable() {
+  if (typeof window === 'undefined') return false;
+  if (window.maplibregl) return true;
+  return mapboxAvailable();
+}
+
 export class MapEngine {
   /**
    * @param {HTMLElement} container
@@ -62,7 +70,7 @@ export class MapEngine {
     this.countries = countries || {};
     this.selected = '';
     this.map = null;
-    this.joinProp = BOUNDARY.joinProp;
+    this.joinProp = '';
     this.onCountryClick = null;
     this._ready = this._build();
   }
@@ -73,13 +81,30 @@ export class MapEngine {
 
   async _build() {
     const token = resolveMapboxToken();
-    if (!token) throw new Error('mapbox-token-missing');
+    const useMapbox = token && window.mapboxgl;
+    const gl = useMapbox ? window.mapboxgl : window.maplibregl;
+    if (!gl) throw new Error('map-engine-missing');
 
-    window.mapboxgl.accessToken = token;
+    if (useMapbox) window.mapboxgl.accessToken = token;
+    this.joinProp = useMapbox ? BOUNDARY.joinProp : 'iso_a2';
 
-    const map = new window.mapboxgl.Map({
+    const map = new gl.Map({
       container: this.container,
-      style: 'mapbox://styles/mapbox/light-v11',
+      style: useMapbox ? 'mapbox://styles/mapbox/light-v11' : {
+        version: 8,
+        sources: {
+          osm: {
+            type: 'raster',
+            tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+            tileSize: 256,
+            attribution: '© OpenStreetMap contributors',
+          },
+        },
+        layers: [
+          { id: 'background', type: 'background', paint: { 'background-color': '#eef2f5' } },
+          { id: 'osm', type: 'raster', source: 'osm' },
+        ],
+      },
       center: [10, 25],
       zoom: 1.3,
       attributionControl: true,
@@ -93,7 +118,7 @@ export class MapEngine {
     // control is added after 'load' has already resolved (meaning
     // 'style.load' already fired earlier), the listener registers too late
     // and the language switch silently never applies.
-    if (window.MapboxLanguage) {
+    if (useMapbox && window.MapboxLanguage) {
       const language = new window.MapboxLanguage({ defaultLanguage: 'zh-Hant' });
       map.addControl(language);
     }
@@ -106,16 +131,28 @@ export class MapEngine {
       setTimeout(() => reject(new Error('map load timeout')), 15000).unref?.();
     });
 
-    // Add country boundaries source
-    map.addSource(HIGHLIGHT_SRC, {
-      type: 'vector',
-      url: BOUNDARY.url,
-    });
+    if (!useMapbox && gl.NavigationControl) {
+      map.addControl(new gl.NavigationControl({ visualizePitch: false }), 'top-right');
+    }
 
     const noMatch = ['==', ['get', this.joinProp], '__none__'];
     this._noMatchFilter = noMatch;
 
-    const layerBase = { source: HIGHLIGHT_SRC, 'source-layer': BOUNDARY.sourceLayer, filter: noMatch };
+    if (useMapbox) {
+      map.addSource(HIGHLIGHT_SRC, {
+        type: 'vector',
+        url: BOUNDARY.url,
+      });
+    } else {
+      map.addSource(HIGHLIGHT_SRC, {
+        type: 'geojson',
+        data: COUNTRY_GEOJSON_URL.href,
+      });
+    }
+
+    const layerBase = useMapbox
+      ? { source: HIGHLIGHT_SRC, 'source-layer': BOUNDARY.sourceLayer, filter: noMatch }
+      : { source: HIGHLIGHT_SRC, filter: noMatch };
 
     // Add highlight layers
     map.addLayer({ id: HIGHLIGHT_FILL, type: 'fill', paint: { 'fill-color': ACCENT, 'fill-opacity': 0.45 }, ...layerBase });
@@ -129,8 +166,8 @@ export class MapEngine {
       id: HIT_LAYER,
       type: 'fill',
       source: HIGHLIGHT_SRC,
-      'source-layer': BOUNDARY.sourceLayer,
-      filter: WORLDVIEW_FILTER,
+      ...(useMapbox ? { 'source-layer': BOUNDARY.sourceLayer } : {}),
+      filter: useMapbox ? WORLDVIEW_FILTER : ['has', this.joinProp],
       paint: { 'fill-color': '#000', 'fill-opacity': 0 },
     });
 
@@ -189,7 +226,9 @@ export class MapEngine {
   _applyHighlight(iso) {
     if (!this.map) return;
     const filter = iso
-      ? ['all', ['==', ['get', this.joinProp], iso], WORLDVIEW_FILTER]
+      ? this.joinProp === BOUNDARY.joinProp
+        ? ['all', ['==', ['get', this.joinProp], iso], WORLDVIEW_FILTER]
+        : ['==', ['get', this.joinProp], iso]
       : this._noMatchFilter;
     this.map.setFilter(HIGHLIGHT_FILL, filter);
     this.map.setFilter(HIGHLIGHT_LINE, filter);
