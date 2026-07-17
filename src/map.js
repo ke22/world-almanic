@@ -42,10 +42,18 @@ const WORLDVIEW_FILTER = ['any', ['==', ['get', 'worldview'], 'all'], ['in', 'US
 /** Resolve a Mapbox token from opt-in config only; never hardcode a token. */
 function resolveMapboxToken() {
   const fromGlobal = typeof window !== 'undefined' && window.WORLD_ALMANAC_MAPBOX_TOKEN;
-  if (typeof fromGlobal === 'string' && fromGlobal.trim()) return fromGlobal.trim();
+  if (typeof fromGlobal === 'string' && isUsableMapboxToken(fromGlobal)) return fromGlobal.trim();
   const fromUrl = new URLSearchParams(location.search).get('mbtoken');
-  if (fromUrl && fromUrl.trim()) return fromUrl.trim();
+  if (isUsableMapboxToken(fromUrl)) return fromUrl.trim();
   return '';
+}
+
+function isUsableMapboxToken(value) {
+  const token = typeof value === 'string' ? value.trim() : '';
+  if (!token) return false;
+  if (token === 'pk.your_mapbox_token') return false;
+  if (token.includes('your_mapbox_token')) return false;
+  return token.startsWith('pk.');
 }
 
 export function mapboxAvailable() {
